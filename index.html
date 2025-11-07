@@ -50,10 +50,36 @@
     }
     .brand{color:var(--txt); text-decoration:none; font-weight:800; letter-spacing:.3px}
     .brand small{opacity:.85; font-weight:700}
+
+    /* Исправление: стиль выпадающего списка */
     select{
-      background:rgba(255,255,255,.06); color:var(--txt);
-      border:1px solid var(--stroke); border-radius:10px;
-      padding:8px 10px; font-weight:600;
+      background:rgba(255,255,255,0.15);
+      color:var(--txt);
+      border:1px solid rgba(255,255,255,0.3);
+      border-radius:10px;
+      padding:8px 12px;
+      font-weight:600;
+      backdrop-filter:blur(10px);
+      box-shadow:0 2px 8px rgba(0,0,0,.25);
+      cursor:pointer;
+      appearance:none;
+      -webkit-appearance:none;
+      position:relative;
+    }
+    select option{
+      background-color:#0e1f2e;
+      color:#e9f4fb;
+      font-weight:600;
+      padding:8px;
+    }
+    select:hover{
+      background:rgba(255,255,255,0.25);
+      border-color:rgba(255,255,255,0.5);
+    }
+    select:focus{
+      outline:none;
+      border-color:var(--primary);
+      box-shadow:0 0 0 2px rgba(25,160,255,.4);
     }
 
     .hero{
@@ -224,22 +250,6 @@
         jSub:"Diving is a journey — better together.",
         copy:"© iScuba.online — International Diving Community.",
         file:"dive50plus-EN.pdf"
-      },
-      de:{
-        kNote:"Geplant: „7 Schritte zum ersten Tauchgang“. Neuigkeiten in der Gruppe verfolgen.",
-        file:"dive50plus-DE.pdf"
-      },
-      fr:{
-        kNote:"Prévu : « 7 étapes vers la première plongée ». Suivez les actualités dans le groupe.",
-        file:"dive50plus-FR.pdf"
-      },
-      it:{
-        kNote:"In programma: “7 passi verso la prima immersione”. Segui gli aggiornamenti nel gruppo.",
-        file:"dive50plus-IT.pdf"
-      },
-      lv:{
-        kNote:"Plānots: “7 soļi līdz pirmajai niršanai”. Sekojiet jaunumiem grupā.",
-        file:"dive50plus-LV.pdf"
       }
     };
 
