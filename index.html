@@ -1,247 +1,235 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>iScuba Hub — бесплатные материалы для дайверов</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>iScuba Hub — материалы и чек-листы</title>
 
   <!-- Meta Pixel -->
   <script>
     !function(f,b,e,v,n,t,s){
-      if(f.fbq)return;n=f.fbq=function(){
-        n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)
-      };
-      if(!f._fbq)f._fbq=n;
-      n.push=n;
-      n.loaded=!0;n.version='2.0';n.queue=[];
-      t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
+      if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];
+      t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];
       s.parentNode.insertBefore(t,s)
     }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
 
-    fbq('init', '675997335920840');
+    fbq('init','675997335920840');
   </script>
 
   <style>
-    body {
-      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-      text-align: center;
-      background: linear-gradient(180deg,#f4fbff 0%,#e9f6fa 100%);
-      color:#222;
-      margin:0;
-      padding:0;
+    :root{
+      --bg-1:#051b26; --bg-2:#0a2a3a; --card:#0d3347cc; --stroke:#0f475f66;
+      --txt:#e8f3f9; --muted:#a7c2cf; --primary:#19A0FF; --primary-2:#1581cc; --mint:#3dd6c3;
+      --radius:20px;
     }
-
-    header {
-      padding: 20px 0;
-      background-color: #003b56;
-      color: #fff;
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:system-ui,-apple-system,"Segoe UI",Roboto,Inter,Arial,sans-serif;
+      color:var(--txt);
+      background:radial-gradient(1200px 800px at 20% -10%, #0f3951 0%, transparent 60%),
+                 linear-gradient(180deg,var(--bg-1),var(--bg-2));
+      min-height:100dvh; display:flex; flex-direction:column;
     }
-
-    header h1 {
-      margin: 0;
-      font-size: 24px;
-      letter-spacing: 0.5px;
+    header{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:18px 22px; border-bottom:1px solid var(--stroke);
+      backdrop-filter:saturate(140%) blur(6px);
     }
-
-    .lang-select {
-      position:absolute;
-      top:20px;
-      right:20px;
+    .brand{color:var(--txt); text-decoration:none; font-weight:700; letter-spacing:.4px}
+    .brand small{opacity:.8; font-weight:600}
+    .lang{display:flex; align-items:center; gap:8px}
+    select{
+      background:#0b2939; color:var(--txt); border:1px solid var(--stroke);
+      padding:8px 10px; border-radius:10px; font-weight:600
     }
-
-    select {
-      font-size:14px;
-      padding:6px 8px;
-      border-radius:6px;
-      border:1px solid #ccc;
+    main{width:100%; max-width:1100px; margin:40px auto; padding:0 16px}
+    h1{font-size:36px; margin:0 0 8px}
+    .sub{color:var(--muted); margin:0 0 24px}
+    .grid{
+      display:grid; grid-template-columns:repeat(2,minmax(280px,1fr)); gap:22px;
     }
-
-    .section {
-      max-width: 680px;
-      margin: 40px auto;
-      background: #fff;
-      border-radius: 18px;
-      box-shadow: 0 10px 28px rgba(0,0,0,0.08);
-      padding: 40px 30px;
+    .card{
+      background:var(--card); border:1px solid var(--stroke); border-radius:var(--radius);
+      padding:26px; box-shadow:0 10px 30px rgba(0,0,0,.25);
     }
-
-    h2 {
-      font-size: 22px;
-      color: #003b56;
-      margin-bottom: 10px;
+    .card h2{margin:0 0 10px; font-size:22px}
+    .card p{margin:0 0 16px; color:var(--muted)}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:8px;
+      min-width:220px; padding:12px 18px; border-radius:12px; border:0; cursor:pointer;
+      font-weight:700; color:#fff; background:var(--primary);
+      box-shadow:0 6px 18px rgba(25,160,255,.25); transition:.2s;
     }
-
-    p {
-      font-size: 17px;
-      color: #444;
-      margin-bottom: 25px;
+    .btn:hover{background:var(--primary-2)}
+    .btn.mint{background:var(--mint); color:#072329}
+    .btn.mint:hover{filter:brightness(.95)}
+    .disabled{opacity:.55; cursor:not-allowed}
+    footer{margin:auto 0 24px; text-align:center; color:var(--muted); font-size:14px}
+    @media (max-width:800px){
+      h1{font-size:28px}
+      .grid{grid-template-columns:1fr}
     }
-
-    button {
-      display: block;
-      width: 80%;
-      max-width: 340px;
-      margin: 10px auto;
-      padding: 12px 20px;
-      font-size: 16px;
-      font-weight: 600;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      background-color: #0077cc;
-      color: #fff;
-      transition: all .3s ease;
-    }
-
-    button:hover { background-color:#005fa3; }
-
-    .soon {
-      color: #888;
-      font-style: italic;
-      margin-top: 10px;
-    }
-
-    footer {
-      margin-top: 50px;
-      font-size: 14px;
-      color: #777;
-      padding-bottom: 30px;
-    }
-
   </style>
 </head>
-
 <body>
   <header>
-    <h1>🌊 iScuba Hub — материалы для дайверов и семей</h1>
+    <a class="brand" href="https://iscuba.online" target="_blank" rel="noopener">
+      iScuba.<small>online</small>
+    </a>
+    <div class="lang">
+      <select id="language" aria-label="Language switcher" onchange="setLanguage(this.value)">
+        <option value="ru">🇷🇺 RU</option>
+        <option value="en">🇬🇧 EN</option>
+        <option value="de">🇩🇪 DE</option>
+        <option value="fr">🇫🇷 FR</option>
+        <option value="it">🇮🇹 IT</option>
+        <option value="lv">🇱🇻 LV</option>
+      </select>
+    </div>
   </header>
 
-  <div class="lang-select">
-    <select id="language" onchange="setLanguage(this.value)">
-      <option value="ru">🇷🇺 Русский</option>
-      <option value="en">🇬🇧 English</option>
-      <option value="de">🇩🇪 Deutsch</option>
-      <option value="fr">🇫🇷 Français</option>
-      <option value="lv">🇱🇻 Latviešu</option>
-      <option value="vn">🇻🇳 Tiếng Việt</option>
-    </select>
-  </div>
-
   <main>
-    <!-- Dive50Plus Section -->
-    <div class="section" id="dive50plus">
-      <h2 id="title50">📘 Чек-лист «7 правил дайвера 50+»</h2>
-      <p id="subtitle50">Выберите язык и скачайте PDF-документ бесплатно:</p>
-      <button id="download50">📥 Скачать</button>
-      <p id="note50">Доступно для участников сообщества Dive50Plus.</p>
-    </div>
+    <h1 id="h-title">Сообщество и бесплатные материалы</h1>
+    <p class="sub" id="h-sub">Выберите раздел. Чек-листы доступны после вступления в группу.</p>
 
-    <!-- Kids Section -->
-    <div class="section" id="kids">
-      <h2 id="titleKids">🐠 iScuba Kids — скоро здесь!</h2>
-      <p id="subtitleKids">Раздел для родителей и детей в разработке.</p>
-      <button disabled style="background:#bbb;cursor:not-allowed;">🚧 В разработке</button>
-      <p class="soon" id="noteKids">Здесь появится чек-лист «7 шагов к первому погружению».</p>
-    </div>
+    <section class="grid">
+      <!-- Dive50Plus -->
+      <article class="card">
+        <h2 id="d-title">📘 Чек-лист «7 правил дайвера 50+»</h2>
+        <p id="d-sub">Скачайте PDF на своём языке. Спокойные погружения, опыт и безопасность.</p>
+        <button class="btn" id="d-btn">📥 Скачать чек-лист</button>
+        <p class="sub" id="d-note">PDF доступен для участников Dive50Plus. Ссылка в закрепе группы.</p>
+      </article>
+
+      <!-- Kids (placeholder) -->
+      <article class="card">
+        <h2 id="k-title">🐠 iScuba Kids — скоро здесь</h2>
+        <p id="k-sub">Раздел для родителей и детей в разработке. Будут чек-листы, лайфхаки и мини-курсы.</p>
+        <button class="btn mint disabled" id="k-btn" disabled>🚧 В разработке</button>
+        <p class="sub" id="k-note">Планируем: «7 шагов к первому погружению». Подпишитесь в группе, чтобы не пропустить.</p>
+      </article>
+    </section>
   </main>
 
-  <footer id="footer">
-    © iScuba.online — международное сообщество дайверов.  
-  </footer>
+  <footer id="f-copy">© iScuba.online — международное сообщество дайверов.</footer>
 
   <script>
-    const translations = {
-      ru: {
-        title50: "📘 Чек-лист «7 правил дайвера 50+»",
-        subtitle50: "Выберите язык и скачайте PDF-документ бесплатно:",
-        button50: "📥 Скачать",
-        note50: "Доступно для участников сообщества Dive50Plus.",
-        titleKids: "🐠 iScuba Kids — скоро здесь!",
-        subtitleKids: "Раздел для родителей и детей в разработке.",
-        noteKids: "Здесь появится чек-лист «7 шагов к первому погружению».",
-        footer: "© iScuba.online — международное сообщество дайверов.",
-        file: "dive50plus-RU.pdf"
+    // локализации: RU EN DE FR IT LV
+    const t = {
+      ru:{
+        hTitle:"Сообщество и бесплатные материалы",
+        hSub:"Выберите раздел. Чек-листы доступны после вступления в группу.",
+        dTitle:"📘 Чек-лист «7 правил дайвера 50+»",
+        dSub:"Скачайте PDF на своём языке. Спокойные погружения, опыт и безопасность.",
+        dBtn:"📥 Скачать чек-лист",
+        dNote:"PDF доступен для участников Dive50Plus. Ссылка в закрепе группы.",
+        kTitle:"🐠 iScuba Kids — скоро здесь",
+        kSub:"Раздел для родителей и детей в разработке. Будут чек-листы, лайфхаки и мини-курсы.",
+        kBtn:"🚧 В разработке",
+        kNote:"Планируем: «7 шагов к первому погружению». Подпишитесь в группе, чтобы не пропустить.",
+        copy:"© iScuba.online — международное сообщество дайверов.",
+        file:"dive50plus-RU.pdf"
       },
-      en: {
-        title50: "📘 Checklist “7 Rules for Divers 50+”",
-        subtitle50: "Select language and download the free PDF:",
-        button50: "📥 Download",
-        note50: "Available for members of the Dive50Plus community.",
-        titleKids: "🐠 iScuba Kids — coming soon!",
-        subtitleKids: "Section for parents and kids under development.",
-        noteKids: "Here will be the checklist “7 Steps to the First Dive”.",
-        footer: "© iScuba.online — International Diving Community.",
-        file: "dive50plus-EN.pdf"
+      en:{
+        hTitle:"Community & Free Resources",
+        hSub:"Pick a section. Checklists are available after joining the group.",
+        dTitle:"📘 Checklist “7 Rules for Divers 50+”",
+        dSub:"Download the PDF in your language. Calm dives, experience and safety.",
+        dBtn:"📥 Download Checklist",
+        dNote:"PDF is available for Dive50Plus members. Link is pinned in the group.",
+        kTitle:"🐠 iScuba Kids — coming soon",
+        kSub:"Section for parents and kids is under development. Checklists and mini-guides ahead.",
+        kBtn:"🚧 Coming soon",
+        kNote:"Planned: “7 Steps to the First Dive”. Follow the group not to miss it.",
+        copy:"© iScuba.online — International Diving Community.",
+        file:"dive50plus-EN.pdf"
       },
-      de: {
-        title50: "📘 Checkliste „7 Regeln für Taucher 50+“",
-        subtitle50: "Sprache wählen und kostenloses PDF herunterladen:",
-        button50: "📥 Herunterladen",
-        note50: "Verfügbar für Mitglieder der Dive50Plus-Community.",
-        titleKids: "🐠 iScuba Kids — bald verfügbar!",
-        subtitleKids: "Bereich für Eltern und Kinder in Entwicklung.",
-        noteKids: "Hier erscheint die Checkliste „7 Schritte zum ersten Tauchgang“.",
-        footer: "© iScuba.online — internationale Tauchgemeinschaft.",
-        file: "dive50plus-DE.pdf"
+      de:{
+        hTitle:"Community & Kostenlose Materialien",
+        hSub:"Wählen Sie einen Bereich. Checklisten sind nach Gruppenbeitritt verfügbar.",
+        dTitle:"📘 Checkliste „7 Regeln für Taucher 50+“",
+        dSub:"Laden Sie das PDF in Ihrer Sprache herunter. Ruhige Tauchgänge, Erfahrung und Sicherheit.",
+        dBtn:"📥 Checkliste herunterladen",
+        dNote:"PDF ist für Mitglieder der Dive50Plus-Community verfügbar. Link ist oben in der Gruppe.",
+        kTitle:"🐠 iScuba Kids — bald verfügbar",
+        kSub:"Bereich für Eltern und Kinder in Entwicklung. Checklisten und Mini-Guides folgen.",
+        kBtn:"🚧 In Arbeit",
+        kNote:"Geplant: „7 Schritte zum ersten Tauchgang“. Folgen Sie der Gruppe.",
+        copy:"© iScuba.online — internationale Tauchgemeinschaft.",
+        file:"dive50plus-DE.pdf"
       },
-      fr: {
-        title50: "📘 Liste de contrôle « 7 règles du plongeur 50+ »",
-        subtitle50: "Choisissez la langue et téléchargez le PDF gratuit :",
-        button50: "📥 Télécharger",
-        note50: "Disponible pour les membres de la communauté Dive50Plus.",
-        titleKids: "🐠 iScuba Kids — bientôt ici !",
-        subtitleKids: "Section pour les parents et les enfants en développement.",
-        noteKids: "Ici apparaîtra la liste « 7 étapes vers la première plongée ».",
-        footer: "© iScuba.online — communauté internationale de plongée.",
-        file: "dive50plus-FR.pdf"
+      fr:{
+        hTitle:"Communauté & ressources gratuites",
+        hSub:"Choisissez une section. Les check-lists sont disponibles après avoir rejoint le groupe.",
+        dTitle:"📘 Liste de contrôle « 7 règles du plongeur 50+ »",
+        dSub:"Téléchargez le PDF dans votre langue. Plongées calmes, expérience et sécurité.",
+        dBtn:"📥 Télécharger la liste",
+        dNote:"Le PDF est disponible pour les membres de Dive50Plus. Lien épinglé dans le groupe.",
+        kTitle:"🐠 iScuba Kids — bientôt ici",
+        kSub:"Rubrique pour les parents et les enfants en cours de création. Check-lists et mini-guides à venir.",
+        kBtn:"🚧 Bientôt",
+        kNote:"Prévu : « 7 étapes vers la première plongée ». Suivez le groupe.",
+        copy:"© iScuba.online — communauté internationale de plongée.",
+        file:"dive50plus-FR.pdf"
       },
-      lv: {
-        title50: "📘 Pārbaudes saraksts “7 noteikumi nirējam 50+”",
-        subtitle50: "Izvēlieties valodu un lejupielādējiet bezmaksas PDF:",
-        button50: "📥 Lejupielādēt",
-        note50: "Pieejams Dive50Plus kopienas dalībniekiem.",
-        titleKids: "🐠 iScuba Kids — drīzumā!",
-        subtitleKids: "Sadaļa vecākiem un bērniem tiek izstrādāta.",
-        noteKids: "Šeit būs kontrolsaraksts “7 soļi līdz pirmajai niršanai”.",
-        footer: "© iScuba.online — starptautiska nirēju kopiena.",
-        file: "dive50plus-LV.pdf"
+      it:{
+        hTitle:"Comunità e materiali gratuiti",
+        hSub:"Scegli una sezione. Le checklist sono disponibili dopo l’adesione al gruppo.",
+        dTitle:"📘 Checklist “7 regole per sub 50+”",
+        dSub:"Scarica il PDF nella tua lingua. Immersioni calme, esperienza e sicurezza.",
+        dBtn:"📥 Scarica la checklist",
+        dNote:"Il PDF è disponibile per i membri di Dive50Plus. Link fissato nel gruppo.",
+        kTitle:"🐠 iScuba Kids — presto online",
+        kSub:"Sezione per genitori e bambini in sviluppo. Checklist e mini-guide in arrivo.",
+        kBtn:"🚧 In sviluppo",
+        kNote:"In programma: “7 passi verso la prima immersione”. Segui il gruppo.",
+        copy:"© iScuba.online — comunità internazionale di diving.",
+        file:"dive50plus-IT.pdf"
       },
-      vn: {
-        title50: "📘 Danh sách kiểm tra “7 quy tắc cho thợ lặn 50+”",
-        subtitle50: "Chọn ngôn ngữ và tải xuống tệp PDF miễn phí:",
-        button50: "📥 Tải xuống",
-        note50: "Có sẵn cho các thành viên cộng đồng Dive50Plus.",
-        titleKids: "🐠 iScuba Kids — sắp ra mắt!",
-        subtitleKids: "Phần dành cho cha mẹ và trẻ em đang được phát triển.",
-        noteKids: "Tại đây sẽ xuất hiện danh sách “7 bước cho lần lặn đầu tiên”.",
-        footer: "© iScuba.online — Cộng đồng lặn quốc tế.",
-        file: "dive50plus-VN.pdf"
+      lv:{
+        hTitle:"Kopiena un bezmaksas materiāli",
+        hSub:"Izvēlieties sadaļu. Kontrolsaraksti pieejami pēc pievienošanās grupai.",
+        dTitle:"📘 Pārbaudes saraksts “7 noteikumi nirējam 50+”",
+        dSub:"Lejupielādējiet PDF savā valodā. Mierīgas niršanas, pieredze un drošība.",
+        dBtn:"📥 Lejupielādēt sarakstu",
+        dNote:"PDF pieejams Dive50Plus kopienas dalībniekiem. Saite piesprausta grupā.",
+        kTitle:"🐠 iScuba Kids — drīzumā",
+        kSub:"Sadaļa vecākiem un bērniem top. Būs saraksti un mini-ceļveži.",
+        kBtn:"🚧 Drīzumā",
+        kNote:"Plānots: “7 soļi līdz pirmajai niršanai”. Sekojiet grupai.",
+        copy:"© iScuba.online — starptautiska nirēju kopiena.",
+        file:"dive50plus-LV.pdf"
       }
     };
 
-    const userLang = (navigator.language || navigator.userLanguage).substring(0,2).toLowerCase();
-    const supported = Object.keys(translations);
-    const defaultLang = supported.includes(userLang) ? userLang : 'en';
-    setLanguage(defaultLang);
-    document.getElementById('language').value = defaultLang;
+    const langSel = document.getElementById('language');
+    const userLang = (navigator.language||navigator.userLanguage||'en').slice(0,2).toLowerCase();
+    const initial = t[userLang] ? userLang : 'en';
+    langSel.value = initial;
+    applyLang(initial);
 
-    function setLanguage(lang) {
-      const t = translations[lang];
-      document.getElementById('title50').innerText = t.title50;
-      document.getElementById('subtitle50').innerText = t.subtitle50;
-      document.getElementById('download50').innerText = t.button50;
-      document.getElementById('note50').innerText = t.note50;
-      document.getElementById('titleKids').innerText = t.titleKids;
-      document.getElementById('subtitleKids').innerText = t.subtitleKids;
-      document.getElementById('noteKids').innerText = t.noteKids;
-      document.getElementById('footer').innerText = t.footer;
+    function setLanguage(lang){ applyLang(lang); }
 
-      document.getElementById('download50').onclick = function(){
-        fbq('track', 'Lead', {content_name: 'Checklist_50Plus', language: lang});
-        fbq('trackCustom', 'Checklist_50Plus_Downloaded', {language: lang});
-        window.open(t.file, '_blank');
+    function applyLang(lang){
+      const L = t[lang];
+      document.querySelector('#h-title').innerText = L.hTitle;
+      document.querySelector('#h-sub').innerText = L.hSub;
+      document.querySelector('#d-title').innerText = L.dTitle;
+      document.querySelector('#d-sub').innerText = L.dSub;
+      document.querySelector('#d-btn').innerText = L.dBtn;
+      document.querySelector('#d-note').innerText = L.dNote;
+      document.querySelector('#k-title').innerText = L.kTitle;
+      document.querySelector('#k-sub').innerText = L.kSub;
+      document.querySelector('#k-btn').innerText = L.kBtn;
+      document.querySelector('#k-note').innerText = L.kNote;
+      document.querySelector('#f-copy').innerText = L.copy;
+
+      document.querySelector('#d-btn').onclick = function(){
+        fbq('track','Lead',{content_name:'Checklist_50Plus',language:lang});
+        fbq('trackCustom','Checklist_50Plus_Downloaded',{language:lang});
+        window.open(L.file,'_blank');
       };
     }
   </script>
