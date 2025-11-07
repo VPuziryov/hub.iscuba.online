@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Чек-лист «7 правил дайвера 50+»</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Meta Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s){
+      if(f.fbq)return;n=f.fbq=function(){
+        n.callMethod ?
+        n.callMethod.apply(n,arguments) : n.queue.push(arguments)
+      };
+      if(!f._fbq)f._fbq=n;
+      n.push=n;
+      n.loaded=!0;
+      n.version='2.0';
+      n.queue=[];
+      t=b.createElement(e);t.async=!0;
+      t.src=v;
+      s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)
+    }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', '675997335920840');
+  </script>
+
+  <style>
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      text-align: center;
+      background: linear-gradient(180deg, #f4fbff 0%, #e9f6fa 100%);
+      color: #222;
+      margin: 0;
+      padding: 0;
+    }
+
+    .wrapper {
+      max-width: 600px;
+      margin: 80px auto;
+      padding: 40px 30px;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #003b56;
+    }
+
+    p {
+      font-size: 17px;
+      margin-bottom: 30px;
+      color: #444;
+    }
+
+    button {
+      display: block;
+      width: 80%;
+      max-width: 340px;
+      margin: 8px auto;
+      padding: 12px 20px;
+      font-size: 16px;
+      font-weight: 600;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      background-color: #0077cc;
+      color: white;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #005fa3;
+    }
+
+    footer {
+      margin-top: 30px;
+      font-size: 14px;
+      color: #777;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <h1>📘 Чек-лист «7 правил дайвера 50+»</h1>
+    <p>Выберите язык для скачивания PDF-документа:</p>
+
+    <button onclick="trackDownload('RU')">🇷🇺 Русский</button>
+    <button onclick="trackDownload('EN')">🇬🇧 English</button>
+    <button onclick="trackDownload('DE')">🇩🇪 Deutsch</button>
+    <button onclick="trackDownload('FR')">🇫🇷 Français</button>
+    <button onclick="trackDownload('LV')">🇱🇻 Latviešu</button>
+    <button onclick="trackDownload('VN')">🇻🇳 Tiếng Việt</button>
+
+    <footer>
+      PDF-файлы доступны бесплатно для участников сообщества Dive50Plus.
+    </footer>
+  </div>
+
+  <script>
+    function trackDownload(lang) {
+      fbq('track', 'Lead', {content_name: 'Checklist_50Plus_' + lang});
+      fbq('trackCustom', 'Checklist_50Plus_Downloaded_' + lang);
+      window.open('dive50plus-' + lang + '.pdf', '_blank');
+    }
+  </script>
+</body>
+</html>
