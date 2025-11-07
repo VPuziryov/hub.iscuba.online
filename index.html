@@ -71,19 +71,8 @@
       font-weight:600;
       padding:8px;
     }
-    select:hover{
-      background:rgba(255,255,255,0.25);
-      border-color:rgba(255,255,255,0.5);
-    }
-    select:focus{
-      outline:none;
-      border-color:var(--primary);
-      box-shadow:0 0 0 2px rgba(25,160,255,.4);
-    }
 
-    .hero{
-      max-width:1100px; margin:36px auto 0; padding:0 16px; text-align:center;
-    }
+    .hero{max-width:1100px; margin:36px auto 0; padding:0 16px; text-align:center;}
     .hero h1{font-size:28px; margin:4px 0 6px}
     .hero p{color:var(--muted); margin:0}
 
@@ -123,14 +112,10 @@
 
     .faq{max-width:900px; margin:34px auto 0; padding:0 16px}
     .faq h2{font-size:22px; text-align:center; margin:0 0 14px}
-    details{
-      background:var(--surface); border:1px solid var(--stroke); border-radius:14px;
-      padding:14px 16px; margin:10px 0; backdrop-filter:blur(var(--blur));
-    }
-    summary{
-      list-style:none; cursor:pointer; font-weight:700;
-      display:flex; align-items:center; gap:10px;
-    }
+    details{background:var(--surface); border:1px solid var(--stroke); border-radius:14px;
+      padding:14px 16px; margin:10px 0; backdrop-filter:blur(var(--blur));}
+    summary{list-style:none; cursor:pointer; font-weight:700;
+      display:flex; align-items:center; gap:10px;}
     summary::-webkit-details-marker{display:none}
     .qmark{width:22px; height:22px; border-radius:50%; background:#ffcf4d; color:#1d2a34;
       display:inline-flex; align-items:center; justify-content:center; font-weight:900; font-size:14px}
@@ -141,14 +126,9 @@
     .join p{color:var(--muted); margin:0 0 16px}
     .join .btns{display:flex; flex-wrap:wrap; gap:16px; justify-content:center}
 
-    footer{
-      margin-top:auto; padding:22px 16px; text-align:center;
-      color:var(--muted); border-top:1px solid var(--stroke);
-    }
+    footer{margin-top:auto; padding:22px 16px; text-align:center;
+      color:var(--muted); border-top:1px solid var(--stroke);}
     .sig{opacity:.9; margin-top:6px; font-size:13px}
-    @media (max-width:760px){
-      .hero h1{font-size:24px}
-    }
   </style>
 </head>
 <body>
@@ -250,10 +230,94 @@
         copy:"© iScuba.online — International Diving Community.",
         file:"dive50plus-EN.pdf"
       },
-      de:{ dTitle:"📘 Checkliste „7 ungewöhnliche Regeln für Taucher 50Plus“", file:"dive50plus-DE.pdf" },
-      fr:{ dTitle:"📘 Liste de contrôle « 7 règles inattendues du plongeur 50Plus »", file:"dive50plus-FR.pdf" },
-      it:{ dTitle:"📘 Checklist “7 regole non ovvie per i sub 50Plus”", file:"dive50plus-IT.pdf" },
-      lv:{ dTitle:"📘 Kontrolsaraksts “7 negaidīti noteikumi nirējiem 50Plus”", file:"dive50plus-LV.pdf" }
+      de:{
+        hTitle:"Community & Kostenlose Materialien",
+        hSub:"Kostenlose Checklisten und Leitfäden zum Tauchen. PDF-Zugang nach Beitritt zur Gruppe.",
+        dTitle:"📘 Checkliste „7 ungewöhnliche Regeln für Taucher 50Plus“",
+        dSub:"Laden Sie das PDF in Ihrer Sprache herunter. Ruhige Tauchgänge, Erfahrung und Sicherheit.",
+        dBtn:"📥 Checkliste herunterladen",
+        dNote:"Das PDF ist für Mitglieder von Dive50Plus verfügbar (angehefteter Beitrag in der Gruppe).",
+        kTitle:"🐠 iScuba Kids – bald verfügbar",
+        kSub:"Bereich für Eltern und Kinder in Entwicklung. Checklisten und Mini-Guides folgen.",
+        kBtn:"🚧 In Arbeit",
+        kNote:"Geplant: „7 Schritte zum ersten Tauchgang“. Folgen Sie den Updates in der Gruppe.",
+        fTitle:"Häufig gestellte Fragen",
+        faq:[
+          ["Warum sind iScuba-Materialien kostenlos?","Weil Tauchen den Austausch von Erfahrung bedeutet – keine Geheimhaltung. Wir teilen, was hilft, sicher und bewusst zu tauchen."],
+          ["Muss ich Profi sein, um teilzunehmen?","Nein. In Dive50Plus und iScuba Kids sind alle gleich. Respekt vor dem Meer und Lernbereitschaft sind entscheidend."],
+          ["Wie geht es weiter?","Weitere Routen, Geschichten und Tipps – ohne Werbung und Hype."]
+        ],
+        jTitle:"Noch nicht Teil der Community? Treten Sie bei!",
+        jSub:"Tauchen ist eine Reise – gemeinsam ist sie schöner.",
+        copy:"© iScuba.online – Internationale Tauchgemeinschaft.",
+        file:"dive50plus-DE.pdf"
+      },
+      fr:{
+        hTitle:"Communauté & Ressources gratuites",
+        hSub:"Listes de contrôle et guides de plongée gratuits. Accès au PDF après avoir rejoint le groupe.",
+        dTitle:"📘 Liste de contrôle « 7 règles inattendues du plongeur 50Plus »",
+        dSub:"Téléchargez le PDF dans votre langue. Plongées calmes, expérience et sécurité.",
+        dBtn:"📥 Télécharger la liste",
+        dNote:"Le PDF est disponible pour les membres de Dive50Plus (publication épinglée dans le groupe).",
+        kTitle:"🐠 iScuba Kids – bientôt disponible",
+        kSub:"Section pour les parents et les enfants en développement. Listes et mini-guides à venir.",
+        kBtn:"🚧 En développement",
+        kNote:"Prévu : « 7 étapes vers la première plongée ». Suivez les mises à jour dans le groupe.",
+        fTitle:"Questions fréquentes",
+        faq:[
+          ["Pourquoi les ressources iScuba sont-elles gratuites ?","Parce que la plongée consiste à partager l’expérience, pas à garder des secrets. Nous partageons ce qui aide à plonger en toute sécurité et conscience."],
+          ["Faut-il être professionnel pour participer ?","Non. Dans Dive50Plus et iScuba Kids, tout le monde est égal. Le respect de la mer et l’envie de progresser comptent avant tout."],
+          ["Et ensuite ?","D’autres itinéraires, récits et conseils pratiques – sans publicité ni course aux likes."]
+        ],
+        jTitle:"Pas encore membre ? Rejoignez-nous",
+        jSub:"La plongée est un voyage – mieux ensemble.",
+        copy:"© iScuba.online – Communauté internationale de plongeurs.",
+        file:"dive50plus-FR.pdf"
+      },
+      it:{
+        hTitle:"Comunità e Risorse Gratuite",
+        hSub:"Checklist e guide subacquee gratuite. Accesso PDF dopo l'iscrizione al gruppo.",
+        dTitle:"📘 Checklist “7 regole non ovvie per i sub 50Plus”",
+        dSub:"Scarica il PDF nella tua lingua. Immersioni tranquille, esperienza e sicurezza.",
+        dBtn:"📥 Scarica la checklist",
+        dNote:"Il PDF è disponibile per i membri Dive50Plus (post fissato nel gruppo).",
+        kTitle:"🐠 iScuba Kids – in arrivo",
+        kSub:"Sezione per genitori e bambini in sviluppo. Checklist e mini-guide in arrivo.",
+        kBtn:"🚧 In lavorazione",
+        kNote:"In programma: “7 passi verso la prima immersione”. Segui gli aggiornamenti nel gruppo.",
+        fTitle:"Domande frequenti",
+        faq:[
+          ["Perché i materiali iScuba sono gratuiti?","Perché l’immersione è condivisione di esperienza, non segreti. Condividiamo ciò che aiuta a immergersi in sicurezza e consapevolezza."],
+          ["Devo essere un professionista per partecipare?","No. In Dive50Plus e iScuba Kids siamo tutti uguali. Il rispetto per il mare e la voglia di crescere contano di più."],
+          ["Cosa succede dopo?","Nuovi percorsi, storie e consigli pratici – senza pubblicità né competizione."]
+        ],
+        jTitle:"Non fai ancora parte della community? Unisciti!",
+        jSub:"L'immersione è un viaggio – meglio insieme.",
+        copy:"© iScuba.online – Comunità internazionale di subacquei.",
+        file:"dive50plus-IT.pdf"
+      },
+      lv:{
+        hTitle:"Kopiena un bezmaksas materiāli",
+        hSub:"Bezmaksas niršanas kontrolsaraksti un ceļveži. PDF pieejams pēc pievienošanās grupai.",
+        dTitle:"📘 Kontrolsaraksts “7 negaidīti noteikumi nirējiem 50Plus”",
+        dSub:"Lejupielādējiet PDF savā valodā. Mierīgas niršanas, pieredze un drošība.",
+        dBtn:"📥 Lejupielādēt kontrolsarakstu",
+        dNote:"PDF pieejams Dive50Plus dalībniekiem (pievienotajā grupas ierakstā).",
+        kTitle:"🐠 iScuba Kids — drīzumā",
+        kSub:"Vecākiem un bērniem paredzētā sadaļa izstrādē. Būs kontrolsaraksti un mini-ceļveži.",
+        kBtn:"🚧 Izstrādē",
+        kNote:"Plānots: “7 soļi līdz pirmajai niršanai”. Sekojiet jaunumiem grupā.",
+        fTitle:"Biežāk uzdotie jautājumi",
+        faq:[
+          ["Kāpēc iScuba materiāli ir bez maksas?","Tāpēc, ka niršana ir pieredzes apmaiņa, nevis noslēpumu glabāšana. Mēs dalāmies ar to, kas palīdz droši un apzināti nirt."],
+          ["Vai man jābūt profesionālim, lai piedalītos?","Nē. Dive50Plus un iScuba Kids visi ir vienlīdzīgi. Galvenais ir cieņa pret jūru un vēlme attīstīties."],
+          ["Kas būs tālāk?","Jauni maršruti, stāsti un padomi – bez reklāmām un sacensībām."]
+        ],
+        jTitle:"Vēl neesat mūsu kopienā? Pievienojieties!",
+        jSub:"Niršana ir ceļojums — vieglāk kopā.",
+        copy:"© iScuba.online — Starptautiskā nirēju kopiena.",
+        file:"dive50plus-LV.pdf"
+      }
     };
 
     function renderFAQ(list){
