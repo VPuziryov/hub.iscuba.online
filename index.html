@@ -64,6 +64,14 @@
     .faq h2{text-align:center;color:var(--txt);margin-bottom:20px}
     .faq p{color:var(--muted);font-size:16px;line-height:1.6;margin-bottom:16px}
     .faq strong{color:var(--txt)}
+    .join{max-width:900px;margin:60px auto;text-align:center;padding:0 20px}
+    .join h2{color:#e8f3f9;margin-bottom:20px}
+    .join p{color:#a7c2cf;margin-bottom:30px}
+    .join .btns{display:flex;flex-wrap:wrap;gap:20px;justify-content:center}
+    .join a{
+      text-decoration:none;display:inline-block;min-width:260px;
+      padding:14px 22px;border-radius:12px;font-weight:700;
+    }
     @media(max-width:800px){h1{font-size:28px}}
   </style>
 </head>
@@ -104,6 +112,15 @@
     <h2 id="f-title"></h2>
     <div id="faq-body"></div>
   </section>
+
+  <section class="join" id="join">
+    <h2 id="j-title"></h2>
+    <p id="j-sub"></p>
+    <div class="btns">
+      <a id="j-dive" href="https://www.facebook.com/groups/diveover50" target="_blank">🤿 Dive 50Plus</a>
+      <a id="j-kids" href="https://www.facebook.com/groups/iscubakids" target="_blank">🐠 iScuba Kids</a>
+    </div>
+  </section>
 </main>
 
 <footer id="f-copy"></footer>
@@ -130,6 +147,8 @@ ru:{
   ["Что будет дальше?",
    "После чек-листов мы публикуем новые маршруты, истории и советы. Всё — без рекламы и гонки за лайками."]
  ],
+ jTitle:"🌊 Если вы ещё не с нами — присоединяйтесь к сообществу",
+ jSub:"Дайвинг — это не спорт, а путь. А идти по нему интереснее вместе.",
  copy:"© iScuba.online — международное сообщество дайверов.",
  file:"dive50plus-RU.pdf"
 },
@@ -153,6 +172,8 @@ en:{
   ["What comes next?",
    "More routes, stories, and practical advice — without ads or hype."]
  ],
+ jTitle:"🌊 Not part of the community yet? Join us",
+ jSub:"Diving is not a sport, it’s a journey — and journeys are better together.",
  copy:"© iScuba.online — International Diving Community.",
  file:"dive50plus-EN.pdf"
 },
@@ -176,6 +197,8 @@ de:{
   ["Wie geht es weiter?",
    "Weitere Routen, Geschichten und Tipps — ohne Werbung oder Eile."]
  ],
+ jTitle:"🌊 Noch kein Mitglied? Treten Sie der Community bei",
+ jSub:"Tauchen ist kein Sport, sondern ein Weg – und gemeinsam ist er schöner.",
  copy:"© iScuba.online — internationale Tauchgemeinschaft.",
  file:"dive50plus-DE.pdf"
 },
@@ -199,6 +222,8 @@ fr:{
   ["Et ensuite ?",
    "De nouveaux itinéraires, récits et conseils — sans publicité ni compétition."]
  ],
+ jTitle:"🌊 Pas encore membre ? Rejoignez la communauté",
+ jSub:"La plongée n’est pas un sport, c’est un voyage – et les voyages sont meilleurs ensemble.",
  copy:"© iScuba.online — communauté internationale de plongée.",
  file:"dive50plus-FR.pdf"
 },
@@ -222,6 +247,8 @@ it:{
   ["E poi?",
    "Nuovi percorsi, storie e consigli — senza pubblicità o fretta."]
  ],
+ jTitle:"🌊 Non fai ancora parte della community? Unisciti a noi",
+ jSub:"Le immersioni non sono uno sport, ma un viaggio – e insieme è più bello.",
  copy:"© iScuba.online — comunità internazionale di diving.",
  file:"dive50plus-IT.pdf"
 },
@@ -245,6 +272,8 @@ lv:{
   ["Kas tālāk?",
    "Jauni maršruti, stāsti un padomi — bez reklāmām un steigas."]
  ],
+ jTitle:"🌊 Neesi vēl mūsu kopienā? Pievienojies!",
+ jSub:"Niršana nav sports, bet ceļojums – un kopā tas ir interesantāk.",
  copy:"© iScuba.online — starptautiska nirēju kopiena.",
  file:"dive50plus-LV.pdf"
 }
@@ -264,6 +293,8 @@ function applyLang(l){
  document.getElementById('k-note').textContent=L.kNote;
  document.getElementById('f-copy').textContent=L.copy;
  document.getElementById('f-title').textContent=L.fTitle;
+ document.getElementById('j-title').textContent=L.jTitle;
+ document.getElementById('j-sub').textContent=L.jSub;
  const faqBody=document.getElementById('faq-body');
  faqBody.innerHTML="";
  L.faq.forEach(q=>{
