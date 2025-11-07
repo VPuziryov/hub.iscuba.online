@@ -19,7 +19,6 @@
 
   <style>
     :root{
-      /* Цвета и размеры */
       --bg1:#0b1724; --bg2:#12273b;
       --surface:rgba(255,255,255,.08);
       --stroke:rgba(255,255,255,.12);
@@ -42,7 +41,6 @@
       display:flex; flex-direction:column;
     }
 
-    /* Шапка */
     header{
       position:sticky; top:0; z-index:10;
       display:flex; align-items:center; justify-content:space-between;
@@ -58,14 +56,12 @@
       padding:8px 10px; font-weight:600;
     }
 
-    /* Хиро */
     .hero{
       max-width:1100px; margin:36px auto 0; padding:0 16px; text-align:center;
     }
     .hero h1{font-size:28px; margin:4px 0 6px}
     .hero p{color:var(--muted); margin:0}
 
-    /* Карточки материалов */
     .grid{
       max-width:1100px; margin:24px auto; padding:0 16px;
       display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:22px;
@@ -100,7 +96,6 @@
     .btn.mint:hover{background:var(--mint-2)}
     .btn.disabled{opacity:.55; cursor:not-allowed}
 
-    /* FAQ (аккордеон) */
     .faq{max-width:900px; margin:34px auto 0; padding:0 16px}
     .faq h2{font-size:22px; text-align:center; margin:0 0 14px}
     details{
@@ -116,13 +111,11 @@
       display:inline-flex; align-items:center; justify-content:center; font-weight:900; font-size:14px}
     details p{color:var(--muted); margin:10px 0 2px; line-height:1.6}
 
-    /* Join */
     .join{max-width:900px; margin:36px auto 40px; padding:0 16px; text-align:center}
     .join h3{font-size:20px; margin:0 0 6px}
     .join p{color:var(--muted); margin:0 0 16px}
     .join .btns{display:flex; flex-wrap:wrap; gap:16px; justify-content:center}
 
-    /* Подвал */
     footer{
       margin-top:auto; padding:22px 16px; text-align:center;
       color:var(--muted); border-top:1px solid var(--stroke);
@@ -136,7 +129,7 @@
 <body>
   <header>
     <a class="brand" href="https://iscuba.online" target="_blank" rel="noopener">iScuba.<small>online</small></a>
-    <select id="language" aria-label="Language" onchange="setLang(this.value)">
+    <select id="language" onchange="setLang(this.value)">
       <option value="ru">🇷🇺 RU</option>
       <option value="en">🇬🇧 EN</option>
       <option value="de">🇩🇪 DE</option>
@@ -146,13 +139,11 @@
     </select>
   </header>
 
-  <!-- HERO -->
   <section class="hero">
     <h1 id="h-title"></h1>
     <p id="h-sub"></p>
   </section>
 
-  <!-- MATERIALS -->
   <section class="grid">
     <article class="card">
       <h2 id="d-title"></h2>
@@ -169,19 +160,17 @@
     </article>
   </section>
 
-  <!-- FAQ -->
   <section class="faq">
     <h2 id="f-title"></h2>
     <div id="faq-body"></div>
   </section>
 
-  <!-- JOIN -->
   <section class="join">
     <h3 id="j-title"></h3>
     <p id="j-sub"></p>
     <div class="btns">
-      <a class="btn" style="text-decoration:none" href="https://www.facebook.com/groups/diveover50" target="_blank" rel="noopener">🤿 Dive 50Plus</a>
-      <a class="btn mint" style="text-decoration:none" href="https://www.facebook.com/groups/iscubakids" target="_blank" rel="noopener">🐠 iScuba Kids</a>
+      <a class="btn" href="https://www.facebook.com/groups/diveover50" target="_blank">🤿 Dive 50Plus</a>
+      <a class="btn mint" href="https://www.facebook.com/groups/iscubakids" target="_blank">🐠 iScuba Kids</a>
     </div>
   </section>
 
@@ -191,8 +180,7 @@
   </footer>
 
   <script>
-    /* Тексты и файлы */
-    const tr = {
+    const tr={
       ru:{
         hTitle:"Сообщество и бесплатные материалы",
         hSub:"Бесплатные чек-листы и полезные материалы по дайвингу. Доступ к PDF после вступления в группу.",
@@ -203,15 +191,12 @@
         kTitle:"🐠 iScuba Kids — скоро здесь",
         kSub:"Раздел для родителей и детей в разработке. Будут чек-листы и мини-гайды.",
         kBtn:"🚧 В разработке",
-        kNote:"Планируем: «7 шагов к первому погружению». Подпишитесь, чтобы не пропустить.",
+        kNote:"Планируем: «7 шагов к первому погружению». Следите за обновлениями в группе.",
         fTitle:"Часто задаваемые вопросы",
         faq:[
-          ["Почему материалы iScuba бесплатны?",
-           "Потому что дайвинг — это про передачу опыта, а не про секреты. Мы делимся тем, что помогает погружаться осознанно и безопасно."],
-          ["Нужно ли быть профессионалом, чтобы участвовать?",
-           "Нет. В сообществе Dive 50Plus и iScuba Kids все равны. Главное — уважение к морю и желание развиваться без спешки."],
-          ["Что будет дальше?",
-           "После чек-листов публикуем маршруты, истории и советы — без рекламы и гонки за лайками."]
+          ["Почему материалы iScuba бесплатны?","Потому что дайвинг — это про передачу опыта, а не про секреты. Мы делимся тем, что помогает погружаться осознанно и безопасно."],
+          ["Нужно ли быть профессионалом, чтобы участвовать?","Нет. В сообществе Dive50Plus и iScuba Kids все равны. Главное — уважение к морю и желание развиваться без спешки."],
+          ["Что будет дальше?","После чек-листов публикуем маршруты, истории и советы — без рекламы и гонки за лайками."]
         ],
         jTitle:"Если вы ещё не с нами — присоединяйтесь",
         jSub:"Дайвинг — это путь. Идти по нему проще вместе.",
@@ -228,15 +213,12 @@
         kTitle:"🐠 iScuba Kids — coming soon",
         kSub:"Section for parents and kids is under development. Checklists and mini-guides ahead.",
         kBtn:"🚧 Coming soon",
-        kNote:"Planned: “7 Steps to the First Dive”. Follow the group to stay updated.",
+        kNote:"Planned: “7 Steps to the First Dive”. Follow updates in the group.",
         fTitle:"Frequently Asked Questions",
         faq:[
-          ["Why are iScuba materials free?",
-           "Because diving is about sharing experience, not keeping secrets. We share what truly helps you dive safely and consciously."],
-          ["Do I need to be a professional?",
-           "No. In Dive50Plus and iScuba Kids everyone is equal. Respect for the sea and willingness to grow matter most."],
-          ["What comes next?",
-           "More routes, stories and practical advice — without ads or hype."]
+          ["Why are iScuba materials free?","Because diving is about sharing experience, not keeping secrets. We share what truly helps you dive safely and consciously."],
+          ["Do I need to be a professional?","No. In Dive50Plus and iScuba Kids everyone is equal. Respect for the sea and willingness to grow matter most."],
+          ["What comes next?","More routes, stories and practical advice — without ads or hype."]
         ],
         jTitle:"Not part of the community yet? Join us",
         jSub:"Diving is a journey — better together.",
@@ -244,103 +226,19 @@
         file:"dive50plus-EN.pdf"
       },
       de:{
-        hTitle:"Community & Kostenlose Materialien",
-        hSub:"Kostenlose Tauch-Checklisten und Guides. PDF nach Gruppenbeitritt.",
-        dTitle:"📘 Checkliste „7 Regeln für Taucher 50+“",
-        dSub:"Laden Sie das PDF in Ihrer Sprache herunter. Ruhige Tauchgänge, Erfahrung und Sicherheit.",
-        dBtn:"📥 Checkliste herunterladen",
-        dNote:"PDF ist für Mitglieder der Dive50Plus-Gruppe verfügbar (angepinnter Beitrag).",
-        kTitle:"🐠 iScuba Kids — bald verfügbar",
-        kSub:"Bereich für Eltern und Kinder in Arbeit. Checklisten und Mini-Guides folgen.",
-        kBtn:"🚧 In Arbeit",
-        kNote:"Geplant: „7 Schritte zum ersten Tauchgang“. Folgen Sie der Gruppe.",
-        fTitle:"Häufige Fragen",
-        faq:[
-          ["Warum sind iScuba-Materialien kostenlos?",
-           "Tauchen bedeutet Erfahrung zu teilen, nicht Geheimnisse zu hüten. Wir geben weiter, was wirklich hilft, sicher zu tauchen."],
-          ["Muss ich Profi sein?",
-           "Nein. In Dive50Plus und iScuba Kids sind alle gleich. Wichtig sind Respekt vor dem Meer und Lernbereitschaft."],
-          ["Wie geht es weiter?",
-           "Weitere Routen, Geschichten und Tipps — ohne Werbung oder Eile."]
-        ],
-        jTitle:"Noch kein Mitglied? Treten Sie der Community bei",
-        jSub:"Tauchen ist ein Weg — gemeinsam ist er schöner.",
-        copy:"© iScuba.online — internationale Tauchgemeinschaft.",
+        kNote:"Geplant: „7 Schritte zum ersten Tauchgang“. Neuigkeiten in der Gruppe verfolgen.",
         file:"dive50plus-DE.pdf"
       },
       fr:{
-        hTitle:"Communauté & ressources gratuites",
-        hSub:"Check-lists et guides de plongée gratuits. PDF après avoir rejoint le groupe.",
-        dTitle:"📘 Liste de contrôle « 7 règles du plongeur 50+ »",
-        dSub:"Téléchargez le PDF dans votre langue. Plongées calmes, expérience et sécurité.",
-        dBtn:"📥 Télécharger la liste",
-        dNote:"Le PDF est disponible pour les membres de Dive50Plus (post épinglé).",
-        kTitle:"🐠 iScuba Kids — bientôt ici",
-        kSub:"Rubrique parents & enfants en cours. Check-lists et mini-guides à venir.",
-        kBtn:"🚧 Bientôt",
-        kNote:"Prévu : « 7 étapes vers la première plongée ». Suivez le groupe.",
-        fTitle:"Questions fréquentes",
-        faq:[
-          ["Pourquoi les ressources iScuba sont-elles gratuites ?",
-           "Parce que la plongée, c’est le partage d’expérience, pas les secrets. Nous partageons ce qui aide à plonger en sécurité."],
-          ["Faut-il être professionnel ?",
-           "Non. Dans Dive50Plus et iScuba Kids, tout le monde est égal. Respect de la mer et envie d’apprendre avant tout."],
-          ["Et ensuite ?",
-           "De nouveaux itinéraires, récits et conseils — sans publicité ni compétition."]
-        ],
-        jTitle:"Pas encore membre ? Rejoignez la communauté",
-        jSub:"La plongée est un voyage — mieux ensemble.",
-        copy:"© iScuba.online — communauté internationale de plongée.",
+        kNote:"Prévu : « 7 étapes vers la première plongée ». Suivez les actualités dans le groupe.",
         file:"dive50plus-FR.pdf"
       },
       it:{
-        hTitle:"Comunità e materiali gratuiti",
-        hSub:"Checklist e guide di diving gratuite. PDF dopo l’adesione al gruppo.",
-        dTitle:"📘 Checklist “7 regole per sub 50+”",
-        dSub:"Scarica il PDF nella tua lingua. Immersioni tranquille, esperienza e sicurezza.",
-        dBtn:"📥 Scarica la checklist",
-        dNote:"Il PDF è disponibile per i membri di Dive50Plus (post fissato).",
-        kTitle:"🐠 iScuba Kids — presto online",
-        kSub:"Sezione per genitori e bambini in sviluppo. Checklist e mini-guide in arrivo.",
-        kBtn:"🚧 In sviluppo",
-        kNote:"In programma: “7 passi verso la prima immersione”. Segui il gruppo.",
-        fTitle:"Domande frequenti",
-        faq:[
-          ["Perché i materiali iScuba sono gratuiti?",
-           "Perché le immersioni significano condividere esperienza, non segreti. Offriamo ciò che aiuta davvero a immergersi in sicurezza."],
-          ["Serve essere professionisti?",
-           "No. In Dive50Plus e iScuba Kids tutti sono uguali. Contano il rispetto per il mare e la voglia di crescere."],
-          ["E poi?",
-           "Nuovi percorsi, storie e consigli — senza pubblicità o fretta."]
-        ],
-        jTitle:"Non fai ancora parte della community? Unisciti a noi",
-        jSub:"Le immersioni sono un viaggio — meglio insieme.",
-        copy:"© iScuba.online — comunità internazionale di diving.",
+        kNote:"In programma: “7 passi verso la prima immersione”. Segui gli aggiornamenti nel gruppo.",
         file:"dive50plus-IT.pdf"
       },
       lv:{
-        hTitle:"Kopiena un bezmaksas materiāli",
-        hSub:"Bezmaksas niršanas kontrolsaraksti un ceļveži. PDF pēc pievienošanās grupai.",
-        dTitle:"📘 Pārbaudes saraksts “7 noteikumi nirējam 50+”",
-        dSub:"Lejupielādējiet PDF savā valodā. Mierīgas niršanas, pieredze un drošība.",
-        dBtn:"📥 Lejupielādēt sarakstu",
-        dNote:"PDF pieejams Dive50Plus kopienas dalībniekiem (piesprausts ieraksts).",
-        kTitle:"🐠 iScuba Kids — drīzumā",
-        kSub:"Sadaļa vecākiem un bērniem top. Būs saraksti un mini-ceļveži.",
-        kBtn:"🚧 Drīzumā",
-        kNote:"Plānots: “7 soļi līdz pirmajai niršanai”. Seko grupai.",
-        fTitle:"Biežāk uzdotie jautājumi",
-        faq:[
-          ["Kāpēc iScuba materiāli ir bez maksas?",
-           "Jo niršana nozīmē pieredzes nodošanu, nevis noslēpumu glabāšanu. Dalāmies ar to, kas palīdz droši nirt."],
-          ["Vai jābūt profesionālim?",
-           "Nē. Dive50Plus un iScuba Kids visi ir vienlīdzīgi. Svarīga cieņa pret jūru un vēlme augt."],
-          ["Kas tālāk?",
-           "Jauni maršruti, stāsti un padomi — bez reklāmām un steigas."]
-        ],
-        jTitle:"Neesi vēl mūsu kopienā? Pievienojies!",
-        jSub:"Niršana ir ceļojums — kopā tas ir labāk.",
-        copy:"© iScuba.online — starptautiska nirēju kopiena.",
+        kNote:"Plānots: “7 soļi līdz pirmajai niršanai”. Sekojiet jaunumiem grupā.",
         file:"dive50plus-LV.pdf"
       }
     };
@@ -353,37 +251,30 @@
         const s=document.createElement('summary');
         const dot=document.createElement('span');
         dot.className='qmark'; dot.textContent='?';
-        s.appendChild(dot);
-        const title=document.createElement('span');
-        title.textContent=' '+q;
-        s.appendChild(title);
-        d.appendChild(s);
-        const p=document.createElement('p'); p.textContent=a;
-        d.appendChild(p);
-        wrap.appendChild(d);
+        s.append(dot,document.createTextNode(' '+q));
+        d.append(s);
+        const p=document.createElement('p'); p.textContent=a; d.append(p);
+        wrap.append(d);
       });
     }
 
     function applyLang(code){
-      const L=tr[code];
-      // Hero
-      h_title.textContent=L.hTitle;
-      h_sub.textContent=L.hSub;
-      // Cards
-      d_title.textContent=L.dTitle;
-      d_sub.textContent=L.dSub;
-      d_btn.textContent=L.dBtn;
-      d_note.textContent=L.dNote;
-      k_title.textContent=L.kTitle;
-      k_sub.textContent=L.kSub;
-      k_btn.textContent=L.kBtn;
-      k_note.textContent=L.kNote;
-      // FAQ + Join + Footer
-      f_title.textContent=L.fTitle;
-      renderFAQ(L.faq);
-      j_title.textContent=L.jTitle;
-      j_sub.textContent=L.jSub;
-      f_copy.textContent=L.copy;
+      const L=tr[code]||tr.en;
+      h_title.textContent=L.hTitle||tr.en.hTitle;
+      h_sub.textContent=L.hSub||tr.en.hSub;
+      d_title.textContent=L.dTitle||tr.en.dTitle;
+      d_sub.textContent=L.dSub||tr.en.dSub;
+      d_btn.textContent=L.dBtn||tr.en.dBtn;
+      d_note.textContent=L.dNote||tr.en.dNote;
+      k_title.textContent=L.kTitle||tr.en.kTitle;
+      k_sub.textContent=L.kSub||tr.en.kSub;
+      k_btn.textContent=L.kBtn||tr.en.kBtn;
+      k_note.textContent=L.kNote||tr.en.kNote;
+      f_title.textContent=L.fTitle||tr.en.fTitle;
+      renderFAQ(L.faq||tr.en.faq);
+      j_title.textContent=L.jTitle||tr.en.jTitle;
+      j_sub.textContent=L.jSub||tr.en.jSub;
+      f_copy.textContent=L.copy||tr.en.copy;
 
       d_btn.onclick=function(){
         fbq('track','Lead',{content_name:'Checklist_50Plus',language:code});
@@ -392,7 +283,6 @@
       };
     }
 
-    // DOM refs
     const h_title=document.getElementById('h-title');
     const h_sub=document.getElementById('h-sub');
     const d_title=document.getElementById('d-title');
@@ -408,7 +298,7 @@
     const j_sub=document.getElementById('j-sub');
     const f_copy=document.getElementById('f-copy');
 
-    function setLang(l){ applyLang(l); }
+    function setLang(l){applyLang(l);}
     const userLang=(navigator.language||'en').slice(0,2).toLowerCase();
     const initial=tr[userLang]?userLang:'en';
     document.getElementById('language').value=initial;
