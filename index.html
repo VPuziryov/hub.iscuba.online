@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>iScuba Hub — чек-листы и материалы</title>
 
-  <!-- Meta Pixel -->
   <script>
     !function(f,b,e,v,n,t,s){
       if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -29,113 +28,77 @@
       --shadow:0 18px 40px rgba(0,0,0,.35);
     }
     *{box-sizing:border-box}
-    html,body{height:100%}
     body{
       margin:0; font-family:system-ui,-apple-system,"Segoe UI",Inter,Roboto,Arial,sans-serif;
       color:var(--txt);
-      background:
-        radial-gradient(1200px 800px at 20% -10%, #163d55 0%, transparent 60%),
-        radial-gradient(900px 600px at 90% 10%, #11344a 0%, transparent 60%),
-        linear-gradient(180deg,var(--bg1),var(--bg2));
-      min-height:100%;
-      display:flex; flex-direction:column;
+      background:linear-gradient(180deg,var(--bg1),var(--bg2));
+      display:flex; flex-direction:column; min-height:100vh;
     }
 
-    /* Header */
     header{
-      position:sticky; top:0; z-index:10;
-      display:flex; align-items:center; justify-content:space-between;
-      padding:14px 18px; border-bottom:1px solid var(--stroke);
+      position:sticky;top:0;z-index:10;
+      display:flex;justify-content:space-between;align-items:center;
+      padding:14px 18px;border-bottom:1px solid var(--stroke);
       backdrop-filter:saturate(130%) blur(10px);
-      background:linear-gradient(180deg,rgba(7,18,28,.7),rgba(7,18,28,.35));
+      background:rgba(7,18,28,.7);
     }
-    .brand{color:var(--txt); text-decoration:none; font-weight:800; letter-spacing:.3px}
-    .brand small{opacity:.85; font-weight:700}
+    .brand{color:var(--txt);text-decoration:none;font-weight:800}
     select{
-      background:rgba(255,255,255,.07);
-      color:var(--txt);
-      border:1px solid var(--stroke);
+      background:rgba(255,255,255,.1);
+      color:#fff;
+      border:1px solid rgba(255,255,255,.25);
       border-radius:10px;
-      padding:6px 8px;
+      padding:6px 10px;
       font-weight:600;
+      appearance:none;
       cursor:pointer;
-      backdrop-filter:blur(6px);
     }
-    select:hover{background:rgba(255,255,255,.15)}
-
-    /* Hero */
-    .hero{
-      max-width:1100px; margin:36px auto 0; padding:0 16px; text-align:center;
+    select option{
+      background:#0b1724;
+      color:#fff;
     }
-    .hero h1{font-size:28px; margin:4px 0 6px}
-    .hero p{color:var(--muted); margin:0}
+    select:hover{background:rgba(255,255,255,.2)}
 
-    /* Cards */
+    .hero{text-align:center;margin:40px auto 10px;max-width:900px}
+    .hero h1{font-size:28px;margin:0 0 6px}
+    .hero p{color:var(--muted)}
+
     .grid{
-      max-width:1100px; margin:24px auto; padding:0 16px;
-      display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:22px;
+      display:grid;gap:20px;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      max-width:1000px;margin:20px auto;padding:0 16px;
     }
     .card{
-      background:var(--surface);
-      border:1px solid var(--stroke);
-      border-radius:var(--radius);
-      padding:24px;
-      box-shadow:var(--shadow);
-      backdrop-filter:blur(var(--blur));
-      transition:transform .18s ease, box-shadow .18s ease, border-color .18s;
+      background:var(--surface);border:1px solid var(--stroke);
+      border-radius:var(--radius);padding:24px;
+      box-shadow:var(--shadow);backdrop-filter:blur(var(--blur));
+      transition:all .2s ease;
     }
-    .card:hover{
-      transform:translateY(-4px);
-      box-shadow:0 24px 50px rgba(0,0,0,.45);
-      border-color:rgba(255,255,255,.18);
-    }
-    .card h2{font-size:20px; margin:0 0 10px}
-    .card p{color:var(--muted); margin:0 0 16px}
-
+    .card:hover{transform:translateY(-4px);border-color:rgba(255,255,255,.2)}
     .btn{
-      display:inline-flex; align-items:center; justify-content:center; gap:10px;
-      min-width:240px; padding:13px 18px; font-weight:800;
-      border:0; border-radius:14px; cursor:pointer;
-      color:#fff; background:var(--primary);
-      box-shadow:0 12px 28px rgba(25,160,255,.28);
-      transition:transform .15s ease, filter .15s ease, background .15s ease;
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:12px 20px;border:0;border-radius:14px;
+      font-weight:800;color:#fff;background:var(--primary);
+      cursor:pointer;transition:.2s;box-shadow:0 8px 25px rgba(25,160,255,.3);
     }
-    .btn:hover{background:var(--primary-2); transform:translateY(-1px)}
-    .btn.mint{background:var(--mint); color:#042e2a; box-shadow:0 12px 28px rgba(61,214,195,.28)}
+    .btn:hover{background:var(--primary-2)}
+    .btn.mint{background:var(--mint);color:#04322b}
     .btn.mint:hover{background:var(--mint-2)}
-    .btn.disabled{opacity:.55; cursor:not-allowed}
+    .btn.disabled{opacity:.5;cursor:not-allowed}
 
-    /* FAQ */
-    .faq{max-width:900px; margin:34px auto 0; padding:0 16px}
-    .faq h2{font-size:22px; text-align:center; margin:0 0 14px}
-    details{
-      background:var(--surface); border:1px solid var(--stroke); border-radius:14px;
-      padding:14px 16px; margin:10px 0; backdrop-filter:blur(var(--blur));
-    }
-    summary{
-      list-style:none; cursor:pointer; font-weight:700;
-      display:flex; align-items:center; gap:10px;
-    }
-    summary::-webkit-details-marker{display:none}
-    .qmark{width:22px; height:22px; border-radius:50%; background:#ffcf4d; color:#1d2a34;
-      display:inline-flex; align-items:center; justify-content:center; font-weight:900; font-size:14px}
-    details p{color:var(--muted); margin:10px 0 2px; line-height:1.6}
+    .faq{max-width:900px;margin:40px auto;padding:0 16px}
+    .faq h2{text-align:center}
+    details{background:var(--surface);border:1px solid var(--stroke);border-radius:14px;padding:14px 16px;margin:8px 0}
+    summary{cursor:pointer;font-weight:700}
+    details p{color:var(--muted);margin:8px 0 0}
 
-    /* Join */
-    .join{max-width:900px; margin:36px auto 40px; padding:0 16px; text-align:center}
-    .join h3{font-size:20px; margin:0 0 6px}
-    .join p{color:var(--muted); margin:0 0 16px}
-    .join .btns{display:flex; flex-wrap:wrap; gap:16px; justify-content:center}
+    .join{text-align:center;margin:40px auto;max-width:800px}
+    .join h3{margin:0 0 6px}
+    .join p{color:var(--muted)}
+    .join .btns{display:flex;justify-content:center;gap:16px;flex-wrap:wrap}
 
-    /* Footer */
-    footer{
-      margin-top:auto; padding:22px 16px; text-align:center;
-      color:var(--muted); border-top:1px solid var(--stroke);
-    }
-    .sig{opacity:.9; margin-top:6px; font-size:13px}
-    @media (max-width:760px){
-      .hero h1{font-size:24px}
-    }
+    footer{text-align:center;color:var(--muted);padding:20px;border-top:1px solid var(--stroke);margin-top:auto}
+    .sig{font-size:13px;opacity:.9;margin-top:4px}
   </style>
 </head>
 <body>
@@ -161,14 +124,13 @@
       <h2 id="d-title"></h2>
       <p id="d-sub"></p>
       <button class="btn" id="d-btn">📥</button>
-      <p id="d-note" style="margin-top:10px"></p>
+      <p id="d-note"></p>
     </article>
-
     <article class="card">
       <h2 id="k-title"></h2>
       <p id="k-sub"></p>
-      <button class="btn mint disabled" id="k-btn" disabled>🚧</button>
-      <p id="k-note" style="margin-top:10px"></p>
+      <button class="btn mint disabled" id="k-btn">🚧</button>
+      <p id="k-note"></p>
     </article>
   </section>
 
@@ -181,8 +143,8 @@
     <h3 id="j-title"></h3>
     <p id="j-sub"></p>
     <div class="btns">
-      <a class="btn" href="https://www.facebook.com/groups/diveover50" target="_blank">🤿 Dive 50Plus</a>
-      <a class="btn mint" href="https://www.facebook.com/groups/iscubakids" target="_blank">🐠 iScuba Kids</a>
+      <a class="btn" href="https://www.facebook.com/groups/dive50plus/" target="_blank">🤿 Dive 50Plus</a>
+      <a class="btn mint" href="https://www.facebook.com/groups/iscubakidsopen/" target="_blank">🐠 iScuba Kids</a>
     </div>
   </section>
 
@@ -201,14 +163,13 @@
         dBtn:"📥 Скачать чек-лист",
         dNote:"PDF доступен для участников Dive50Plus. Ссылка в закрепе группы.",
         kTitle:"🐠 iScuba Kids — скоро здесь",
-        kSub:"Раздел для родителей и детей в разработке. Будут чек-листы и мини-гайды.",
-        kBtn:"🚧 В разработке",
+        kSub:"Раздел для родителей и детей в разработке.",
         kNote:"Присоединяйтесь к группе, чтобы не пропустить обновления.",
         fTitle:"Часто задаваемые вопросы",
         faq:[
           ["Почему материалы iScuba бесплатны?","Потому что дайвинг — это про передачу опыта, а не про секреты."],
           ["Нужно ли быть профессионалом, чтобы участвовать?","Нет. Главное — уважение к морю и желание развиваться без спешки."],
-          ["Что будет дальше?","После чек-листов публикуем маршруты, истории и советы — без рекламы."]
+          ["Что будет дальше?","После чек-листов публикуем маршруты и советы — без рекламы."]
         ],
         jTitle:"Если вы ещё не с нами — присоединяйтесь",
         jSub:"Дайвинг — это путь. Идти по нему проще вместе.",
@@ -217,80 +178,60 @@
       },
       en:{
         hTitle:"Community & Free Resources",
-        hSub:"Free diving checklists and guides. Access the PDF after joining the group.",
+        hSub:"Free diving checklists and guides. Access after joining the group.",
         dTitle:"📘 Checklist “7 Rules for Divers 50+”",
         dSub:"Download the PDF in your language. Calm dives, experience and safety.",
         dBtn:"📥 Download Checklist",
         dNote:"PDF is available for Dive50Plus members (pinned post in the group).",
         kTitle:"🐠 iScuba Kids — coming soon",
         kSub:"Section for parents and kids is under development.",
-        kBtn:"🚧 Coming soon",
         kNote:"Join the group to stay updated.",
         fTitle:"Frequently Asked Questions",
         faq:[
-          ["Why are iScuba materials free?","Because diving is about sharing experience, not keeping secrets."],
+          ["Why are iScuba materials free?","Because diving is about sharing experience, not secrets."],
           ["Do I need to be a professional?","No. Respect for the sea and willingness to grow matter most."],
-          ["What comes next?","More routes, stories and advice — no ads, no rush."]
+          ["What comes next?","More routes, stories and advice — no ads."]
         ],
         jTitle:"Not part of the community yet? Join us",
         jSub:"Diving is a journey — better together.",
         copy:"© iScuba.online — International Diving Community.",
         file:"dive50plus-EN.pdf"
-      },
-      de:{
-        kNote:"Treten Sie der Gruppe bei, um auf dem Laufenden zu bleiben."
-      },
-      fr:{
-        kNote:"Rejoignez le groupe pour rester informé."
-      },
-      it:{
-        kNote:"Unisciti al gruppo per non perdere gli aggiornamenti."
-      },
-      lv:{
-        kNote:"Pievienojieties grupai, lai nepalaistu garām jaunumus."
       }
     };
 
-    function setLang(l){applyLang(l);}
-    function applyLang(code){
-      const L=tr[code]||tr.ru;
-      document.getElementById('h-title').textContent=L.hTitle;
-      document.getElementById('h-sub').textContent=L.hSub;
-      document.getElementById('d-title').textContent=L.dTitle;
-      document.getElementById('d-sub').textContent=L.dSub;
-      document.getElementById('d-btn').textContent=L.dBtn;
-      document.getElementById('d-note').textContent=L.dNote;
-      document.getElementById('k-title').textContent=L.kTitle;
-      document.getElementById('k-sub').textContent=L.kSub;
-      document.getElementById('k-btn').textContent=L.kBtn;
-      document.getElementById('k-note').textContent=L.kNote;
-      document.getElementById('f-title').textContent=L.fTitle;
-      document.getElementById('j-title').textContent=L.jTitle;
-      document.getElementById('j-sub').textContent=L.jSub;
-      document.getElementById('f-copy').textContent=L.copy;
+    function applyLang(c){
+      const L=tr[c]||tr.ru;
+      h_title.textContent=L.hTitle;
+      h_sub.textContent=L.hSub;
+      d_title.textContent=L.dTitle;
+      d_sub.textContent=L.dSub;
+      d_btn.textContent=L.dBtn;
+      d_note.textContent=L.dNote;
+      k_title.textContent=L.kTitle;
+      k_sub.textContent=L.kSub;
+      k_note.textContent=L.kNote;
+      f_title.textContent=L.fTitle;
+      f_copy.textContent=L.copy;
       const fb=document.getElementById('faq-body');
       fb.innerHTML="";
-      (L.faq||[]).forEach(([q,a])=>{
-        const d=document.createElement('details');
-        const s=document.createElement('summary');
-        const qm=document.createElement('span');qm.className='qmark';qm.textContent='?';
-        s.appendChild(qm);
-        s.appendChild(document.createTextNode(' '+q));
-        d.appendChild(s);
-        const p=document.createElement('p');p.textContent=a;d.appendChild(p);
-        fb.appendChild(d);
+      L.faq.forEach(([q,a])=>{
+        const det=document.createElement('details');
+        det.innerHTML=`<summary>${q}</summary><p>${a}</p>`;
+        fb.appendChild(det);
       });
-      document.getElementById('d-btn').onclick=function(){
-        fbq('track','Lead',{content_name:'Checklist_50Plus',language:code});
-        fbq('trackCustom','Checklist_50Plus_Downloaded',{language:code});
+      j_title.textContent=L.jTitle;
+      j_sub.textContent=L.jSub;
+      d_btn.onclick=function(){
+        fbq('track','Lead',{content_name:'Checklist_50Plus',language:c});
+        fbq('trackCustom','Checklist_50Plus_Downloaded',{language:c});
         window.open(L.file,'_blank');
       };
     }
-
     const userLang=(navigator.language||'en').slice(0,2).toLowerCase();
     const initial=tr[userLang]?userLang:'en';
     document.getElementById('language').value=initial;
     applyLang(initial);
+    function setLang(l){applyLang(l);}
   </script>
 </body>
 </html>
