@@ -224,150 +224,206 @@ footer{text-align:center;color:var(--muted);padding:22px}
 /* ---------- TRANSLATIONS ---------- */
 
 const tr={
-  ru:{
-    hTitle:"Сообщество и бесплатные материалы",
-    hSub:"Бесплатные чек-листы и материалы. Доступ к PDF после вступления в группу.",
-    dTitle:"📘 Чек-лист «7 неочевидных правил дайвера 50Plus»",
-    dSub:"Скачайте PDF на своём языке. Опыт, спокойствие и безопасность.",
-    dBtn:"📥 Скачать PDF",
-    dNote:"PDF доступен участникам Dive50Plus. Ссылка в закрепе.",
-    kTitle:"🐠 iScuba Kids — скоро здесь",
-    kSub:"Раздел для родителей и детей в разработке.",
-    kBtn:"🚧 В разработке",
-    kNote:"«7 шагов к первому погружению» скоро появится.",
-    fTitle:"Часто задаваемые вопросы",
-    faq:[
-      ["Почему материалы бесплатные?","Потому что дайвинг — это про опыт, а не секреты."],
-      ["Нужен ли профессиональный уровень?","Нет. Важны уважение к морю и желание развиваться."],
-      ["Что дальше?","Маршруты, истории и советы — без рекламы."]
+  const tr = {
+  ru: {
+    hTitle: "Сообщество и бесплатные материалы",
+    hSub: "Бесплатные чек-листы и полезные материалы по дайвингу. Доступ к PDF после вступления в группу.",
+    dTitle: "📘 Чек-лист «7 неочевидных правил дайвера 50Plus»",
+    dSub: "Скачайте PDF на своём языке. Спокойные погружения, опыт и безопасность.",
+    dBtn: "📥 Скачать чек-лист",
+    dNote: "PDF доступен в закрепе группы Dive50Plus.",
+    kTitle: "🐠 iScuba Kids — скоро здесь",
+    kSub: "Раздел для родителей и детей в разработке. Будут чек-листы и мини-гайды.",
+    kBtn: "🚧 В разработке",
+    kNote: "Планируем: «7 шагов к первому погружению». Следите за обновлениями в группе.",
+    fTitle: "Часто задаваемые вопросы",
+    faq: [
+      [
+        "Почему материалы iScuba бесплатны?",
+        "Потому что дайвинг — это про передачу опыта, а не про секреты. Мы делимся тем, что помогает погружаться осознанно и безопасно."
+      ],
+      [
+        "Нужно ли быть профессионалом, чтобы участвовать?",
+        "Нет. В Dive50Plus и iScuba Kids все равны. Главное — уважение к морю и желание развиваться."
+      ],
+      [
+        "Что будет дальше?",
+        "После чек-листов публикуем маршруты, истории и советы — без рекламы и гонки за лайками."
+      ]
     ],
-    jTitle:"Если вы ещё не с нами — присоединяйтесь",
-    jSub:"Дайвинг — путь, по которому легче идти вместе.",
-    copy:"© iScuba.online — международное сообщество дайверов.",
-    sig:"🧭 Виталий Пузырёв, инструктор-тренер SSI",
-    file:"7rules_50Plus_RU.pdf"
+    jTitle: "Если вы ещё не с нами — присоединяйтесь",
+    jSub: "Дайвинг — это путь. Идти по нему проще вместе.",
+    copy: "© iScuba.online — международное сообщество дайверов.",
+    sig: "🧭 Виталий Пузырёв, инструктор-тренер SSI",
+    file: "7rules_50Plus_RU.pdf"
   },
 
-  en:{
-    hTitle:"Community & Free Materials",
-    hSub:"Free diving checklists. PDF available after joining the group.",
-    dTitle:"📘 Checklist “7 Unconventional Rules for Divers 50Plus”",
-    dSub:"Download the PDF in your language.",
-    dBtn:"📥 Download PDF",
-    dNote:"PDF is available in the pinned post.",
-    kTitle:"🐠 iScuba Kids — coming soon",
-    kSub:"Section under development.",
-    kBtn:"🚧 Coming soon",
-    kNote:"“7 Steps to First Dive” coming soon.",
-    fTitle:"Frequently Asked Questions",
-    faq:[
-      ["Why is it free?","Because diving is about sharing knowledge."],
-      ["Do I need to be professional?","No — only respect for the sea."],
-      ["What’s next?","More routes and practical guides."]
+  en: {
+    hTitle: "Community & Free Materials",
+    hSub: "Free diving checklists and useful resources. PDF available after joining the group.",
+    dTitle: "📘 Checklist “7 Unconventional Rules for 50Plus Divers”",
+    dSub: "Download the PDF in your language. Calm dives, experience and safety.",
+    dBtn: "📥 Download Checklist",
+    dNote: "The PDF is available in the pinned post of the Dive50Plus group.",
+    kTitle: "🐠 iScuba Kids — coming soon",
+    kSub: "A section for parents and kids is under development. Checklists and mini-guides coming soon.",
+    kBtn: "🚧 Coming soon",
+    kNote: "Upcoming: “7 Steps to the First Dive”. Follow updates in the group.",
+    fTitle: "Frequently Asked Questions",
+    faq: [
+      [
+        "Why are iScuba materials free?",
+        "Because diving is about sharing experience, not hiding secrets. We share what helps people dive consciously and safely."
+      ],
+      [
+        "Do I need to be a professional?",
+        "No. In Dive50Plus and iScuba Kids everyone is equal. Respect for the sea and willingness to grow matter most."
+      ],
+      [
+        "What’s next?",
+        "More routes, stories and practical advice — without ads or hype."
+      ]
     ],
-    jTitle:"Not part of the community yet?",
-    jSub:"Diving is a journey — better together.",
-    copy:"© iScuba.online — International Diving Community.",
-    sig:"🧭 Vitaliy Puziryov, SSI Instructor Trainer",
-    file:"7rules_50Plus_EN.pdf"
+    jTitle: "Not in the community yet? Join us",
+    jSub: "Diving is a journey — easier together.",
+    copy: "© iScuba.online — International Diving Community.",
+    sig: "🧭 Vitaliy Puziryov, SSI Instructor Trainer",
+    file: "7rules_50Plus_EN.pdf"
   },
 
-  de:{
-    hTitle:"Community & Kostenlose Materialien",
-    hSub:"Kostenlose Checklisten. PDF nach Gruppenbeitritt.",
-    dTitle:"📘 Checkliste „7 ungewöhnliche Regeln für Taucher 50Plus“",
-    dSub:"PDF in Ihrer Sprache herunterladen.",
-    dBtn:"📥 PDF herunterladen",
-    dNote:"PDF im angehefteten Beitrag.",
-    kTitle:"🐠 iScuba Kids — bald verfügbar",
-    kSub:"Bereich in Entwicklung.",
-    kBtn:"🚧 In Arbeit",
-    kNote:"„7 Schritte zum ersten Tauchgang“ kommt bald.",
-    fTitle:"Häufig gestellte Fragen",
-    faq:[
-      ["Warum kostenlos?","Tauchen bedeutet Erfahrungsaustausch."],
-      ["Muss ich Profi sein?","Nein, Respekt fürs Meer reicht."],
-      ["Wie geht’s weiter?","Mehr Routen und Tipps."]
+  de: {
+    hTitle: "Community & Kostenlose Materialien",
+    hSub: "Kostenlose Checklisten und nützliche Ressourcen zum Tauchen. PDF nach Gruppenbeitritt verfügbar.",
+    dTitle: "📘 Checkliste „7 ungewöhnliche Regeln für Taucher 50Plus“",
+    dSub: "Laden Sie das PDF in Ihrer Sprache herunter. Ruhige Tauchgänge, Erfahrung und Sicherheit.",
+    dBtn: "📥 Checkliste herunterladen",
+    dNote: "Das PDF befindet sich im angehefteten Beitrag der Dive50Plus-Gruppe.",
+    kTitle: "🐠 iScuba Kids — bald verfügbar",
+    kSub: "Bereich für Eltern und Kinder in Entwicklung. Checklisten und Mini-Guides folgen.",
+    kBtn: "🚧 In Arbeit",
+    kNote: "Geplant: „7 Schritte zum ersten Tauchgang“. Folgen Sie den Updates in der Gruppe.",
+    fTitle: "Häufig gestellte Fragen",
+    faq: [
+      [
+        "Warum sind iScuba-Materialien kostenlos?",
+        "Weil Tauchen Erfahrungsaustausch bedeutet — keine Geheimhaltung. Wir teilen, was beim sicheren und bewussten Tauchen hilft."
+      ],
+      [
+        "Muss ich Profi sein?",
+        "Nein. In Dive50Plus und iScuba Kids sind alle gleich. Respekt vor dem Meer und der Wunsch zu lernen sind entscheidend."
+      ],
+      [
+        "Wie geht es weiter?",
+        "Weitere Routen, Geschichten und praktische Tipps — ohne Werbung und Sensationsdrang."
+      ]
     ],
-    jTitle:"Noch nicht dabei?",
-    jSub:"Gemeinsam taucht man besser.",
-    copy:"© iScuba.online — Internationale Tauchgemeinschaft.",
-    sig:"🧭 Vitaliy Puziryov, SSI Instructor-Trainer",
-    file:"7rules_50Plus_DE.pdf"
+    jTitle: "Noch nicht Teil der Community? Treten Sie bei!",
+    jSub: "Tauchen ist eine Reise — gemeinsam leichter.",
+    copy: "© iScuba.online — Internationale Tauchgemeinschaft.",
+    sig: "🧭 Vitaliy Puziryov, SSI Instructor-Trainer",
+    file: "7rules_50Plus_DE.pdf"
   },
 
-  fr:{
-    hTitle:"Communauté & Ressources gratuites",
-    hSub:"Listes et guides gratuits.",
-    dTitle:"📘 Liste « 7 règles inattendues du plongeur 50Plus »",
-    dSub:"Téléchargez le PDF.",
-    dBtn:"📥 Télécharger PDF",
-    dNote:"PDF dans le post épinglé.",
-    kTitle:"🐠 iScuba Kids — bientôt",
-    kSub:"Section en développement.",
-    kBtn:"🚧 Bientôt",
-    kNote:"« 7 étapes vers la première plongée » arrive.",
-    fTitle:"Questions fréquentes",
-    faq:[
-      ["Pourquoi gratuit ?","Parce que la plongée, c’est le partage."],
-      ["Faut-il être pro ?","Non, seulement respecter la mer."],
-      ["Et après ?","Plus d’itinéraires et conseils."]
+  fr: {
+    hTitle: "Communauté & Ressources gratuites",
+    hSub: "Listes de contrôle et ressources de plongée gratuites. PDF disponible après avoir rejoint le groupe.",
+    dTitle: "📘 Liste « 7 règles inattendues du plongeur 50Plus »",
+    dSub: "Téléchargez le PDF dans votre langue. Plongées calmes, expérience et sécurité.",
+    dBtn: "📥 Télécharger la liste",
+    dNote: "Le PDF se trouve dans la publication épinglée du groupe Dive50Plus.",
+    kTitle: "🐠 iScuba Kids — bientôt disponible",
+    kSub: "Section pour les parents et les enfants en cours de développement. Listes et mini-guides disponibles prochainement.",
+    kBtn: "🚧 En développement",
+    kNote: "À venir : « 7 étapes vers la première plongée ». Suivez les mises à jour dans le groupe.",
+    fTitle: "Questions fréquentes",
+    faq: [
+      [
+        "Pourquoi les ressources iScuba sont-elles gratuites ?",
+        "Parce que la plongée repose sur le partage d’expérience — pas sur le secret. Nous partageons ce qui aide à plonger en pleine conscience et en sécurité."
+      ],
+      [
+        "Dois-je être professionnel ?",
+        "Non. Dans Dive50Plus et iScuba Kids, tout le monde est égal. Le respect de la mer et la volonté d’apprendre comptent avant tout."
+      ],
+      [
+        "Et ensuite ?",
+        "Davantage d’itinéraires, de récits et de conseils pratiques — sans publicité ni recherche de buzz."
+      ]
     ],
-    jTitle:"Pas encore membre ?",
-    jSub:"La plongée est plus simple ensemble.",
-    copy:"© iScuba.online — Communauté internationale.",
-    sig:"🧭 Vitaliy Puziryov",
-    file:"7rules_50Plus_FR.pdf"
+    jTitle: "Pas encore membre ? Rejoignez-nous",
+    jSub: "La plongée est un voyage — plus simple ensemble.",
+    copy: "© iScuba.online — Communauté internationale de plongeurs.",
+    sig: "🧭 Vitaliy Puziryov, Formateur d’instructeurs SSI",
+    file: "7rules_50Plus_FR.pdf"
   },
 
-  it:{
-    hTitle:"Comunità & Risorse Gratuite",
-    hSub:"Checklist gratuite.",
-    dTitle:"📘 Checklist “7 regole per sub 50Plus”",
-    dSub:"Scarica il PDF.",
-    dBtn:"📥 Scarica PDF",
-    dNote:"PDF nel post fissato.",
-    kTitle:"🐠 iScuba Kids — in arrivo",
-    kSub:"Sezione in sviluppo.",
-    kBtn:"🚧 In arrivo",
-    kNote:"« 7 passi al primo tuffo » presto.",
-    fTitle:"Domande frequenti",
-    faq:[
-      ["Perché gratis?","Perché l’immersione è condivisione."],
-      ["Serve essere professionista?","No — basta rispetto per il mare."],
-      ["E poi?","Altri percorsi e guide pratiche."]
+  it: {
+    hTitle: "Comunità & Risorse Gratuite",
+    hSub: "Checklist e materiali utili per la subacquea. PDF disponibile dopo l’iscrizione al gruppo.",
+    dTitle: "📘 Checklist “7 regole non ovvie per sub 50Plus”",
+    dSub: "Scarica il PDF nella tua lingua. Immersioni tranquille, esperienza e sicurezza.",
+    dBtn: "📥 Scarica la checklist",
+    dNote: "Il PDF si trova nel post fissato del gruppo Dive50Plus.",
+    kTitle: "🐠 iScuba Kids — in arrivo",
+    kSub: "Sezione per genitori e bambini in sviluppo. Checklist e mini-guide in arrivo.",
+    kBtn: "🚧 In sviluppo",
+    kNote: "In arrivo: “7 passi verso la prima immersione”. Segui gli aggiornamenti nel gruppo.",
+    fTitle: "Domande frequenti",
+    faq: [
+      [
+        "Perché i materiali iScuba sono gratuiti?",
+        "Perché la subacquea è condivisione di esperienza — non segreti. Condividiamo ciò che aiuta a immergersi in modo sicuro e consapevole."
+      ],
+      [
+        "Devo essere un professionista?",
+        "No. In Dive50Plus e iScuba Kids tutti sono uguali. Rispetto per il mare e volontà di crescere sono fondamentali."
+      ],
+      [
+        "Cosa succede dopo?",
+        "Altri percorsi, storie e consigli pratici — senza pubblicità e senza competizione per i like."
+      ]
     ],
-    jTitle:"Non sei ancora nel gruppo?",
-    jSub:"Meglio insieme.",
-    copy:"© iScuba.online",
-    sig:"🧭 Vitaliy Puziryov",
-    file:"7rules_50Plus_IT.pdf"
+    jTitle: "Non fai ancora parte della community? Unisciti!",
+    jSub: "L'immersione è un viaggio — meglio insieme.",
+    copy: "© iScuba.online — Comunità internazionale di subacquei.",
+    sig: "🧭 Vitaliy Puziryov, Formatore istruttori SSI",
+    file: "7rules_50Plus_IT.pdf"
   },
 
-  lv:{
-    hTitle:"Kopiena un materiāli",
-    hSub:"Bezmaksas PDF pēc pievienošanās grupai.",
-    dTitle:"📘 “7 noteikumi nirējiem 50Plus”",
-    dSub:"Lejupielādējiet PDF.",
-    dBtn:"📥 Lejupielādēt PDF",
-    dNote:"PDF piespraustajā ierakstā.",
-    kTitle:"🐠 iScuba Kids — drīzumā",
-    kSub:"Sadaļa izstrādē.",
-    kBtn:"🚧 Izstrādē",
-    kNote:"« 7 soļi līdz pirmajai niršanai » drīzumā.",
-    fTitle:"BUJ",
-    faq:[
-      ["Kāpēc bez maksas?","Niršana ir pieredzes apmaiņa."],
-      ["Vai jābūt profesionālim?","Nē — svarīga ir cieņa pret jūru."],
-      ["Kas būs tālāk?","Jauni maršruti un padomi."]
+  lv: {
+    hTitle: "Kopiena un bezmaksas materiāli",
+    hSub: "Bezmaksas niršanas kontrolsaraksti un noderīgi materiāli. PDF pieejams pēc pievienošanās grupai.",
+    dTitle: "📘 Kontrolsaraksts “7 negaidīti noteikumi 50Plus nirējiem”",
+    dSub: "Lejupielādējiet PDF savā valodā. Mierīgas niršanas, pieredze un drošība.",
+    dBtn: "📥 Lejupielādēt kontrolsarakstu",
+    dNote: "PDF atrodams Dive50Plus grupas piespraustajā ierakstā.",
+    kTitle: "🐠 iScuba Kids — drīzumā",
+    kSub: "Sadaļa vecākiem un bērniem izstrādes procesā. Būs kontrolsaraksti un mini-ceļveži.",
+    kBtn: "🚧 Izstrādē",
+    kNote: "Plānots: “7 soļi līdz pirmajai niršanai”. Seko atjauninājumiem grupā.",
+    fTitle: "Biežāk uzdotie jautājumi",
+    faq: [
+      [
+        "Kāpēc iScuba materiāli ir bez maksas?",
+        "Tāpēc, ka niršana ir pieredzes apmaiņa — nevis noslēpumi. Mēs dalāmies ar to, kas palīdz droši un apzināti nirt."
+      ],
+      [
+        "Vai jābūt profesionālim?",
+        "Nē. Dive50Plus un iScuba Kids visi ir vienlīdzīgi. Galvenais — cieņa pret jūru un vēlme augt."
+      ],
+      [
+        "Kas tālāk?",
+        "Jauni maršruti, stāsti un praktiski padomi — bez reklāmām un sacensībām."
+      ]
     ],
-    jTitle:"Vēl neesat ar mums?",
-    jSub:"Niršana — kopīgs ceļš.",
-    copy:"© iScuba.online — Starptautiskā kopiena.",
-    sig:"🧭 Vitālijs Puzirevs",
-    file:"7rules_50Plus_LV.pdf"
+    jTitle: "Vēl neesat kopienā? Pievienojieties!",
+    jSub: "Niršana ir ceļojums — vieglāk kopā.",
+    copy: "© iScuba.online — Starptautiskā nirēju kopiena.",
+    sig: "🧭 Vitālijs Puzirevs, SSI instruktors-treneris",
+    file: "7rules_50Plus_LV.pdf"
   }
 };
+
 
 /* ------- RENDER -------- */
 
