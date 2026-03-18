@@ -4,9 +4,16 @@
 
 <script>
 (function () {
+  const saved = document.cookie.match(/lang=([^;]+)/);
+
+  // если пользователь уже выбирал язык — используем его
+  if (saved) {
+    window.location.href = '/' + saved[1] + '/';
+    return;
+  }
+
   const userAgent = navigator.userAgent.toLowerCase();
 
-  // если бот — не трогаем (SEO)
   if (userAgent.includes('bot') || userAgent.includes('crawl') || userAgent.includes('spider')) {
     window.location.href = '/en/';
     return;
@@ -17,14 +24,14 @@
 
   const lang = (navigator.language || '').toLowerCase().slice(0,2);
 
-  if (ruGroup.includes(lang)) {
-    window.location.href = '/ru/';
-  } else if (supported.includes(lang)) {
-    window.location.href = '/' + lang + '/';
-  } else {
-    window.location.href = '/en/';
-  }
+  let target = 'en';
 
+  if (ruGroup.includes(lang)) target = 'ru';
+  else if (supported.includes(lang)) target = lang;
+
+  document.cookie = 'lang=' + target + '; path=/; max-age=31536000';
+
+  window.location.href = '/' + target + '/';
 })();
 </script>
 
