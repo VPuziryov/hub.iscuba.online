@@ -1,7 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="refresh" content="0; url=/en/" />
+
+<script>
+(function () {
+  const userAgent = navigator.userAgent.toLowerCase();
+
+  // если бот — не трогаем (SEO)
+  if (userAgent.includes('bot') || userAgent.includes('crawl') || userAgent.includes('spider')) {
+    window.location.href = '/en/';
+    return;
+  }
+
+  const ruGroup = ['ru','uk','be','kk'];
+  const supported = ['ru','en','de','fr','it','lv','pl'];
+
+  const lang = (navigator.language || '').toLowerCase().slice(0,2);
+
+  if (ruGroup.includes(lang)) {
+    window.location.href = '/ru/';
+  } else if (supported.includes(lang)) {
+    window.location.href = '/' + lang + '/';
+  } else {
+    window.location.href = '/en/';
+  }
+
+})();
+</script>
+
 </head>
 <body></body>
 </html>
