@@ -178,3 +178,8 @@
       border-top:1px solid var(--stroke);
     }
     .sig{margin-top:6px;font-size:13px;opacity:.9}
+    @media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr !important;
+  }
+}
