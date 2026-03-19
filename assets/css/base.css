@@ -183,3 +183,13 @@
     grid-template-columns: 1fr !important;
   }
 }
+@media (max-width: 768px) {
+  .grid {
+    display: block !important;
+  }
+
+  .grid .card {
+    width: 100% !important;
+    margin-bottom: 16px;
+  }
+}
