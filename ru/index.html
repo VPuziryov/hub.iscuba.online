@@ -20,28 +20,6 @@
 
   <link rel="stylesheet" href="../assets/css/base.css">
 
-  <!-- Meta Pixel -->
-  <script>
-    !function(f,b,e,v,n,t,s){
-      if(f.fbq)return;
-      n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;
-      n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];
-      t=b.createElement(e);t.async=!0;t.src=v;
-      s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s);
-    }(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-
-    fbq('init','675997335920840');
-    fbq('track','PageView');
-  </script>
-
-  <noscript>
-    <img height="1" width="1" style="display:none"
-         src="https://www.facebook.com/tr?id=675997335920840&ev=PageView&noscript=1" />
-  </noscript>
 </head>
 
 <body>
@@ -85,14 +63,16 @@
     <h2>📘 7 неочевидных правил дайвера 50Plus</h2>
 <p>Ошибки, которые не замечаешь перед погружением</p>
 
-    <a class="btn" href="../7rules_50Plus_RU.pdf" target="_blank">
+    <a id="download-50plus" class="btn" href="../7rules_50Plus_RU.pdf" target="_blank">
   📥 Скачать
 </a>
 
     <p>То, что упускают даже опытные дайверы</p>
   </article>
+  </section>
 
-  <article class="card">
+  <section class="grid">
+<article class="card">
     <h2>🐠 iScuba Kids</h2>
 <p>Как привести ребёнка в дайвинг спокойно и без ошибок</p>
 
@@ -104,7 +84,47 @@
   </article>
 </section>
 
-<!-- ВТОРОЙ СИЛЬНЫЙ МАТЕРИАЛ -->
+  <section class="grid">
+  <article class="card">
+
+    <h3>📱 Обои для телефона</h3>
+
+    <a href="#" target="_blank">
+      <img src="../assets/img/wallpapers.jpg"
+     style="width:100%; height:220px; object-fit:cover; border-radius:12px;">
+    </a>
+
+    <p>Иногда достаточно напоминания, чтобы собрать снарягу...</p>
+
+    <a id="download-wallpapers" class="btn secondary" href="../assets/downloads/iscuba-wallpapers.zip" download>
+  📥 Скачать обои
+</a>
+
+  </article>
+</section>
+
+  <section class="grid">
+  <article class="card">
+  <h2>🌍 Календарь сафари по месяцам</h2>
+
+  <p>
+    Можно поехать просто «в отпуск».  
+    А можно попасть в сезон.
+  </p>
+
+  <a id="download-safari-seasons"
+     class="btn secondary"
+     href="../assets/downloads/safari-timing-RU.pdf"
+     target="_blank">
+    📥 Скачать календарь
+  </a>
+
+  <p style="opacity:0.7;">
+    Разница чувствуется под водой.
+  </p>
+</article>
+</section>
+
 <section class="grid">
   <article class="card">
     <h2>🎒 Упаковочный лист дайвера на сафари</h2>
@@ -113,7 +133,10 @@
 Забывают то, что действительно важно.
 </p>
 
-<a class="btn secondary" href="#">
+<a id="download-packing"
+   class="btn secondary"
+   href="../assets/downloads/Packing-List-RU.png"
+   target="_blank">
   📥 Скачать список
 </a>
   </article>
@@ -130,29 +153,9 @@
 Карты, сезоны и ориентиры перед поездкой
 </p>
 
-<a class="btn secondary" href="#">
+<a id="egypt-link" class="btn primary" href="#">
   Открыть
 </a>
-  </article>
-</section>
-
-<!-- ДОПОЛНИТЕЛЬНО -->
-<section class="grid">
-  <article class="card">
-
-    <h3>📱 Обои для телефона</h3>
-
-    <a href="#" target="_blank">
-      <img src="../assets/img/wallpapers.jpg"
-     style="width:100%; height:220px; object-fit:cover; border-radius:12px;">
-    </a>
-
-    <p>Иногда достаточно напоминания, чтобы собрать снарягу...</p>
-
-    <a class="btn secondary" href="../assets/downloads/iscuba-wallpapers.zip" download>
-  📥 Скачать обои
-</a>
-
   </article>
 </section>
 
@@ -206,6 +209,7 @@
 
 <script src="../assets/js/base.js"></script>
 <script src="../assets/js/ui.js"></script>
+<script src="../assets/js/pixel.js"></script>
 
 </body>
 </html>
