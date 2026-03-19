@@ -62,3 +62,10 @@ document.addEventListener("DOMContentLoaded", function () {
 setTimeout(function () {
   fbq("trackCustom", "ViewContent_hub_7s");
 }, 7000);
+document.getElementById("group-50plus")?.addEventListener("click", function () {
+  fbq("trackCustom", "Group_50Plus_Click");
+});
+
+document.getElementById("group-kids")?.addEventListener("click", function () {
+  fbq("trackCustom", "Group_Kids_Click");
+});
