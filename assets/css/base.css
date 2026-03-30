@@ -288,3 +288,6 @@ footer{
 .btn.mint:hover {
   background: rgba(79, 209, 197, 0.1);
 }
+.card {
+  scroll-margin-top: 120px;
+}
