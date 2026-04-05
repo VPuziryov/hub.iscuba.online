@@ -8,9 +8,10 @@
 
   // если пользователь уже выбирал язык — используем его
   if (saved) {
-    window.location.href = '/' + saved[1] + '/';
-    return;
-  }
+  const hash = window.location.hash || '';
+  window.location.href = '/' + saved[1] + '/' + hash;
+  return;
+}
 
   const userAgent = navigator.userAgent.toLowerCase();
 
@@ -31,7 +32,8 @@
 
   document.cookie = 'lang=' + target + '; path=/; max-age=31536000';
 
-  window.location.href = '/' + target + '/';
+  const hash = window.location.hash || '';
+window.location.href = '/' + target + '/' + hash;
 })();
 </script>
 
