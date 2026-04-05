@@ -32,7 +32,8 @@
     const lang = detectLang();
     setCookie('lang', lang);
 
-    window.location.href = '/' + lang + '/';
+    const hash = window.location.hash || '';
+window.location.href = '/' + lang + '/' + hash;
   }
 
   redirect();
