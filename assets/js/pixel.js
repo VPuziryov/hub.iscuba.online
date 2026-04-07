@@ -1,6 +1,8 @@
-// === META PIXEL INIT ===
+// === META PIXEL INIT (SAFE) ===
 (function () {
-  if (window.fbq) return;
+
+  if (window.__pixelInitialized) return;
+  window.__pixelInitialized = true;
 
   var n = (window.fbq = function () {
     n.callMethod
@@ -24,6 +26,7 @@
 
   fbq("init", "675997335920840");
   fbq("track", "PageView");
+
 })();
 
 
@@ -50,22 +53,37 @@ document.addEventListener("DOMContentLoaded", function () {
     fbq("trackCustom", "Checklist_Safari_Seasons_Downloaded");
   });
 
-  // Egypt
+  // Egypt вход с хаба
   document.getElementById("egypt-link")?.addEventListener("click", function () {
     fbq("trackCustom", "Egypt_Interest_Click");
+  });
+
+  // Группы
+  document.getElementById("group-50plus")?.addEventListener("click", function () {
+    fbq("trackCustom", "Group_50Plus_Click");
+  });
+
+  document.getElementById("group-kids")?.addEventListener("click", function () {
+    fbq("trackCustom", "Group_Kids_Click");
   });
 
 });
 
 
-// === PRESENCE (7 sec) ===
-setTimeout(function () {
-  fbq("trackCustom", "ViewContent_hub_7s");
-}, 7000);
-document.getElementById("group-50plus")?.addEventListener("click", function () {
-  fbq("trackCustom", "Group_50Plus_Click");
-});
+// === PRESENCE (7 sec) — SAFE ===
+(function () {
 
-document.getElementById("group-kids")?.addEventListener("click", function () {
-  fbq("trackCustom", "Group_Kids_Click");
-});
+  if (window.__viewTracked) return;
+  window.__viewTracked = true;
+
+  const path = window.location.pathname;
+
+  setTimeout(function () {
+    if (path.includes('/egypt')) {
+      fbq("trackCustom", "ViewContent_EgyptHub_7s");
+    } else {
+      fbq("trackCustom", "ViewContent_hub_7s");
+    }
+  }, 7000);
+
+})();
