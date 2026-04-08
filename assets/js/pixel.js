@@ -38,6 +38,11 @@ document.addEventListener("DOMContentLoaded", function () {
     fbq("trackCustom", "Checklist_50Plus_Downloaded");
   });
 
+  // Kids-checklist
+  document.getElementById("kids-checklist")?.addEventListener("click", function () {
+  fbq("trackCustom", "Kids_Checklist_Click");
+});
+
   // Обои
   document.getElementById("download-wallpapers")?.addEventListener("click", function () {
     fbq("trackCustom", "Checklist_Wallpapers_Downloaded");
