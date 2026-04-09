@@ -291,3 +291,6 @@ footer{
 .card {
   scroll-margin-top: 100px;
 }
+section {
+  scroll-margin-top: 80px;
+}
