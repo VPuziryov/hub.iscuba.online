@@ -38,3 +38,18 @@ window.location.href = '/' + lang + '/' + hash;
 
   redirect();
 })();
+document.addEventListener('DOMContentLoaded', function () {
+  const select = document.getElementById('language');
+  if (!select) return;
+
+  select.addEventListener('change', function () {
+    const lang = this.value;
+
+    const path = window.location.pathname;
+
+    // текущий путь без языка
+    const cleanPath = path.replace(/^\/(ru|en|de|fr|it|lv|pl)\//, '/');
+
+    window.location.href = '/' + lang + cleanPath;
+  });
+});
