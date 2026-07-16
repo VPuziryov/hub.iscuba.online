@@ -29,6 +29,12 @@ to = "https://drive.google.com/file/d/1iEAt1eR1HVwoWBg-Gr7V4C3iyTEbmsXq/view"
 status = 302
 force = true
 
+[[redirects]]
+from = "/assets/downloads/red-sea-routes-en"
+to = "https://drive.google.com/file/d/11lQlAmxvSS4XlyoPqyYF0dCSNwle5Elx/view"
+status = 302
+force = true
+
 
 
 [[redirects]]
