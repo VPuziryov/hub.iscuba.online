@@ -22,6 +22,14 @@
   to = "/"
   status = 301
 
+
+[[redirects]]
+  from = "/assets/downloads/red-sea-routes-v2-ru.pdf"
+  to = "https://drive.google.com/file/d/1iEAt1eR1HVwoWBg-Gr7V4C3iyTEbmsXq/view"
+  status = 302
+
+
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
