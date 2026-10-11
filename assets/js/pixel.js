@@ -75,20 +75,46 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// === PRESENCE (7 sec) — SAFE ===
+// === PRESENCE: 7 seconds of visible-page time, once per page ===
 (function () {
-
   if (window.__viewTracked) return;
   window.__viewTracked = true;
 
   const path = window.location.pathname;
+  let remaining = 7000;
+  let startedAt = null;
+  let timer = null;
+  let sent = false;
 
-  setTimeout(function () {
-    if (path.includes('/egypt')) {
-      fbq("trackCustom", "ViewContent_EgyptHub_7s");
-    } else {
-      fbq("trackCustom", "ViewContent_hub_7s");
-    }
-  }, 7000);
+  function pause() {
+    if (startedAt === null) return;
+    remaining = Math.max(0, remaining - (performance.now() - startedAt));
+    startedAt = null;
+    clearTimeout(timer);
+    timer = null;
+  }
 
+  function send() {
+    pause();
+    if (sent || document.visibilityState !== 'visible') return;
+    sent = true;
+    document.removeEventListener('visibilitychange', onVisibilityChange);
+    fbq('trackCustom', path.includes('/egypt')
+      ? 'ViewContent_EgyptHub_7s'
+      : 'ViewContent_hub_7s');
+  }
+
+  function resume() {
+    if (sent || startedAt !== null || document.visibilityState !== 'visible') return;
+    startedAt = performance.now();
+    timer = setTimeout(send, remaining);
+  }
+
+  function onVisibilityChange() {
+    if (document.visibilityState === 'visible') resume();
+    else pause();
+  }
+
+  document.addEventListener('visibilitychange', onVisibilityChange);
+  resume();
 })();
