@@ -9,14 +9,14 @@
   // если пользователь уже выбирал язык — используем его
   if (saved) {
   const hash = window.location.hash || '';
-  window.location.href = '/' + saved[1] + '/' + hash;
+  window.location.href = '/' + saved[1] + '/' + window.location.search + hash;
   return;
 }
 
   const userAgent = navigator.userAgent.toLowerCase();
 
   if (userAgent.includes('bot') || userAgent.includes('crawl') || userAgent.includes('spider')) {
-    window.location.href = '/en/';
+    window.location.href = '/en/' + window.location.search + window.location.hash;
     return;
   }
 
@@ -33,7 +33,7 @@
   document.cookie = 'lang=' + target + '; path=/; max-age=31536000';
 
   const hash = window.location.hash || '';
-window.location.href = '/' + target + '/' + hash;
+window.location.href = '/' + target + '/' + window.location.search + hash;
 })();
 </script>
 

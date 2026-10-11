@@ -33,7 +33,7 @@
     setCookie('lang', lang);
 
     const hash = window.location.hash || '';
-window.location.href = '/' + lang + '/' + hash;
+window.location.href = '/' + lang + '/' + window.location.search + hash;
   }
 
   redirect();
@@ -50,6 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // текущий путь без языка
     const cleanPath = path.replace(/^\/(ru|en|de|fr|it|lv|pl)\//, '/');
 
-    window.location.href = '/' + lang + cleanPath;
+    document.cookie = 'lang=' + lang + '; path=/; max-age=31536000';
+    window.location.href = '/' + lang + cleanPath + window.location.search + window.location.hash;
   });
 });
