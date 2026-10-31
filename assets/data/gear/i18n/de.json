@@ -1,0 +1,55 @@
+{
+  "back": "Zurück zum Hub",
+  "language": "Sprache",
+  "heading": "Ausrüstung mit begründeter Auswahl",
+  "intro": "Praktische Ausrüstungsempfehlungen von Vitaliy Puziryov, SSI Instructor Trainer.",
+  "empty": "Die Auswahl wird vorbereitet. Noch kein Produkt ist zur Veröffentlichung freigegeben.",
+  "previewTitle": "Entwicklungsvorschau",
+  "previewNote": "Drei Kandidaten zeigen das Layout. Sie sind keine freigegebenen Empfehlungen. Shop-Links sind inaktiv.",
+  "all": "Alle Empfehlungen",
+  "demoTitle": "Demonstrationskandidaten",
+  "purpose": "Einsatzbereich",
+  "advantages": "Vorteile",
+  "limitations": "Einschränkungen",
+  "experience": "Erfahrung des Autors",
+  "experienceUnknown": "Persönlicher Test nicht bestätigt",
+  "experienceYes": "Persönlich getestet — vom Autor bestätigt",
+  "experienceNo": "Fachliche Bewertung; nicht persönlich getestet",
+  "pending": "Redaktionelle Bewertung steht aus",
+  "pendingReview": "Prüfung und Bewertung durch den Autor stehen aus",
+  "imagePending": "Bildfreigabe steht aus",
+  "unavailable": "Shop-Link nicht verfügbar",
+  "approvalPending": "Freigabe des Partnerprogramms steht aus",
+  "viewAt": "Ansehen bei",
+  "affiliate": "Partnerlink",
+  "methodTitle": "So werden Empfehlungen ausgewählt",
+  "method": "Jede veröffentlichte Empfehlung erläutert Einsatzbereich, Vorteile und Einschränkungen. Persönliche Tests werden nur nach Bestätigung durch den Autor angegeben.",
+  "disclosureTitle": "Partnerlinks",
+  "disclosure": "In diesem Prototyp sind keine Partnerlinks aktiv. Künftige Partnerlinks werden deutlich gekennzeichnet.",
+  "error": "Die Auswahl konnte nicht geladen werden. Bitte später erneut versuchen.",
+  "noscript": "Zum Laden der Auswahl ist JavaScript erforderlich.",
+  "safari": "Für die Tauchsafari",
+  "comfort50": "Komfort für Taucher ab 50",
+  "kids": "Kinder & Tauchen",
+  "safety": "Sicherheit & Zubehör",
+  "purposeWing": "Kandidat: Wing-System",
+  "purposeMask": "Kandidat: Junior-Tauchmaske",
+  "purposeFins": "Kandidat: Reiseflossen",
+  "products": {
+    "hollis-st-travel": {
+      "purpose": "Kandidat: Wing-System",
+      "advantages": [],
+      "limitations": []
+    },
+    "cressi-f1-junior": {
+      "purpose": "Kandidat: Junior-Tauchmaske",
+      "advantages": [],
+      "limitations": []
+    },
+    "scubapro-go-travel": {
+      "purpose": "Kandidat: Reiseflossen",
+      "advantages": [],
+      "limitations": []
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "back": "Powrót do Hub",
+  "language": "Język",
+  "heading": "Sprzęt z uzasadnieniem wyboru",
+  "intro": "Praktyczne rekomendacje sprzętu od Vitaliy Puziryov, SSI Instructor Trainer.",
+  "empty": "Wybór jest przygotowywany. Żaden produkt nie został jeszcze zatwierdzony do publikacji.",
+  "previewTitle": "Podgląd roboczy",
+  "previewNote": "Trzej kandydaci pokazują układ kart. Nie są zatwierdzonymi rekomendacjami. Linki do sklepu są nieaktywne.",
+  "all": "Wszystkie rekomendacje",
+  "demoTitle": "Kandydaci demonstracyjni",
+  "purpose": "Zastosowanie",
+  "advantages": "Zalety",
+  "limitations": "Ograniczenia",
+  "experience": "Doświadczenie autora",
+  "experienceUnknown": "Osobisty test niepotwierdzony",
+  "experienceYes": "Osobiście przetestowane — potwierdzone przez autora",
+  "experienceNo": "Ocena profesjonalna; bez osobistego testu",
+  "pending": "Oczekuje na ocenę redakcyjną",
+  "pendingReview": "Oczekuje na weryfikację i ocenę autora",
+  "imagePending": "Oczekuje na zgodę na użycie zdjęcia",
+  "unavailable": "Link do sklepu niedostępny",
+  "approvalPending": "Oczekuje na zatwierdzenie programu partnerskiego",
+  "viewAt": "Zobacz w",
+  "affiliate": "Link partnerski",
+  "methodTitle": "Jak wybierane są rekomendacje",
+  "method": "Każda opublikowana rekomendacja musi wyjaśniać zastosowanie, zalety i ograniczenia. Osobisty test jest wskazywany dopiero po potwierdzeniu przez autora.",
+  "disclosureTitle": "Linki partnerskie",
+  "disclosure": "W tym prototypie nie ma aktywnych linków partnerskich. Przyszłe linki partnerskie będą wyraźnie oznaczone.",
+  "error": "Nie udało się wczytać wyboru. Spróbuj ponownie później.",
+  "noscript": "Do wczytania wyboru wymagany jest JavaScript.",
+  "safari": "Na safari nurkowe",
+  "comfort50": "Komfort nurków 50+",
+  "kids": "Dzieci i nurkowanie",
+  "safety": "Bezpieczeństwo i akcesoria",
+  "purposeWing": "Kandydat: system ze skrzydłem",
+  "purposeMask": "Kandydat: maska junior",
+  "purposeFins": "Kandydat: płetwy podróżne",
+  "products": {
+    "hollis-st-travel": {
+      "purpose": "Kandydat: system ze skrzydłem",
+      "advantages": [],
+      "limitations": []
+    },
+    "cressi-f1-junior": {
+      "purpose": "Kandydat: maska junior",
+      "advantages": [],
+      "limitations": []
+    },
+    "scubapro-go-travel": {
+      "purpose": "Kandydat: płetwy podróżne",
+      "advantages": [],
+      "limitations": []
+    }
+  }
+}

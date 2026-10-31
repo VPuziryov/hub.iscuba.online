@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "products": [
+    {
+      "product_id": "hollis-st-travel",
+      "title": "Hollis ST Travel System Wing",
+      "categories": [
+        "safari"
+      ],
+      "source_url": "https://www.tradeinn.com/diveinn/en/hollis-st-travel-system-wing/138723514/p",
+      "status": "candidate",
+      "personally_tested": null,
+      "approved_by": null,
+      "approved_at": null,
+      "last_verified": null,
+      "image": null,
+      "source_check": {
+        "checked_at": "2026-10-31",
+        "method": "Retrieved source page via web search open; product identity only. No availability, price or specifications verified."
+      }
+    },
+    {
+      "product_id": "cressi-f1-junior",
+      "title": "Cressi F1 Junior Diving Mask",
+      "categories": [
+        "kids"
+      ],
+      "source_url": "https://www.tradeinn.com/diveinn/en/cressi-f1-junior-diving-mask/141891704/p",
+      "status": "candidate",
+      "personally_tested": null,
+      "approved_by": null,
+      "approved_at": null,
+      "last_verified": null,
+      "image": null,
+      "source_check": {
+        "checked_at": "2026-10-31",
+        "method": "Retrieved source page via web search open; product identity only. No availability, price or specifications verified."
+      }
+    },
+    {
+      "product_id": "scubapro-go-travel",
+      "title": "Scubapro GO Travel Fins",
+      "categories": [
+        "safari"
+      ],
+      "source_url": "https://www.tradeinn.com/diveinn/en/scubapro-go-travel-diving-fins/136761018/p",
+      "status": "candidate",
+      "personally_tested": null,
+      "approved_by": null,
+      "approved_at": null,
+      "last_verified": null,
+      "image": null,
+      "source_check": {
+        "checked_at": "2026-10-31",
+        "method": "Retrieved source page via web search open; product identity only. No availability, price or specifications verified."
+      }
+    }
+  ]
+}

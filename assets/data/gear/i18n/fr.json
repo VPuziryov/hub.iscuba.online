@@ -1,0 +1,55 @@
+{
+  "back": "Retour au Hub",
+  "language": "Langue",
+  "heading": "Un choix d’équipement expliqué",
+  "intro": "Des recommandations pratiques d’équipement par Vitaliy Puziryov, SSI Instructor Trainer.",
+  "empty": "La sélection est en préparation. Aucun produit n’est encore approuvé pour publication.",
+  "previewTitle": "Aperçu de développement",
+  "previewNote": "Ces trois candidats illustrent la mise en page. Ce ne sont pas des recommandations approuvées. Les liens marchands sont inactifs.",
+  "all": "Toutes les recommandations",
+  "demoTitle": "Candidats de démonstration",
+  "purpose": "Usage",
+  "advantages": "Avantages",
+  "limitations": "Limites",
+  "experience": "Expérience de l’auteur",
+  "experienceUnknown": "Essai personnel non confirmé",
+  "experienceYes": "Testé personnellement — confirmé par l’auteur",
+  "experienceNo": "Évaluation professionnelle ; sans essai personnel",
+  "pending": "Évaluation éditoriale en attente",
+  "pendingReview": "Vérification et évaluation par l’auteur en attente",
+  "imagePending": "Autorisation de l’image en attente",
+  "unavailable": "Lien marchand indisponible",
+  "approvalPending": "Approbation du programme partenaire en attente",
+  "viewAt": "Voir chez",
+  "affiliate": "Lien affilié",
+  "methodTitle": "Comment les recommandations sont sélectionnées",
+  "method": "Chaque recommandation publiée doit expliquer son usage, ses avantages et ses limites. Un essai personnel n’est mentionné qu’après confirmation de l’auteur.",
+  "disclosureTitle": "Liens affiliés",
+  "disclosure": "Aucun lien affilié n’est actif dans ce prototype. Les futurs liens affiliés seront clairement signalés.",
+  "error": "Impossible de charger la sélection. Veuillez réessayer plus tard.",
+  "noscript": "JavaScript est nécessaire pour charger la sélection.",
+  "safari": "Pour le safari plongée",
+  "comfort50": "Confort des plongeurs de plus de 50 ans",
+  "kids": "Enfants & plongée",
+  "safety": "Sécurité & accessoires",
+  "purposeWing": "Candidat : système à wing",
+  "purposeMask": "Candidat : masque junior",
+  "purposeFins": "Candidat : palmes de voyage",
+  "products": {
+    "hollis-st-travel": {
+      "purpose": "Candidat : système à wing",
+      "advantages": [],
+      "limitations": []
+    },
+    "cressi-f1-junior": {
+      "purpose": "Candidat : masque junior",
+      "advantages": [],
+      "limitations": []
+    },
+    "scubapro-go-travel": {
+      "purpose": "Candidat : palmes de voyage",
+      "advantages": [],
+      "limitations": []
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "back": "Back to Hub",
+  "language": "Language",
+  "heading": "Equipment, chosen with context",
+  "intro": "A space for practical equipment recommendations by Vitaliy Puziryov, SSI Instructor Trainer.",
+  "empty": "Recommendations are being prepared. No products have been approved for publication yet.",
+  "previewTitle": "Development preview",
+  "previewNote": "These three candidates demonstrate the layout. They are not approved recommendations. Store links are inactive.",
+  "all": "All recommendations",
+  "demoTitle": "Demonstration candidates",
+  "purpose": "Purpose",
+  "advantages": "Advantages",
+  "limitations": "Limitations",
+  "experience": "Author’s experience",
+  "experienceUnknown": "Personal testing not confirmed",
+  "experienceYes": "Personally tested — confirmed by the author",
+  "experienceNo": "Professional assessment; not personally tested",
+  "pending": "Awaiting editorial assessment",
+  "pendingReview": "Awaiting verification and the author’s assessment",
+  "imagePending": "Equipment image pending permission",
+  "unavailable": "Store link unavailable",
+  "approvalPending": "Affiliate programme approval pending",
+  "viewAt": "View at",
+  "affiliate": "Affiliate link",
+  "methodTitle": "How recommendations are selected",
+  "method": "Each published recommendation must explain its purpose, advantages and limitations. Personal testing is stated only when confirmed by the author.",
+  "disclosureTitle": "Partner links",
+  "disclosure": "No affiliate links are active in this prototype. Any future partner links will be clearly labelled.",
+  "error": "Unable to load the selection. Please try again later.",
+  "noscript": "JavaScript is required to load the selection.",
+  "safari": "Safari essentials",
+  "comfort50": "Comfort for divers 50+",
+  "kids": "Kids & diving",
+  "safety": "Safety & accessories",
+  "purposeWing": "Wing system candidate",
+  "purposeMask": "Junior mask candidate",
+  "purposeFins": "Travel fins candidate",
+  "products": {
+    "hollis-st-travel": {
+      "purpose": "Wing system candidate",
+      "advantages": [],
+      "limitations": []
+    },
+    "cressi-f1-junior": {
+      "purpose": "Junior mask candidate",
+      "advantages": [],
+      "limitations": []
+    },
+    "scubapro-go-travel": {
+      "purpose": "Travel fins candidate",
+      "advantages": [],
+      "limitations": []
+    }
+  }
+}

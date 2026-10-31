@@ -1,0 +1,55 @@
+{
+  "back": "Torna all’Hub",
+  "language": "Lingua",
+  "heading": "Attrezzatura: il perché della scelta",
+  "intro": "Consigli pratici sull’attrezzatura di Vitaliy Puziryov, SSI Instructor Trainer.",
+  "empty": "La selezione è in preparazione. Nessun prodotto è ancora approvato per la pubblicazione.",
+  "previewTitle": "Anteprima di sviluppo",
+  "previewNote": "Questi tre candidati mostrano la struttura delle schede. Non sono consigli approvati. I link al negozio sono inattivi.",
+  "all": "Tutti i consigli",
+  "demoTitle": "Candidati dimostrativi",
+  "purpose": "Utilizzo",
+  "advantages": "Vantaggi",
+  "limitations": "Limiti",
+  "experience": "Esperienza dell’autore",
+  "experienceUnknown": "Prova personale non confermata",
+  "experienceYes": "Provato personalmente — confermato dall’autore",
+  "experienceNo": "Valutazione professionale; non provato personalmente",
+  "pending": "Valutazione editoriale in attesa",
+  "pendingReview": "Verifica e valutazione dell’autore in attesa",
+  "imagePending": "Autorizzazione per l’immagine in attesa",
+  "unavailable": "Link al negozio non disponibile",
+  "approvalPending": "Approvazione del programma di affiliazione in attesa",
+  "viewAt": "Vedi su",
+  "affiliate": "Link affiliato",
+  "methodTitle": "Come vengono selezionati i consigli",
+  "method": "Ogni consiglio pubblicato deve spiegare utilizzo, vantaggi e limiti. La prova personale viene indicata solo dopo la conferma dell’autore.",
+  "disclosureTitle": "Link affiliati",
+  "disclosure": "Questo prototipo non contiene link affiliati attivi. I futuri link affiliati saranno chiaramente indicati.",
+  "error": "Impossibile caricare la selezione. Riprova più tardi.",
+  "noscript": "Per caricare la selezione è necessario JavaScript.",
+  "safari": "Per il safari subacqueo",
+  "comfort50": "Comfort per subacquei over 50",
+  "kids": "Bambini & immersioni",
+  "safety": "Sicurezza & accessori",
+  "purposeWing": "Candidato: sistema wing",
+  "purposeMask": "Candidato: maschera junior",
+  "purposeFins": "Candidato: pinne da viaggio",
+  "products": {
+    "hollis-st-travel": {
+      "purpose": "Candidato: sistema wing",
+      "advantages": [],
+      "limitations": []
+    },
+    "cressi-f1-junior": {
+      "purpose": "Candidato: maschera junior",
+      "advantages": [],
+      "limitations": []
+    },
+    "scubapro-go-travel": {
+      "purpose": "Candidato: pinne da viaggio",
+      "advantages": [],
+      "limitations": []
+    }
+  }
+}

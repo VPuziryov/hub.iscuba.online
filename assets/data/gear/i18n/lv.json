@@ -1,0 +1,55 @@
+{
+  "back": "Atpakaļ uz Hub",
+  "language": "Valoda",
+  "heading": "Pamatota ekipējuma izvēle",
+  "intro": "Praktiski ekipējuma ieteikumi no Vitaliy Puziryov, SSI Instructor Trainer.",
+  "empty": "Izlase tiek gatavota. Neviens produkts vēl nav apstiprināts publicēšanai.",
+  "previewTitle": "Izstrādes priekšskatījums",
+  "previewNote": "Šie trīs kandidāti demonstrē kartīšu izkārtojumu. Tie nav apstiprināti ieteikumi. Veikala saites nav aktīvas.",
+  "all": "Visi ieteikumi",
+  "demoTitle": "Demonstrācijas kandidāti",
+  "purpose": "Pielietojums",
+  "advantages": "Priekšrocības",
+  "limitations": "Ierobežojumi",
+  "experience": "Autora pieredze",
+  "experienceUnknown": "Personīga izmēģināšana nav apstiprināta",
+  "experienceYes": "Personīgi izmēģināts — autors ir apstiprinājis",
+  "experienceNo": "Profesionāls vērtējums; nav personīgi izmēģināts",
+  "pending": "Gaida redakcionālu vērtējumu",
+  "pendingReview": "Gaida pārbaudi un autora vērtējumu",
+  "imagePending": "Gaida attēla izmantošanas atļauju",
+  "unavailable": "Veikala saite nav pieejama",
+  "approvalPending": "Gaida partnerprogrammas apstiprinājumu",
+  "viewAt": "Skatīt veikalā",
+  "affiliate": "Partnera saite",
+  "methodTitle": "Kā tiek atlasīti ieteikumi",
+  "method": "Katram publicētajam ieteikumam jāizskaidro pielietojums, priekšrocības un ierobežojumi. Personīga izmēģināšana tiek norādīta tikai pēc autora apstiprinājuma.",
+  "disclosureTitle": "Partneru saites",
+  "disclosure": "Šajā prototipā nav aktīvu partneru saišu. Turpmāk šādas saites tiks skaidri atzīmētas.",
+  "error": "Neizdevās ielādēt izlasi. Lūdzu, mēģiniet vēlāk.",
+  "noscript": "Lai ielādētu izlasi, nepieciešams JavaScript.",
+  "safari": "Niršanas safari",
+  "comfort50": "Komforts nirējiem pēc 50",
+  "kids": "Bērni un niršana",
+  "safety": "Drošība un piederumi",
+  "purposeWing": "Kandidāts: spārna sistēma",
+  "purposeMask": "Kandidāts: bērnu maska",
+  "purposeFins": "Kandidāts: ceļojumu pleznas",
+  "products": {
+    "hollis-st-travel": {
+      "purpose": "Kandidāts: spārna sistēma",
+      "advantages": [],
+      "limitations": []
+    },
+    "cressi-f1-junior": {
+      "purpose": "Kandidāts: bērnu maska",
+      "advantages": [],
+      "limitations": []
+    },
+    "scubapro-go-travel": {
+      "purpose": "Kandidāts: ceļojumu pleznas",
+      "advantages": [],
+      "limitations": []
+    }
+  }
+}

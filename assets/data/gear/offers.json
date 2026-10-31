@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "offers": [
+    {
+      "offer_id": "hollis-st-travel-diveinn",
+      "product_id": "hollis-st-travel",
+      "merchant": "Diveinn / Tradeinn",
+      "source_url": "https://www.tradeinn.com/diveinn/en/hollis-st-travel-system-wing/138723514/p",
+      "affiliate_url": null,
+      "sub_id": null,
+      "network": null,
+      "campaign": null,
+      "permitted_locales": [],
+      "permitted_sites": [],
+      "country_scope": null,
+      "approval_status": "pending",
+      "approval_evidence": null,
+      "links_by_locale": {}
+    },
+    {
+      "offer_id": "cressi-f1-junior-diveinn",
+      "product_id": "cressi-f1-junior",
+      "merchant": "Diveinn / Tradeinn",
+      "source_url": "https://www.tradeinn.com/diveinn/en/cressi-f1-junior-diving-mask/141891704/p",
+      "affiliate_url": null,
+      "sub_id": null,
+      "network": null,
+      "campaign": null,
+      "permitted_locales": [],
+      "permitted_sites": [],
+      "country_scope": null,
+      "approval_status": "pending",
+      "approval_evidence": null,
+      "links_by_locale": {}
+    },
+    {
+      "offer_id": "scubapro-go-travel-diveinn",
+      "product_id": "scubapro-go-travel",
+      "merchant": "Diveinn / Tradeinn",
+      "source_url": "https://www.tradeinn.com/diveinn/en/scubapro-go-travel-diving-fins/136761018/p",
+      "affiliate_url": null,
+      "sub_id": null,
+      "network": null,
+      "campaign": null,
+      "permitted_locales": [],
+      "permitted_sites": [],
+      "country_scope": null,
+      "approval_status": "pending",
+      "approval_evidence": null,
+      "links_by_locale": {}
+    }
+  ]
+}
