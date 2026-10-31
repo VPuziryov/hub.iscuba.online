@@ -40,7 +40,12 @@ No production publication, merge, real affiliate requests or live Pixel events w
 
 ## External checks deliberately pending
 
-- No public interactive preview has been provisioned. The demo is loopback-only.
+- Netlify automatically created an isolated PR preview:
+  https://deploy-preview-1--hubiscubaonline.netlify.app/ru/gear/
+  GitHub reports Deploy Preview ready. Direct remote browser access from this
+  execution environment returned ERR_EMPTY_RESPONSE, so remote rendering is not
+  independently verified. Candidate demonstrations remain loopback-only; the
+  external preview shows the default empty state.
 - Meta Test Events delivery was not tested against the real account. Browser tests
   stub the external Facebook script to prevent polluting production audiences.
 - Product suitability, current specifications/availability, image rights and the
