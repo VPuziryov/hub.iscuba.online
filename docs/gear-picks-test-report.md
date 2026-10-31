@@ -64,3 +64,21 @@ No production deployment or merge is performed.
 - Daisycon programme/site/locale/country terms and real network-issued URLs/SubIDs.
 - Real Meta Test Events delivery and physical-device testing. Local browser tests
   block external Facebook traffic and emulate mobile viewports.
+
+
+## Image URL correction — 2026-11-01
+
+Supports external HTTPS photos from explicitly approved official Tradeinn/Daisycon
+feed sources while retaining the existing local-image rights gate. Production
+source registry remains empty; product images and affiliate URLs remain null.
+No product photographs have been downloaded or added to GitHub.
+
+Passed: policy unit tests for rights/evidence/source/feed-item/site/locale gates,
+exact origin/port/path matching, malformed entries, unsafe schemes, credentials,
+suffix-host tricks and encoded path ambiguities. Browser fixtures test direct
+external rendering, lazy loading, no-referrer, failed-photo schematic fallback,
+no outbound image request for unapproved rights/sources or an unavailable registry,
+and retention of eight schematic cards with disabled sales. All fixture image
+responses are in-memory SVG blocks at example.invalid-style domains, not product
+photos or real feed URLs. The existing 21-case language/viewport regression suite
+is rerun after the correction. Existing Hub/Egypt/Pixel and main remain unchanged.

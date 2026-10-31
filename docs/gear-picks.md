@@ -53,6 +53,8 @@ See gear-picks-research.md for facts, source URLs, availability caveats and imag
 - gear.js: safe DOM rendering, sections, category filters, collapsible provenance,
   palette controls, error handling and approval gates.
 - gear-links.js: verified-URL policy; never fabricates a tracking URL.
+- gear-images.js + image-sources.json: independent photo-rights and official-feed
+  source policy. The source registry is empty until permissions are confirmed.
 - gear.css: additive styles scoped to .gear-page. base.css is unchanged.
 - assets/img/gear/*.svg: original category schematics, explicitly not exact product photos.
 
@@ -71,9 +73,45 @@ no content_fallback, and product copy.status=approved with purpose, advantages
 and limitations. `last_verified` only records the stated research scope; it does
 not approve a recommendation, confirm stock or confirm personal testing.
 
-Real images require rights_confirmed=true, rights_evidence and a local asset URL.
-Otherwise an original schematic is used and labelled. No image has been downloaded
-from a manufacturer/store, and no photo licence has been invented.
+Real images require rights_confirmed=true and nonempty rights_evidence.
+Both existing local assets and external HTTPS URLs from officially permitted
+Tradeinn/Daisycon feeds are supported. The renderer does not download external
+photos into the repository: the browser loads the approved URL directly.
+
+For an external image, the product image record must supply source_id and
+feed_item_id. Its source_id must match an approved entry in image-sources.json:
+provider is tradeinn or daisycon; rights_evidence documents official feed/image
+publication permission; permitted_sites includes hub.iscuba.online and
+permitted_locales includes the current page language. image_rules specifies exact
+HTTPS origins plus directory path_prefix values (ending in /). No wildcard or
+substring hostname matching is used. These permissions cover images independently
+of affiliate-link approval. Do not infer a permitted CDN from the provider name.
+No source is pre-approved: the shipped registry contains sources=[].
+
+Example schema ONLY (reserved .invalid domain, not an actual authorised source):
+
+```json
+{
+  "source_id": "example-approved-feed",
+  "provider": "daisycon",
+  "approval_status": "approved",
+  "rights_evidence": "Reference to the actual written image-use permission",
+  "permitted_sites": ["hub.iscuba.online"],
+  "permitted_locales": ["ru"],
+  "image_rules": [{"origin": "https://approved-cdn.example.invalid", "path_prefix": "/product-images/"}]
+}
+```
+
+The corresponding image record uses src, rights_confirmed, rights_evidence,
+source_id, feed_item_id and localized alt. Add a real source only after confirming
+that its feed URLs and delivery/redirect behaviour fall within that permission.
+HTTP, protocol-relative/data/JavaScript URLs, URL credentials, unapproved
+origins/ports/paths and encoded path ambiguities are rejected. Invalid or
+unavailable source policy disables external photos without hiding the catalogue.
+All images retain lazy loading and reserved dimensions; external requests use
+no-referrer. Failed photo loading falls back to a labelled original schematic.
+If the schematic also fails, a localized pending-image message replaces it.
+Existing product image fields remain null. No photos were downloaded or committed.
 
 ## Affiliate activation: still disabled
 
@@ -98,7 +136,7 @@ parameters or forward incoming UTM/fbclid to a merchant tracking URL.
 Existing base.js/ui.js are unchanged. Language switching retains path, query,
 UTM/fbclid and hash. Back-to-Hub retains query/hash even if a product-only anchor
 has no equivalent Hub section. No universal /gear/ language router was added.
-New assets/data use ?v=3; bump data VERSION and matching script/style references
+New assets/data use ?v=4; bump data VERSION and matching script/style references
 when updating files under the current long cache. Global hosting/indexing settings
 were not changed; new Gear pages retain noindex,nofollow.
 
@@ -112,8 +150,10 @@ Gear_Affiliate_Click. Disabled preview buttons queue nothing. Clicks are not pur
 
 ```sh
 node tests/gear/validate.cjs
+GEAR_UNIT_ONLY=1 node tests/gear/images.cjs
 # Serve repository root; Playwright and Chromium are development tools only.
 CHROMIUM_PATH=/path/to/chromium node tests/gear/browser.cjs
+CHROMIUM_PATH=/path/to/chromium node tests/gear/images.cjs
 ```
 
 No runtime framework/build dependencies. Read gear-picks-test-report.md for results.

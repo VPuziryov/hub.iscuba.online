@@ -1,6 +1,6 @@
 (function () {
   'use strict';
-  const VERSION = '3';
+  const VERSION = '4';
   const categories = ['safari', 'comfort50', 'kids', 'safety'];
   const locale = document.documentElement.lang;
   const preview = window.GearEnvironment?.preview === true;
@@ -28,24 +28,32 @@
       && window.GearLinks.approvedProduct(p) && copy.purpose
       && copy.advantages?.length > 0 && copy.limitations?.length > 0;
   }
-  function localAsset(src) {
-    return typeof src === 'string' && /^\/assets\/img\/gear\/[a-z0-9-]+\.(svg|webp|png|jpg)$/.test(src);
-  }
-  function illustration(p, t) {
+  const localAsset = src => window.GearImages.localAsset(src);
+  function illustration(p, t, imagePolicy) {
     const fig = node('figure', 'gear-figure');
-    let src;
-    let real = false;
-    if (p.image?.rights_confirmed === true && p.image.rights_evidence && localAsset(p.image.src)) {
-      src = p.image.src; real = true;
-    } else src = p.artwork?.palette_variants?.[palette] || p.artwork?.src;
-    if (localAsset(src)) {
+    const photo = window.GearImages.resolve(p.image, imagePolicy, locale);
+    function schematic() {
+      fig.replaceChildren();
+      const src = p.artwork?.palette_variants?.[palette] || p.artwork?.src;
+      if (!localAsset(src)) { fig.append(node('p', 'gear-no-art', t.imagePending)); return; }
       const img = node('img', 'gear-art');
-      img.src = src; img.alt = real ? (p.image.alt?.[locale] || p.title) : t.artLabel;
+      img.alt = t.artLabel; img.width = 520; img.height = 320; img.loading = 'lazy';
+      if (p.artwork?.palette_variants) img.dataset.paletteProduct = p.product_id;
+      img.addEventListener('error', () => {
+        fig.replaceChildren(node('p', 'gear-no-art', t.imagePending));
+      }, { once: true });
+      img.src = src;
+      fig.append(img, node('figcaption', '', t.artLabel));
+    }
+    if (photo) {
+      const img = node('img', 'gear-art');
+      img.alt = p.image.alt?.[locale] || p.title;
       img.width = 520; img.height = 320; img.loading = 'lazy';
-      if (!real && p.artwork?.palette_variants) img.dataset.paletteProduct = p.product_id;
+      if (photo.external) img.referrerPolicy = 'no-referrer';
+      img.addEventListener('error', schematic, { once: true });
+      img.src = photo.src;
       fig.append(img);
-      if (!real) fig.append(node('figcaption', '', t.artLabel));
-    } else fig.append(node('p', 'gear-no-art', t.imagePending));
+    } else schematic();
     return fig;
   }
   function safeSource(url) {
@@ -55,12 +63,12 @@
     const host = new URL(href).hostname;
     return ['www.hollis.com', 'scubapro.johnsonoutdoors.com'].includes(host) ? href : null;
   }
-  function card(p, offers, ui, content, draft) {
+  function card(p, offers, ui, content, draft, imagePolicy) {
     const copy = content.products[p.product_id];
     const el = node('article', 'card gear-card');
     el.id = p.product_id; el.dataset.productId = p.product_id;
     if (content.content_locale !== locale) el.lang = content.content_locale;
-    el.append(illustration(p, ui));
+    el.append(illustration(p, ui, imagePolicy));
     const body = node('div', 'gear-card-body');
     const top = node('div', 'gear-card-top');
     top.append(node('p', 'gear-kicker', copy.kicker));
@@ -114,8 +122,9 @@
     }
     body.append(action); el.append(body); return el;
   }
-  Promise.all([json('products.json'), json('offers.json'), json('i18n/' + locale + '.json')])
-    .then(async ([catalog, merchants, ui]) => {
+  Promise.all([json('products.json'), json('offers.json'), json('i18n/' + locale + '.json'),
+    json('image-sources.json').catch(() => ({ schema_version: 1, sources: [] }))])
+    .then(async ([catalog, merchants, ui, imagePolicy]) => {
       if (catalog.schema_version !== 1 || merchants.schema_version !== 1
         || !Array.isArray(catalog.products) || !Array.isArray(merchants.offers)) throw new Error('Invalid Gear schema');
       const content = ui.content_fallback ? await json('i18n/' + ui.content_fallback + '.json') : ui;
@@ -130,7 +139,7 @@
         for (const id of sectionIds) {
           const selected = products.filter(p => p.collection === id && (active === 'all' || p.categories.includes(active)));
           document.getElementById('gear-' + id + '-grid').replaceChildren(...selected.map(p =>
-            card(p, merchants.offers, ui, content, preview || p.status !== 'approved')));
+            card(p, merchants.offers, ui, content, preview || p.status !== 'approved', imagePolicy)));
           document.getElementById(id).hidden = selected.length === 0;
         }
         filterButtons.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.category === active)));
@@ -164,7 +173,7 @@
           const src = product?.artwork?.palette_variants?.[palette];
           if (localAsset(src)) img.src = src;
         });
-        document.getElementById('gear-hero-art').src = '/assets/img/gear/hero-' + palette + '.svg?v=3';
+        document.getElementById('gear-hero-art').src = '/assets/img/gear/hero-' + palette + '.svg?v=4';
       }));
       render();
       if (!preview && publicProducts.some(p => window.GearLinks.resolveOffer(p, merchants.offers, locale)) && ui.activeDisclosure)
