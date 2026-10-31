@@ -1,57 +1,62 @@
-# Gear Picks Phase 2 — validation report
+# Gear Picks Phase 3 — validation report
 
-Date: 2026-10-31. Baseline: GitHub main 10bfdfd64c140a95e06373a47e2f6a159cb88591.
-No production publication, merge, real affiliate requests or live Pixel events were performed.
+Date: 2026-10-31. Starting feature head: 50a1590bb99ad6d1e8765396f3a61cf81d10925a.
+Production baseline: main 10bfdfd64c140a95e06373a47e2f6a159cb88591.
+All implementation stays in feature/gear-picks and existing PR #1.
 
-## Passed
+## Local checks passed
 
-- Dependency-free validator: seven locales with matching translation keys, three
-  candidate identities, unknown personal experience, no copied images, all affiliate
-  fields null, no permitted locales/sites and pending programme status.
-- Syntax checks: gear.js and gear-links.js.
-- Chromium 153 with Playwright: 14 language/viewport combinations (1440×1000 and
-  390×844), default and local demonstration modes, no JavaScript page errors and
-  no horizontal overflow. Rendered desktop/mobile screenshots visually inspected.
-- Default mode: zero candidate cards, zero empty category buttons, localized empty state.
-- Local demo: three labelled cards, neutral CSS placeholders, three disabled buttons,
-  no outgoing product anchors and no Gear click events.
-- Production hostname simulation: gear_preview=1 does not reveal candidates.
-- Existing language handler: Gear subpath, UTM, fbclid and hash survive switching
-  languages. Back-to-Hub href retains the exact query and hash.
-- In-memory approved fixture: only categories containing approved translated products
-  appear; filter selection updates aria-pressed and cards. Candidate categories stay hidden.
-- Future offer policy: missing programme approval, evidence, locale/site permission,
-  SubID, valid HTTPS URL or unrestricted country scope disables the offer. Missing
-  localized active disclosure also keeps the button disabled.
-- In-memory active offer click: Gear_Product_Click and Gear_Affiliate_Click queued
-  once each. Null/disabled offers produce neither. Tracking failures do not throw.
-- Data load failure: localized error message, no recommendation cards.
-- Existing Hub and Egypt routes across all seven languages, current packing/routes
-  anchors and existing language switching.
-- Existing 7s one-shot events on Hub, Egypt and Gear using a controlled browser clock.
-  Gear retains the existing ViewContent_hub_7s behaviour.
-- Existing tracked baseline files unchanged, including pixel.js/base.js/ui.js/base.css,
-  all Hub/Egypt HTML pages, _headers and netlify.toml.
+- Node validator: eight candidate cards in two collections (5 + 3), separate
+  accessory/component provenance, null personal testing for current shop versions,
+  null real photos, valid original SVG paths, all affiliate fields empty/pending.
+- Seven routes and explicit draft-copy rules. RU/EN editorial drafts; other five
+  locales disclose EN fallback. No fallback is eligible for public recommendations.
+- Offer gate validation, including rejecting a component offer as a parent link.
+  Gear_Product_Click/Gear_Affiliate_Click tested only with synthetic in-memory
+  example.invalid fixtures. Disabled buttons send no click events.
+- Chromium 153 / Playwright: 21 language/viewport cases: RU, EN, DE, FR, IT, LV, PL
+  at 1440×1000, 390×844 and 320×740. No JS page errors or horizontal overflow.
+- Eight complete cards and eight draft badges, five Instructor’s Choice cards,
+  three Color & Travel cards, no active commercial CTA. All schematic images loaded.
+- All three palette controls, image changes, category filters and hidden empty Kids
+  category; hidden empty collections when a category filter excludes them.
+- Language switching preserves /gear/, UTM/fbclid and #color. Back link retains
+  exact query/hash. Anchors work after asynchronous catalogue rendering.
+- Exact remote-preview hostname auto-shows drafts. Production and unrelated
+  Netlify hostnames cannot reveal them, even with gear_preview=1.
+- Preview does not load Pixel. Public/ordinary Gear loads the existing pixel.js once.
+- Draft product content stays hidden even if product status alone becomes approved.
+  Fully approved synthetic product + locale copy can render in public mode.
+- Data-fetch failure gives localized error and removes cards/controls.
+- Regression: all seven existing Hub/Egypt locales, packing/routes anchors, existing
+  language switching and unchanged one-shot 7s event names on Hub, Egypt and Gear.
+- Existing Hub/Egypt HTML, base.css, base.js, ui.js, pixel.js, _headers and
+  netlify.toml remain byte-for-byte unchanged from the production baseline.
 
-## Review screenshots
+## Visual review
 
-- [Russian desktop demo](gear-screenshots/gear-ru-1440.webp)
-- [Russian mobile demo](gear-screenshots/gear-ru-390.webp)
+Screenshots rendered and inspected on desktop and mobile. Original category
+illustrations are labelled and never described as exact product photos.
 
-## External checks deliberately pending
+- [Russian desktop page](gear-screenshots/gear-ru-1440.webp)
+- [Russian mobile page](gear-screenshots/gear-ru-390.webp)
+- [Color & Travel desktop](gear-screenshots/gear-color-1440.webp)
+- [Color & Travel mobile](gear-screenshots/gear-color-390.webp)
 
-- Netlify automatically created an isolated PR preview:
-  https://deploy-preview-1--hubiscubaonline.netlify.app/ru/gear/
-  GitHub reports Deploy Preview ready. Direct remote browser access from this
-  execution environment returned ERR_EMPTY_RESPONSE, so remote rendering is not
-  independently verified. Candidate demonstrations remain loopback-only; the
-  external preview shows the default empty state.
-- Meta Test Events delivery was not tested against the real account. Browser tests
-  stub the external Facebook script to prevent polluting production audiences.
-- Product suitability, current specifications/availability, image rights and the
-  author's personal experience still require verification and editorial approval.
-- Daisycon account, programme, geographic/language permissions and real tracking
-  links/SubID format remain unconfirmed. No affiliate links are active.
-- No physical phone testing; mobile checks use Chromium viewport emulation.
-- Existing download binaries were not downloaded; existing markup/script preservation
-  and navigation were checked. Upstream assets and external booking services were not changed.
+## Remote preview
+
+https://deploy-preview-1--hubiscubaonline.netlify.app/ru/gear/
+
+Netlify automatically rebuilds the existing PR preview after branch updates.
+Final remote verification is recorded in the PR summary after the deploy completes.
+No production deployment or merge is performed.
+
+## Still pending
+
+- Owner approval of editorial explanations and translations; real-image publication
+  permission. Schematics are an intentional substitute until permission exists.
+- Exact stock/configuration/colour/delivery verification before purchases. G2
+  listing shows Notify me; do not claim every candidate is presently in stock.
+- Daisycon programme/site/locale/country terms and real network-issued URLs/SubIDs.
+- Real Meta Test Events delivery and physical-device testing. Local browser tests
+  block external Facebook traffic and emulate mobile viewports.

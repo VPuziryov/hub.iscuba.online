@@ -1,118 +1,119 @@
-# Instructor’s Gear Picks — Phase 2
+# Instructor’s Gear Picks — Phase 3
 
-Status: technical prototype, not a published recommendation list. Work belongs
-only to `feature/gear-picks`; do not merge or publish without owner approval.
-Scope excludes Safari Planner, Group Leader and exit-intent.
+Editorial reference: owner’s final decision in section 15 of Notion page
+40a85694bb3281d19b09d8c530003c77 (read on 2026-10-31).
+Continue PR #1, feature/gear-picks. Never merge or deploy production without approval.
 
-## Routes and preview
+## Review
 
-Seven pages: `/{ru,en,de,fr,it,lv,pl}/gear/`. No unlocalized `/gear/` route.
-Existing base.js, ui.js, pixel.js, Hub/Egypt pages and hosting settings are unchanged.
-No new links have been added to the live Hub navigation.
+https://deploy-preview-1--hubiscubaonline.netlify.app/ru/gear/
 
-Run from the repository root:
+The exact Netlify PR-host pattern `deploy-preview-<number>--hubiscubaonline.netlify.app`
+shows preliminary cards automatically, without a query flag. Local review:
 
 ```sh
 python -m http.server 8765
+# http://127.0.0.1:8765/ru/gear/?gear_preview=1
 ```
 
-Open `http://127.0.0.1:8765/en/gear/?gear_preview=1` (or another language).
-The flag works ONLY on localhost, 127.0.0.1 or IPv6 loopback. Production and
-external deploy previews ignore it. This is a rendering guard, not confidentiality:
-candidate JSON files are public static assets if the branch is deployed.
-Default mode shows an honest empty state, no candidates and no empty category filters.
-The local demo has its own labelled section, three disabled buttons and CSS placeholders.
-Candidates never populate recommendation filters, even in demo mode.
+No other external hostname, including production, can enable candidates through
+query parameters. Preview is not an access-control or confidentiality mechanism:
+JSON is a public static asset if the branch is deployed. All eight cards and both
+RU/EN copy sets remain candidate/draft. No sales are active.
 
-## Files
+## Contents
 
-- `assets/data/gear/products.json`: permanent product identity, categories, editorial status, sources and image rights.
-- `assets/data/gear/offers.json`: independent merchant offers and programme restrictions.
-- `assets/data/gear/i18n/{lang}.json`: interface and editorial copy, keyed by stable product_id.
-- `assets/css/gear.css`: styles scoped to .gear-page; existing base.css provides tokens.
-- `assets/js/gear.js`: data loading, rendering and filters.
-- `assets/js/gear-links.js`: fail-closed offer selection and optional Pixel click events.
-- `tests/gear/validate.cjs`: dependency-free catalogue and link-policy tests.
-- `tests/gear/browser.cjs`: Playwright interface, responsive and Hub regression checks.
+Instructor’s Choice: M1 (with an independent neoprene-strap accessory note),
+standard F1, ST Travel/ST22, a Compact SMB plus finger-spool editorial pairing,
+and Galileo G2. Color & Travel: GO Sport, Trinidad 3, Navigator Lite.
+The buoy/spool pairing is not a seller bundle. There are eight editorial cards,
+with individual source URLs for the two additional component products.
 
-No framework, package installation, build service, backend or account credentials
-are required by the site. Playwright is a development/test dependency only.
-New asset/data references use `?v=1`; increment VERSION and all matching script/style
-references together when releasing changed data/assets under the existing long cache.
-No global cache or indexing settings have been changed.
+M1/F1 model ownership is confirmed in the owner’s account, not a fresh test of
+current shop SKUs. Personally_tested remains null for current retail versions.
+Other modern candidates use confirmed selection criteria, not invented experience.
+Galileo Sol is the author’s computer; G2 is a distinct modern catalogue candidate.
+This is recreational equipment selection. K6, old S25 identification, historical
+photographs, unrelated Safari Planner, Group Leader and exit-intent are excluded.
 
-## Editorial publication gates
+See gear-picks-research.md for facts, source URLs, availability caveats and image rights.
 
-Candidates: Hollis ST Travel System Wing, Cressi F1 Junior Diving Mask and
-Scubapro GO Travel Fins. The three historical source pages were retrieved on
-2026-10-31 for identity checks only. Cached retrieval is not a current price,
-stock, specification or suitability verification. `last_verified` stays null.
-Source URLs are stored as provenance, not clickable sales buttons.
-No manufacturer description, review, claimed benefit, measurement or price is copied.
+## Data and rendering
 
-Before publication set status=approved, approved_by, approved_at, last_verified,
-and explicitly confirm personally_tested=true or false with the author. Unknown
-experience is null. Each locale also requires nonempty purpose, advantages[]
-and limitations[]; a missing translation excludes that product in that locale.
-Do not approve a product solely to make its card visible.
+- products.json: stable IDs, collection/category, exact provenance URLs, optional
+  component products, experience scope, verification scope, retail availability
+  caveats and artwork/image metadata.
+- offers.json: independent merchant offers; component_id prevents a component
+  offer being selected as the parent product’s purchase link.
+- i18n/ru.json and en.json: complete editorial DRAFTS, not approved recommendations.
+- DE/FR/IT/LV/PL: seven routes and existing translated interface remain; editorial
+  product copy falls back explicitly to EN with a localized notice. These locales
+  have no silently approved translations and cannot publish fallback copy.
+- gear-env.js: exact hostname preview detection and analytics isolation.
+- gear.js: safe DOM rendering, sections, category filters, collapsible provenance,
+  palette controls, error handling and approval gates.
+- gear-links.js: verified-URL policy; never fabricates a tracking URL.
+- gear.css: additive styles scoped to .gear-page. base.css is unchanged.
+- assets/img/gear/*.svg: original category schematics, explicitly not exact product photos.
 
-An image may render only from `/assets/img/gear/` with rights_confirmed=true,
-rights_evidence and an appropriate localized alt. Otherwise a CSS placeholder
-is rendered. Obtain rights before adding a file. Product approval and partner
-programme approval are independent.
+Only populated categories appear for the current visible dataset. Production
+uses only approved products and copy. Preview uses candidates and shows a draft
+badge on every card. Palette choices change schematic colours, not real SKU
+selection, shopping stock or compatibility. Colours are approximate screen swatches.
+All sources are revealed in preview disclosures: manufacturer references are
+clickable; retailer URLs are copyable text, not commercial buttons.
 
-## Offer activation — not performed
+## Public publication gate
 
-All shipped affiliate_url/sub_id/network/campaign fields are null; approved
-locales/sites and links_by_locale are empty, approval_status=pending.
-The historical 533805 identifier is not a Publisher ID and is not used.
-No historical NO/SV approvals are inherited by the current seven languages.
+A product needs status=approved, approved_by, approved_at, last_verified and
+explicit boolean personally_tested. Each locale needs editorial_status=approved,
+no content_fallback, and product copy.status=approved with purpose, advantages
+and limitations. `last_verified` only records the stated research scope; it does
+not approve a recommendation, confirm stock or confirm personal testing.
 
-For a future activation, record the actual verified network, campaign, approval
-evidence, permitted_locales and permitted_sites including hub.iscuba.online.
-`country_scope` must explicitly be `unrestricted` for this implementation. A
-country-restricted campaign remains disabled: UI language does not establish
-visitor country. Add a separately reviewed implementation if country gating is needed.
+Real images require rights_confirmed=true, rights_evidence and a local asset URL.
+Otherwise an original schematic is used and labelled. No image has been downloaded
+from a manufacturer/store, and no photo licence has been invented.
 
-Store a network-issued HTTPS affiliate_url and its actual sub_id, either on the
-offer for a single permitted locale or under links_by_locale[locale]. The latter
-supports a separate URL/SubID for each locale. The card placement is `card`.
-Future placements need their own mapping and review. Never append guessed
-parameters to tracking URLs. Tentative internal naming convention:
-`hub_gear_{product_id}_{locale}_{placement}`; network syntax/length still need
-confirmation. SubIDs must contain no personal data.
+## Affiliate activation: still disabled
 
-A nonempty approved localized `activeDisclosure` is additionally required to
-render commercial links. This replaces the prototype disclosure. The per-link
-label is always shown and the link uses rel="sponsored noopener".
-Without these approvals the UI shows a disabled button, even for an editorially
-approved product. There is intentionally no ordinary merchant-link fallback in Phase 2.
+Every affiliate_url/sub_id/network/campaign is null. Programme approval is pending;
+permitted_locales/sites and links_by_locale are empty. Historical NO/SV approvals
+and Advertising Space ID 533805 are not reused.
 
-## Routing and analytics
+A future root product offer needs real programme/site/locale approval, evidence,
+network/campaign, HTTPS URL issued by the network, individual SubID and localized
+activeDisclosure. Country_scope must be explicitly unrestricted; restricted
+countries need a separately reviewed implementation. UI language is not geography.
+Root links and component links must remain independent. No ordinary merchant-link
+fallback is provided. Preview never renders commercial links, even if approved
+offers are introduced later. Future component purchase UI is out of this phase.
 
-Existing language change preserves path/query/hash using base.js. Back-to-Hub
-preserves exact current query/hash. A Gear-only product anchor may have no matching
-section on the Hub, but is not silently discarded. No UTM/fbclid is appended to
-merchant URLs or Pixel event parameters.
+Proposed internal SubID convention: hub_gear_{product_id}_{locale}_{placement}.
+Actual Daisycon parameter syntax/limits are not confirmed. Never append guessed
+parameters or forward incoming UTM/fbclid to a merchant tracking URL.
 
-Existing pixel.js is loaded once and unchanged. It currently emits
-ViewContent_hub_7s for all non-Egypt pages, including Gear; this existing behaviour
-was explicitly retained. ViewContent_EgyptHub_7s remains unchanged.
-An active approved offer click emits Gear_Product_Click and Gear_Affiliate_Click
-with product_id, merchant, locale, placement and sub_id. Demo/disabled buttons
-have no handlers and send neither event. Pixel failures do not block navigation.
-These are outbound clicks, never checkout/purchase/commission confirmations.
-Revenue must be reconciled with the affiliate network report.
+## Routing, cache and analytics
 
-## Validation
+Existing base.js/ui.js are unchanged. Language switching retains path, query,
+UTM/fbclid and hash. Back-to-Hub retains query/hash even if a product-only anchor
+has no equivalent Hub section. No universal /gear/ language router was added.
+New assets/data use ?v=3; bump data VERSION and matching script/style references
+when updating files under the current long cache. Global hosting/indexing settings
+were not changed; new Gear pages retain noindex,nofollow.
+
+Preview does not load pixel.js at all, avoiding false audience accumulation.
+Ordinary public Gear loads the existing pixel.js once, unchanged; its existing
+ViewContent_hub_7s behaviour is retained. Existing Hub/Egypt pages and their 7s
+logic are untouched. Active approved root links can queue Gear_Product_Click and
+Gear_Affiliate_Click. Disabled preview buttons queue nothing. Clicks are not purchases.
+
+## Tests
 
 ```sh
 node tests/gear/validate.cjs
-# In another terminal, serve repository root on 8765, then:
+# Serve repository root; Playwright and Chromium are development tools only.
 CHROMIUM_PATH=/path/to/chromium node tests/gear/browser.cjs
 ```
 
-The browser suite intercepts the Facebook script and never sends real analytics.
-Synthetic approved products and example.invalid offer URLs exist only as in-memory
-test fixtures. They are not written to the shipped catalogue.
-See `gear-picks-test-report.md` for results and remaining external checks.
+No runtime framework/build dependencies. Read gear-picks-test-report.md for results.

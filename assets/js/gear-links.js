@@ -17,7 +17,7 @@
     // Fail closed: a language is not proof of the visitor's country. Restricted
     // country programmes require a separately approved implementation.
     for (const offer of offers) {
-      if (offer.product_id !== product.product_id || offer.approval_status !== 'approved'
+      if (offer.component_id || offer.product_id !== product.product_id || offer.approval_status !== 'approved'
         || !offer.approval_evidence || !offer.network || !offer.campaign
         || !offer.permitted_locales?.includes(locale) || !offer.permitted_sites?.includes(SITE)
         || offer.country_scope !== 'unrestricted') continue;

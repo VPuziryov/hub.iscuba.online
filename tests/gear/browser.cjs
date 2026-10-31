@@ -1,107 +1,67 @@
-/* Requires Playwright + a Chromium executable. No production requests or events.
-   python -m http.server 8765 --directory .
-   CHROMIUM_PATH=/path/to/chromium node tests/gear/browser.cjs
-*/
-const {chromium}=require('playwright');
-const fs=require('node:fs');
-const path=require('node:path');
-const assert=require('node:assert/strict');
-const root=path.resolve(__dirname,'../..');
-const read=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
-const base=process.env.GEAR_TEST_URL || 'http://127.0.0.1:8765';
-const langs=['ru','en','de','fr','it','lv','pl'];
+/* Serve repository root on 8765; requires Playwright and CHROMIUM_PATH.
+   External Facebook is stubbed. No real analytics or affiliate traffic is sent. */
+const {chromium}=require('playwright');const assert=require('node:assert/strict');const fs=require('node:fs');const path=require('node:path');
+const root=path.resolve(__dirname,'../..');const json=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
+const base=process.env.GEAR_TEST_URL||'http://127.0.0.1:8765';const langs=['ru','en','de','fr','it','lv','pl'];
 (async()=>{
- const browser=await chromium.launch({headless:true,executablePath:process.env.CHROMIUM_PATH||undefined,args:['--no-sandbox']});
- let checks=0;
- async function context(viewport){
-  const c=await browser.newContext({viewport});
-  await c.route('https://connect.facebook.net/**',r=>r.fulfill({body:'',contentType:'application/javascript'}));
-  await c.route('https://www.facebook.com/**',r=>r.abort());
-  return c;
- }
- for(const viewport of [{width:1440,height:1000},{width:390,height:844}]){
-  const c=await context(viewport);const page=await c.newPage();const errors=[];
-  page.on('pageerror',e=>errors.push(e.message));
+ const b=await chromium.launch({headless:true,executablePath:process.env.CHROMIUM_PATH||undefined,args:['--no-sandbox']});
+ async function context(viewport){const c=await b.newContext({viewport});await c.route('https://connect.facebook.net/**',r=>r.fulfill({body:''}));return c;}
+ let count=0;
+ for(const viewport of [{width:1440,height:1000},{width:390,height:844},{width:320,height:740}]){
+  const c=await context(viewport);const p=await c.newPage();const errors=[];p.on('pageerror',e=>errors.push(e.message));
   for(const lang of langs){
-   const query='?utm_source=facebook&utm_campaign=gear&fbclid=test';
-   await page.goto(base+'/'+lang+'/gear/'+query+'#packing');
-   await page.waitForSelector('body[data-gear-ready=true]');
-   assert.equal(await page.locator('#gear-grid article').count(),0);
-   assert.equal(await page.locator('#gear-demo').isVisible(),false);
-   assert.equal(await page.locator('#gear-filters').isVisible(),false);
-   assert((await page.locator('[data-gear-back]').getAttribute('href')).endsWith(query+'#packing'));
-   await page.selectOption('#language',lang==='en'?'ru':'en');
-   await page.waitForURL('**/'+(lang==='en'?'ru':'en')+'/gear/'+query+'#packing');
-   await page.goto(base+'/'+lang+'/gear/'+query+'&gear_preview=1#packing');
-   await page.waitForSelector('body[data-gear-ready=true]');
-   assert.equal(await page.locator('#gear-demo article').count(),3);
-   assert.equal(await page.locator('#gear-demo button:disabled').count(),3);
-   assert.equal(await page.locator('#gear-demo a').count(),0);
-   assert.equal(await page.locator('#gear-filters').isVisible(),false);
-   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
-   assert.equal(await page.evaluate(()=>fbq.queue.filter(a=>String(a[1]).startsWith('Gear_')).length),0);
-   if(process.env.GEAR_SCREENSHOTS && lang==='ru'){await page.screenshot({path:process.env.GEAR_SCREENSHOTS+'/gear-ru-'+viewport.width+'.png',fullPage:true});}
-   checks++;
+   const q='?utm_source=facebook&fbclid=test&gear_preview=1';
+   await p.goto(base+'/'+lang+'/gear/'+q+'#color');await p.waitForSelector('body[data-gear-ready=true]');
+   assert.equal(await p.locator('.gear-card').count(),8);
+   assert.equal(await p.locator('#gear-instructor-grid .gear-card').count(),5);assert.equal(await p.locator('#gear-color-grid .gear-card').count(),3);
+   assert.equal(await p.locator('.gear-card .gear-draft').count(),8);assert.equal(await p.locator('.gear-card button:disabled').count(),8);
+   assert.equal(await p.locator('.gear-card .gear-action a').count(),0);assert.equal(await p.locator('[data-category=kids]').count(),0);
+   assert.equal(await p.evaluate(()=>typeof window.fbq),'undefined');
+   assert.equal(await p.locator('#gear-translation').isVisible(),true);
+   const old=await p.locator('#scubapro-go-sport img').getAttribute('src');
+   await p.locator('[data-palette=pink]').click();
+   assert.notEqual(await p.locator('#scubapro-go-sport img').getAttribute('src'),old);
+   assert((await p.locator('#scubapro-go-sport img').getAttribute('src')).includes('-pink.svg'));
+   assert.equal(await p.locator('[data-palette=pink]').getAttribute('aria-pressed'),'true');
+   await p.locator('[data-category=safety]').click();assert.equal(await p.locator('.gear-card').count(),2);assert.equal(await p.locator('#color').isVisible(),false);
+   await p.locator('[data-category=all]').click();assert.equal(await p.locator('.gear-card').count(),8);
+   assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
+   await p.evaluate(()=>document.querySelectorAll('.gear-art').forEach(i=>i.loading='eager'));
+   await p.waitForFunction(()=>[...document.querySelectorAll('.gear-art')].every(i=>i.complete&&i.naturalWidth>0));
+   assert((await p.locator('[data-gear-back]').getAttribute('href')).endsWith(q+'#color'));
+   if(lang==='ru'&&process.env.GEAR_SCREENSHOTS&&viewport.width!==320){
+    await p.locator('[data-palette=teal]').click();await p.waitForFunction(()=>[...document.querySelectorAll('.gear-art')].every(i=>i.complete&&i.naturalWidth>0));await p.evaluate(()=>scrollTo(0,0));
+    await p.screenshot({path:process.env.GEAR_SCREENSHOTS+'/gear-ru-'+viewport.width+'.png',fullPage:true});
+    await p.locator('#gear-entry-color').click();await p.screenshot({path:process.env.GEAR_SCREENSHOTS+'/gear-color-'+viewport.width+'.png'});
+   }
+   const next=lang==='en'?'ru':'en';await p.selectOption('#language',next);await p.waitForURL('**/'+next+'/gear/'+q+'#color');count++;
   }
-  assert.deepEqual(errors,[]);
-  await c.close();
+  assert.deepEqual(errors,[]);await c.close();
  }
- const c=await context({width:1440,height:1000});const page=await c.newPage();
- // Public hostname cannot expose candidates through a query parameter.
- await c.route('https://hub.iscuba.online/**',async route=>{
-  const url=new URL(route.request().url());const local=await fetch(base+url.pathname+url.search);
-  await route.fulfill({status:local.status,body:Buffer.from(await local.arrayBuffer()),headers:{'content-type':local.headers.get('content-type')}});
- });
- await page.goto('https://hub.iscuba.online/ru/gear/?gear_preview=1');
- await page.waitForSelector('body[data-gear-ready=true]');
- assert.equal(await page.locator('#gear-demo').isVisible(),false);
- // Approved fixture checks real filters and fail-closed button behavior.
- const catalog=read('assets/data/gear/products.json');
- catalog.products[0]={...catalog.products[0],status:'approved',approved_by:'test',approved_at:'2026-10-31',last_verified:'2026-10-31',personally_tested:false};
- const t=read('assets/data/gear/i18n/en.json');
- t.products[catalog.products[0].product_id]={purpose:'Test fixture',advantages:['Test benefit'],limitations:['Test limitation']};
+ const c=await context({width:1440,height:1000});const p=await c.newPage();const errors=[];p.on('pageerror',e=>errors.push(e.message));
+ for(const host of ['hub.iscuba.online','deploy-preview-1--hubiscubaonline.netlify.app','evil--hubiscubaonline.netlify.app','deploy-preview-9--anotherproject.netlify.app']){
+  await c.route('https://'+host+'/**',async r=>{const u=new URL(r.request().url());const x=await fetch(base+u.pathname+u.search);await r.fulfill({status:x.status,body:Buffer.from(await x.arrayBuffer()),headers:{'content-type':x.headers.get('content-type')}});});
+  await p.goto('https://'+host+'/ru/gear/?gear_preview=1');await p.waitForSelector('body[data-gear-ready=true]');
+  const preview=host==='deploy-preview-1--hubiscubaonline.netlify.app';
+  assert.equal(await p.locator('.gear-card').count(),preview?8:0);assert.equal(await p.locator('#gear-filters').isVisible(),preview);
+  assert.equal(await p.evaluate(()=>typeof window.fbq),preview?'undefined':'function');
+ }
+ // Candidate content stays hidden at every public locale, even with a preview flag.
+ for(const lang of langs){await p.goto('https://hub.iscuba.online/'+lang+'/gear/?gear_preview=1');await p.waitForSelector('body[data-gear-ready=true]');assert.equal(await p.locator('.gear-card').count(),0);}
+ // A product cannot be made public without approval of both editorial copy and product.
+ const catalog=json('assets/data/gear/products.json');catalog.products[0]={...catalog.products[0],status:'approved',personally_tested:false,approved_by:'test',approved_at:'2026-10-31'};
+ const ui=json('assets/data/gear/i18n/en.json');
  await c.route('**/assets/data/gear/products.json*',r=>r.fulfill({json:catalog}));
- await c.route('**/assets/data/gear/i18n/en.json*',r=>r.fulfill({json:t}));
- await page.goto(base+'/en/gear/');await page.waitForSelector('body[data-gear-ready=true]');
- assert.equal(await page.locator('#gear-grid article').count(),1);
- assert.equal(await page.locator('#gear-filters button').count(),2);
- assert.equal(await page.locator('[data-category=kids]').count(),0);
- await page.locator('[data-category=safari]').click();
- assert.equal(await page.locator('[data-category=safari]').getAttribute('aria-pressed'),'true');
- assert.equal(await page.locator('#gear-grid button:disabled').count(),1);
- // Active future offers require explicit disclosure and all approval gates.
- const offers=read('assets/data/gear/offers.json');
- offers.offers[0]={...offers.offers[0],approval_status:'approved',approval_evidence:'fixture',network:'fixture',campaign:'fixture',permitted_locales:['en'],permitted_sites:['hub.iscuba.online'],country_scope:'unrestricted',affiliate_url:'https://example.invalid/test',sub_id:'test_product_en_card'};
- await c.route('**/assets/data/gear/offers.json*',r=>r.fulfill({json:offers}));
- await page.reload();await page.waitForSelector('body[data-gear-ready=true]');
- assert.equal(await page.locator('#gear-grid a').count(),0);
- t.activeDisclosure='Synthetic test disclosure';
- await page.reload();await page.waitForSelector('body[data-gear-ready=true]');
- assert.equal(await page.locator('#gear-grid a').count(),1);
- await page.evaluate(()=>document.querySelector('#gear-grid a').dispatchEvent(new MouseEvent('click')));
- const events=await page.evaluate(()=>fbq.queue.filter(a=>String(a[1]).startsWith('Gear_')).map(a=>a[1]));
- assert.deepEqual(events,['Gear_Product_Click','Gear_Affiliate_Click']);
- // Fetch failure has a localized recovery message and no cards/buttons.
- await c.route('**/assets/data/gear/products.json*',r=>r.fulfill({status:503,body:''}));
- await page.reload();await page.waitForSelector('body[data-gear-ready=error]');
- assert.equal(await page.locator('#gear-grid article').count(),0);
- assert.equal(await page.locator('#gear-state').innerText(),t.error);
- await c.close();
- // Existing Hub routes and timer: unchanged scripts; real page initialization.
- const regression=await context({width:390,height:844});const hub=await regression.newPage();
- for(const lang of langs){
-  await hub.goto(base+'/'+lang+'/?utm_source=test#packing');
-  assert.equal(await hub.locator('#packing').count(),1);
-  await hub.selectOption('#language',lang==='en'?'ru':'en');
-  await hub.waitForURL('**/'+(lang==='en'?'ru':'en')+'/?utm_source=test#packing');
-  await hub.goto(base+'/'+lang+'/egypt/');assert.equal(await hub.locator('#routes').count(),1);
- }
- await hub.clock.install();
- for(const [url,event] of [['/en/','ViewContent_hub_7s'],['/en/egypt/','ViewContent_EgyptHub_7s'],['/en/gear/','ViewContent_hub_7s']]){
-  await hub.goto(base+url);await hub.clock.runFor(7100);
-  assert.equal(await hub.evaluate(e=>fbq.queue.filter(a=>a[1]===e).length,event),1);
-  await hub.clock.runFor(8000);assert.equal(await hub.evaluate(e=>fbq.queue.filter(a=>a[1]===e).length,event),1);
- }
- await regression.close();await browser.close();
- console.log('PASS: '+checks+' locale/viewport cases; public preview guard; approved filters; disclosure/offer gating; click events; fetch failure; 7 Hub/Egypt locales; 7s one-shot events');
+ await c.route('**/assets/data/gear/i18n/en.json*',r=>r.fulfill({json:ui}));
+ await p.goto(base+'/en/gear/');await p.waitForSelector('body[data-gear-ready=true]');assert.equal(await p.locator('.gear-card').count(),0);
+ ui.editorial_status='approved';ui.products[catalog.products[0].product_id].status='approved';
+ await p.reload();await p.waitForSelector('body[data-gear-ready=true]');assert.equal(await p.locator('.gear-card').count(),1);assert.equal(await p.locator('.gear-card button:disabled').count(),1);
+ await c.route('**/assets/data/gear/products.json*',r=>r.fulfill({status:503,body:''}));await p.reload();await p.waitForSelector('body[data-gear-ready=error]');assert.equal(await p.locator('#gear-state').innerText(),ui.error);
+ assert.deepEqual(errors,[]);await c.close();
+ // Existing pages, routing and pixel.js timer stay unchanged.
+ const rc=await context({width:390,height:844});const rp=await rc.newPage();
+ for(const lang of langs){await rp.goto(base+'/'+lang+'/?utm_source=test#packing');assert.equal(await rp.locator('#packing').count(),1);await rp.selectOption('#language',lang==='en'?'ru':'en');await rp.waitForURL('**/'+(lang==='en'?'ru':'en')+'/?utm_source=test#packing');await rp.goto(base+'/'+lang+'/egypt/');assert.equal(await rp.locator('#routes').count(),1);}
+ await rp.clock.install();
+ for(const [route,event] of [['/en/','ViewContent_hub_7s'],['/en/egypt/','ViewContent_EgyptHub_7s'],['/en/gear/','ViewContent_hub_7s']]){await rp.goto(base+route);await rp.waitForFunction(()=>typeof fbq==='function');await rp.clock.runFor(7100);assert.equal(await rp.evaluate(e=>fbq.queue.filter(a=>a[1]===e).length,event),1);await rp.clock.runFor(8000);assert.equal(await rp.evaluate(e=>fbq.queue.filter(a=>a[1]===e).length,event),1);}
+ await rc.close();await b.close();console.log('PASS: '+count+' language/viewport cases; 8 cards; palette/filter interactions; exact preview host gate; draft publication gates; seven Hub/Egypt locales; unchanged 7s events');
 })().catch(e=>{console.error(e);process.exit(1)});
