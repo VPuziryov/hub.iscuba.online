@@ -48,7 +48,11 @@ illustrations are labelled and never described as exact product photos.
 https://deploy-preview-1--hubiscubaonline.netlify.app/ru/gear/
 
 Netlify automatically rebuilds the existing PR preview after branch updates.
-Final remote verification is recorded in the PR summary after the deploy completes.
+Remote cloud-browser verification completed: the live PR URL rendered eight
+preliminary cards, both collections, draft notices and disabled store buttons.
+The Color & Travel anchor and pink palette were clicked; the fin image source
+changed to travel-fins-pink.svg and the new pink fin/mask artwork rendered visibly.
+This resolves the previous Phase 2 remote-rendering limitation.
 No production deployment or merge is performed.
 
 ## Still pending
