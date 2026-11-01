@@ -1,0 +1,1087 @@
+[
+  {
+    "url": "http://iscuba.online/dajving-safari-v-egipte-raspisanie",
+    "status": 200,
+    "final_url": "https://iscuba.online/dajving-safari-v-egipte-raspisanie/",
+    "bytes": 183934,
+    "redirects": [
+      {
+        "status": 301,
+        "url": "http://iscuba.online/dajving-safari-v-egipte-raspisanie",
+        "location": "https://iscuba.online/dajving-safari-v-egipte-raspisanie",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 302,
+        "url": "https://iscuba.online/dajving-safari-v-egipte-raspisanie",
+        "location": "http://iscuba.online/dajving-safari-v-egipte-raspisanie",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "http://iscuba.online/dajving-safari-v-egipte-raspisanie",
+        "location": "https://iscuba.online/dajving-safari-v-egipte-raspisanie",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "https://iscuba.online/dajving-safari-v-egipte-raspisanie",
+        "location": "https://iscuba.online/dajving-safari-v-egipte-raspisanie/",
+        "redirect_by": "WordPress",
+        "server": "envoy"
+      }
+    ]
+  },
+  {
+    "url": "https://gamma.app/?utm_source=made-with-gamma",
+    "error": "<urlopen error timed out>",
+    "final_url": null,
+    "redirects": []
+  },
+  {
+    "url": "https://hub.iscuba.online/assets/downloads/Packing-List-EN.png",
+    "status": 200,
+    "final_url": "https://hub.iscuba.online/assets/downloads/Packing-List-EN.png",
+    "bytes": 687221,
+    "redirects": []
+  },
+  {
+    "url": "https://hub.iscuba.online/assets/downloads/Packing-List-RU.png",
+    "status": 200,
+    "final_url": "https://hub.iscuba.online/assets/downloads/Packing-List-RU.png",
+    "bytes": 756010,
+    "redirects": []
+  },
+  {
+    "url": "https://iscuba.online/",
+    "status": 200,
+    "final_url": "https://iscuba.online/",
+    "bytes": 183608,
+    "redirects": [
+      {
+        "status": 302,
+        "url": "https://iscuba.online/",
+        "location": "http://iscuba.online/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "http://iscuba.online/",
+        "location": "https://iscuba.online/",
+        "redirect_by": null,
+        "server": "envoy"
+      }
+    ]
+  },
+  {
+    "url": "https://iscuba.online/dajving-safari-v-egipte-raspisanie",
+    "status": 200,
+    "final_url": "https://iscuba.online/dajving-safari-v-egipte-raspisanie/",
+    "bytes": 183940,
+    "redirects": [
+      {
+        "status": 302,
+        "url": "https://iscuba.online/dajving-safari-v-egipte-raspisanie",
+        "location": "http://iscuba.online/dajving-safari-v-egipte-raspisanie",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "http://iscuba.online/dajving-safari-v-egipte-raspisanie",
+        "location": "https://iscuba.online/dajving-safari-v-egipte-raspisanie",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "https://iscuba.online/dajving-safari-v-egipte-raspisanie",
+        "location": "https://iscuba.online/dajving-safari-v-egipte-raspisanie/",
+        "redirect_by": "WordPress",
+        "server": "envoy"
+      }
+    ]
+  },
+  {
+    "url": "https://iscuba.online/dive/assure/",
+    "error": "HTTP Error 403: Forbidden",
+    "final_url": null,
+    "redirects": [
+      {
+        "status": 302,
+        "url": "https://iscuba.online/dive/assure/",
+        "location": "http://iscuba.online/dive/assure/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "http://iscuba.online/dive/assure/",
+        "location": "https://iscuba.online/dive/assure/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "https://iscuba.online/dive/assure/",
+        "location": "https://diveassure.com/en/home/",
+        "redirect_by": "WordPress",
+        "server": "envoy"
+      }
+    ]
+  },
+  {
+    "url": "https://iscuba.online/dive/bags/",
+    "error": "HTTP Error 503: Service Unavailable",
+    "final_url": null,
+    "redirects": [
+      {
+        "status": 302,
+        "url": "https://iscuba.online/dive/bags/",
+        "location": "http://iscuba.online/dive/bags/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "http://iscuba.online/dive/bags/",
+        "location": "https://iscuba.online/dive/bags/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "https://iscuba.online/dive/bags/",
+        "location": "https://tnkdbf.tradeinn.com/ts/i5534887/tsc?typ=r&amc=con.blbn.524297.533805.14119786&rmd=3&trg=https%3A%2F%2Fwww.tradeinn.com%2Fdiveinn%2Fen%2Fbags-and-dry-boxes-gear-bags%2F1%2Fs",
+        "redirect_by": "WordPress",
+        "server": "envoy"
+      }
+    ]
+  },
+  {
+    "url": "https://iscuba.online/dive/bcd/",
+    "error": "HTTP Error 503: Service Unavailable",
+    "final_url": null,
+    "redirects": [
+      {
+        "status": 302,
+        "url": "https://iscuba.online/dive/bcd/",
+        "location": "http://iscuba.online/dive/bcd/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "http://iscuba.online/dive/bcd/",
+        "location": "https://iscuba.online/dive/bcd/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "https://iscuba.online/dive/bcd/",
+        "location": "https://tnkdbf.tradeinn.com/ts/i5534887/tsc?typ=r&amc=con.blbn.524297.533805.14119786&rmd=3&trg=https%3A%2F%2Fwww.tradeinn.com%2Fdiveinn%2Fen%2Fbcd-jackets%2F8%2Ff",
+        "redirect_by": "WordPress",
+        "server": "envoy"
+      }
+    ]
+  },
+  {
+    "url": "https://iscuba.online/dive/dry-bag/",
+    "error": "HTTP Error 503: Service Unavailable",
+    "final_url": null,
+    "redirects": [
+      {
+        "status": 302,
+        "url": "https://iscuba.online/dive/dry-bag/",
+        "location": "http://iscuba.online/dive/dry-bag/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "http://iscuba.online/dive/dry-bag/",
+        "location": "https://iscuba.online/dive/dry-bag/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "https://iscuba.online/dive/dry-bag/",
+        "location": "https://tnkdbf.tradeinn.com/ts/i5534887/tsc?typ=r&amc=con.blbn.524297.533805.14119786&rmd=3&trg=https%3A%2F%2Fwww.tradeinn.com%2Fdiveinn%2Fen%2Fbags-and-dry-boxes%2F10%2Ff",
+        "redirect_by": "WordPress",
+        "server": "envoy"
+      }
+    ]
+  },
+  {
+    "url": "https://iscuba.online/dive/eg-safari-en/",
+    "status": 200,
+    "final_url": "https://egypt.iscuba.online/",
+    "bytes": 22226,
+    "redirects": [
+      {
+        "status": 302,
+        "url": "https://iscuba.online/dive/eg-safari-en/",
+        "location": "http://iscuba.online/dive/eg-safari-en/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "http://iscuba.online/dive/eg-safari-en/",
+        "location": "https://iscuba.online/dive/eg-safari-en/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "https://iscuba.online/dive/eg-safari-en/",
+        "location": "https://egypt.iscuba.online/",
+        "redirect_by": "WordPress",
+        "server": "envoy"
+      }
+    ]
+  },
+  {
+    "url": "https://iscuba.online/dive/eg-safari-ru/",
+    "status": 200,
+    "final_url": "https://egypt.iscuba.online/",
+    "bytes": 22226,
+    "redirects": [
+      {
+        "status": 302,
+        "url": "https://iscuba.online/dive/eg-safari-ru/",
+        "location": "http://iscuba.online/dive/eg-safari-ru/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "http://iscuba.online/dive/eg-safari-ru/",
+        "location": "https://iscuba.online/dive/eg-safari-ru/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "https://iscuba.online/dive/eg-safari-ru/",
+        "location": "https://egypt.iscuba.online/",
+        "redirect_by": "WordPress",
+        "server": "envoy"
+      }
+    ]
+  },
+  {
+    "url": "https://iscuba.online/dive/eg-schedule-form-en/",
+    "status": 200,
+    "final_url": "https://egypt.iscuba.online/safari/en/",
+    "bytes": 6636,
+    "redirects": [
+      {
+        "status": 302,
+        "url": "https://iscuba.online/dive/eg-schedule-form-en/",
+        "location": "http://iscuba.online/dive/eg-schedule-form-en/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "http://iscuba.online/dive/eg-schedule-form-en/",
+        "location": "https://iscuba.online/dive/eg-schedule-form-en/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "https://iscuba.online/dive/eg-schedule-form-en/",
+        "location": "https://egypt.iscuba.online/safari/en/",
+        "redirect_by": "WordPress",
+        "server": "envoy"
+      }
+    ]
+  },
+  {
+    "url": "https://iscuba.online/dive/eg-schedule-form-ru/",
+    "status": 200,
+    "final_url": "https://egypt.iscuba.online/safari/ru/",
+    "bytes": 8379,
+    "redirects": [
+      {
+        "status": 302,
+        "url": "https://iscuba.online/dive/eg-schedule-form-ru/",
+        "location": "http://iscuba.online/dive/eg-schedule-form-ru/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "http://iscuba.online/dive/eg-schedule-form-ru/",
+        "location": "https://iscuba.online/dive/eg-schedule-form-ru/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "https://iscuba.online/dive/eg-schedule-form-ru/",
+        "location": "https://egypt.iscuba.online/safari/ru/",
+        "redirect_by": "WordPress",
+        "server": "envoy"
+      }
+    ]
+  },
+  {
+    "url": "https://iscuba.online/dive/eg-timetable/",
+    "status": 200,
+    "final_url": "https://egypt.iscuba.online/safari/",
+    "bytes": 303,
+    "redirects": [
+      {
+        "status": 302,
+        "url": "https://iscuba.online/dive/eg-timetable/",
+        "location": "http://iscuba.online/dive/eg-timetable/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "http://iscuba.online/dive/eg-timetable/",
+        "location": "https://iscuba.online/dive/eg-timetable/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "https://iscuba.online/dive/eg-timetable/",
+        "location": "https://egypt.iscuba.online/safari",
+        "redirect_by": "WordPress",
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "https://egypt.iscuba.online/safari",
+        "location": "https://egypt.iscuba.online/safari/",
+        "redirect_by": null,
+        "server": "envoy"
+      }
+    ]
+  },
+  {
+    "url": "https://iscuba.online/dive/egypt-en/",
+    "status": 200,
+    "final_url": "https://iscuba.online/egypt-iso-en/",
+    "bytes": 86122,
+    "redirects": [
+      {
+        "status": 302,
+        "url": "https://iscuba.online/dive/egypt-en/",
+        "location": "http://iscuba.online/dive/egypt-en/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "http://iscuba.online/dive/egypt-en/",
+        "location": "https://iscuba.online/dive/egypt-en/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "https://iscuba.online/dive/egypt-en/",
+        "location": "https://iscuba.online/egypt-iso-en/",
+        "redirect_by": "WordPress",
+        "server": "envoy"
+      }
+    ]
+  },
+  {
+    "url": "https://iscuba.online/dive/egypt-ru/",
+    "status": 200,
+    "final_url": "https://iscuba.online/egypt-iso/",
+    "bytes": 86592,
+    "redirects": [
+      {
+        "status": 302,
+        "url": "https://iscuba.online/dive/egypt-ru/",
+        "location": "http://iscuba.online/dive/egypt-ru/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "http://iscuba.online/dive/egypt-ru/",
+        "location": "https://iscuba.online/dive/egypt-ru/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "https://iscuba.online/dive/egypt-ru/",
+        "location": "https://iscuba.online/egypt-iso/",
+        "redirect_by": "WordPress",
+        "server": "envoy"
+      }
+    ]
+  },
+  {
+    "url": "https://iscuba.online/dive/gidrokostyumi/",
+    "error": "HTTP Error 503: Service Unavailable",
+    "final_url": null,
+    "redirects": [
+      {
+        "status": 302,
+        "url": "https://iscuba.online/dive/gidrokostyumi/",
+        "location": "http://iscuba.online/dive/gidrokostyumi/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "http://iscuba.online/dive/gidrokostyumi/",
+        "location": "https://iscuba.online/dive/gidrokostyumi/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "https://iscuba.online/dive/gidrokostyumi/",
+        "location": "https://tnkdbf.tradeinn.com/ts/i5534887/tsc?typ=r&amc=con.blbn.524297.533805.14119786&rmd=3&trg=https%3A%2F%2Fwww.tradeinn.com%2Fdiveinn%2Fen%2Fsuits-and-complements%2F12%2Ff",
+        "redirect_by": "WordPress",
+        "server": "envoy"
+      }
+    ]
+  },
+  {
+    "url": "https://iscuba.online/dive/komodo-national-park/",
+    "error": "HTTP Error 403: Forbidden",
+    "final_url": null,
+    "redirects": [
+      {
+        "status": 302,
+        "url": "https://iscuba.online/dive/komodo-national-park/",
+        "location": "http://iscuba.online/dive/komodo-national-park/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "http://iscuba.online/dive/komodo-national-park/",
+        "location": "https://iscuba.online/dive/komodo-national-park/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "https://iscuba.online/dive/komodo-national-park/",
+        "location": "https://divebooker.com/indonesia-komodo-national-park-laz18?afid=377",
+        "redirect_by": "WordPress",
+        "server": "envoy"
+      }
+    ]
+  },
+  {
+    "url": "https://iscuba.online/dive/komodo/",
+    "error": "HTTP Error 403: Forbidden",
+    "final_url": null,
+    "redirects": [
+      {
+        "status": 302,
+        "url": "https://iscuba.online/dive/komodo/",
+        "location": "http://iscuba.online/dive/komodo/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "http://iscuba.online/dive/komodo/",
+        "location": "https://iscuba.online/dive/komodo/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "https://iscuba.online/dive/komodo/",
+        "location": "https://divebooker.com/indonesia-komodo-national-park-laz18?afid=377",
+        "redirect_by": "WordPress",
+        "server": "envoy"
+      }
+    ]
+  },
+  {
+    "url": "https://iscuba.online/dive/kompyutery/",
+    "error": "HTTP Error 503: Service Unavailable",
+    "final_url": null,
+    "redirects": [
+      {
+        "status": 302,
+        "url": "https://iscuba.online/dive/kompyutery/",
+        "location": "http://iscuba.online/dive/kompyutery/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "http://iscuba.online/dive/kompyutery/",
+        "location": "https://iscuba.online/dive/kompyutery/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "https://iscuba.online/dive/kompyutery/",
+        "location": "https://tnkdbf.tradeinn.com/ts/i5534887/tsc?typ=r&amc=con.blbn.524297.533805.14119786&rmd=3&trg=https%3A%2F%2Fwww.tradeinn.com%2Fdiveinn%2Fen%2Felectronics-and-computers-computers%2F24%2Fs",
+        "redirect_by": "WordPress",
+        "server": "envoy"
+      }
+    ]
+  },
+  {
+    "url": "https://iscuba.online/dive/lasty/",
+    "error": "HTTP Error 503: Service Unavailable",
+    "final_url": null,
+    "redirects": [
+      {
+        "status": 302,
+        "url": "https://iscuba.online/dive/lasty/",
+        "location": "http://iscuba.online/dive/lasty/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "http://iscuba.online/dive/lasty/",
+        "location": "https://iscuba.online/dive/lasty/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "https://iscuba.online/dive/lasty/",
+        "location": "https://tnkdbf.tradeinn.com/ts/i5534887/tsc?typ=r&amc=con.blbn.524297.533805.14119786&rmd=3&trg=https%3A%2F%2Fwww.tradeinn.com%2Fdiveinn%2Fen%2Ffins-masks-and-snorkels%2F3%2Ff",
+        "redirect_by": "WordPress",
+        "server": "envoy"
+      }
+    ]
+  },
+  {
+    "url": "https://iscuba.online/dive/maldives-central-atolls/",
+    "error": "HTTP Error 403: Forbidden",
+    "final_url": null,
+    "redirects": [
+      {
+        "status": 302,
+        "url": "https://iscuba.online/dive/maldives-central-atolls/",
+        "location": "http://iscuba.online/dive/maldives-central-atolls/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "http://iscuba.online/dive/maldives-central-atolls/",
+        "location": "https://iscuba.online/dive/maldives-central-atolls/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "https://iscuba.online/dive/maldives-central-atolls/",
+        "location": "https://divebooker.com/maldives-central-atolls-laz35?afid=377",
+        "redirect_by": "WordPress",
+        "server": "envoy"
+      }
+    ]
+  },
+  {
+    "url": "https://iscuba.online/dive/maldives-southern-atolls/",
+    "error": "HTTP Error 403: Forbidden",
+    "final_url": null,
+    "redirects": [
+      {
+        "status": 302,
+        "url": "https://iscuba.online/dive/maldives-southern-atolls/",
+        "location": "http://iscuba.online/dive/maldives-southern-atolls/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "http://iscuba.online/dive/maldives-southern-atolls/",
+        "location": "https://iscuba.online/dive/maldives-southern-atolls/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "https://iscuba.online/dive/maldives-southern-atolls/",
+        "location": "https://divebooker.com/maldives-south-atolls-laz37?afid=377",
+        "redirect_by": "WordPress",
+        "server": "envoy"
+      }
+    ]
+  },
+  {
+    "url": "https://iscuba.online/dive/masky/",
+    "error": "HTTP Error 503: Service Unavailable",
+    "final_url": null,
+    "redirects": [
+      {
+        "status": 302,
+        "url": "https://iscuba.online/dive/masky/",
+        "location": "http://iscuba.online/dive/masky/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "http://iscuba.online/dive/masky/",
+        "location": "https://iscuba.online/dive/masky/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "https://iscuba.online/dive/masky/",
+        "location": "https://tnkdbf.tradeinn.com/ts/i5534887/tsc?typ=r&amc=con.blbn.524297.533805.14119786&rmd=3&trg=https%3A%2F%2Fwww.tradeinn.com%2Fdiveinn%2Fen%2Ffins-masks-and-snorkels-masks%2F32%2Fs",
+        "redirect_by": "WordPress",
+        "server": "envoy"
+      }
+    ]
+  },
+  {
+    "url": "https://iscuba.online/dive/raja-ampa/",
+    "error": "HTTP Error 403: Forbidden",
+    "final_url": null,
+    "redirects": [
+      {
+        "status": 302,
+        "url": "https://iscuba.online/dive/raja-ampa/",
+        "location": "http://iscuba.online/dive/raja-ampa/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "http://iscuba.online/dive/raja-ampa/",
+        "location": "https://iscuba.online/dive/raja-ampa/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "https://iscuba.online/dive/raja-ampa/",
+        "location": "https://divebooker.com/indonesia-raja-ampat-laz19?afid=377",
+        "redirect_by": "WordPress",
+        "server": "envoy"
+      }
+    ]
+  },
+  {
+    "url": "https://iscuba.online/dive/regulyatory/",
+    "error": "HTTP Error 503: Service Unavailable",
+    "final_url": null,
+    "redirects": [
+      {
+        "status": 302,
+        "url": "https://iscuba.online/dive/regulyatory/",
+        "location": "http://iscuba.online/dive/regulyatory/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "http://iscuba.online/dive/regulyatory/",
+        "location": "https://iscuba.online/dive/regulyatory/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "https://iscuba.online/dive/regulyatory/",
+        "location": "https://tnkdbf.tradeinn.com/ts/i5534887/tsc?typ=r&amc=con.blbn.524297.533805.14119786&rmd=3&trg=https%3A%2F%2Fwww.tradeinn.com%2Fdiveinn%2Fen%2Fregulators%2F11%2Ff",
+        "redirect_by": "WordPress",
+        "server": "envoy"
+      }
+    ]
+  },
+  {
+    "url": "https://iscuba.online/dive/sadko-en/",
+    "status": 200,
+    "final_url": "https://iscuba.online/egypt-liveaboard-timetable/",
+    "bytes": 181524,
+    "redirects": [
+      {
+        "status": 302,
+        "url": "https://iscuba.online/dive/sadko-en/",
+        "location": "http://iscuba.online/dive/sadko-en/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "http://iscuba.online/dive/sadko-en/",
+        "location": "https://iscuba.online/dive/sadko-en/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "https://iscuba.online/dive/sadko-en/",
+        "location": "https://iscuba.online/egypt-liveaboard-timetable/",
+        "redirect_by": "WordPress",
+        "server": "envoy"
+      }
+    ]
+  },
+  {
+    "url": "https://iscuba.online/dive/sadko-ru/",
+    "status": 200,
+    "final_url": "https://iscuba.online/dajving-safari-v-egipte-raspisanie/",
+    "bytes": 183912,
+    "redirects": [
+      {
+        "status": 302,
+        "url": "https://iscuba.online/dive/sadko-ru/",
+        "location": "http://iscuba.online/dive/sadko-ru/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "http://iscuba.online/dive/sadko-ru/",
+        "location": "https://iscuba.online/dive/sadko-ru/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "https://iscuba.online/dive/sadko-ru/",
+        "location": "https://iscuba.online/dajving-safari-v-egipte-raspisanie/",
+        "redirect_by": "WordPress",
+        "server": "envoy"
+      }
+    ]
+  },
+  {
+    "url": "https://iscuba.online/dive/safari-all-destinations/",
+    "error": "HTTP Error 403: Forbidden",
+    "final_url": null,
+    "redirects": [
+      {
+        "status": 302,
+        "url": "https://iscuba.online/dive/safari-all-destinations/",
+        "location": "http://iscuba.online/dive/safari-all-destinations/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "http://iscuba.online/dive/safari-all-destinations/",
+        "location": "https://iscuba.online/dive/safari-all-destinations/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "https://iscuba.online/dive/safari-all-destinations/",
+        "location": "https://divebooker.com/?afid=377",
+        "redirect_by": "WordPress",
+        "server": "envoy"
+      }
+    ]
+  },
+  {
+    "url": "https://iscuba.online/dive/safari-egypt/",
+    "status": 200,
+    "final_url": "https://egypt.iscuba.online/",
+    "bytes": 22226,
+    "redirects": [
+      {
+        "status": 302,
+        "url": "https://iscuba.online/dive/safari-egypt/",
+        "location": "http://iscuba.online/dive/safari-egypt/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "http://iscuba.online/dive/safari-egypt/",
+        "location": "https://iscuba.online/dive/safari-egypt/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "https://iscuba.online/dive/safari-egypt/",
+        "location": "https://egypt.iscuba.online/",
+        "redirect_by": "WordPress",
+        "server": "envoy"
+      }
+    ]
+  },
+  {
+    "url": "https://iscuba.online/dive/safari-galapagos/",
+    "error": "HTTP Error 403: Forbidden",
+    "final_url": null,
+    "redirects": [
+      {
+        "status": 302,
+        "url": "https://iscuba.online/dive/safari-galapagos/",
+        "location": "http://iscuba.online/dive/safari-galapagos/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "http://iscuba.online/dive/safari-galapagos/",
+        "location": "https://iscuba.online/dive/safari-galapagos/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "https://iscuba.online/dive/safari-galapagos/",
+        "location": "https://divebooker.com/ecuador-daz3880?afid=377",
+        "redirect_by": "WordPress",
+        "server": "envoy"
+      }
+    ]
+  },
+  {
+    "url": "https://iscuba.online/dive/safari-indonesia/",
+    "error": "HTTP Error 403: Forbidden",
+    "final_url": null,
+    "redirects": [
+      {
+        "status": 302,
+        "url": "https://iscuba.online/dive/safari-indonesia/",
+        "location": "http://iscuba.online/dive/safari-indonesia/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "http://iscuba.online/dive/safari-indonesia/",
+        "location": "https://iscuba.online/dive/safari-indonesia/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "https://iscuba.online/dive/safari-indonesia/",
+        "location": "https://divebooker.com/indonesia-daz3904?afid=377",
+        "redirect_by": "WordPress",
+        "server": "envoy"
+      }
+    ]
+  },
+  {
+    "url": "https://iscuba.online/dive/safari-maldives/",
+    "error": "HTTP Error 403: Forbidden",
+    "final_url": null,
+    "redirects": [
+      {
+        "status": 302,
+        "url": "https://iscuba.online/dive/safari-maldives/",
+        "location": "http://iscuba.online/dive/safari-maldives/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "http://iscuba.online/dive/safari-maldives/",
+        "location": "https://iscuba.online/dive/safari-maldives/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "https://iscuba.online/dive/safari-maldives/",
+        "location": "https://divebooker.com/maldives-daz3922?afid=377",
+        "redirect_by": "WordPress",
+        "server": "envoy"
+      }
+    ]
+  },
+  {
+    "url": "https://iscuba.online/dive/safari-mexico/",
+    "error": "HTTP Error 403: Forbidden",
+    "final_url": null,
+    "redirects": [
+      {
+        "status": 302,
+        "url": "https://iscuba.online/dive/safari-mexico/",
+        "location": "http://iscuba.online/dive/safari-mexico/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "http://iscuba.online/dive/safari-mexico/",
+        "location": "https://iscuba.online/dive/safari-mexico/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "https://iscuba.online/dive/safari-mexico/",
+        "location": "https://divebooker.com/mexico-daz3927?afid=377",
+        "redirect_by": "WordPress",
+        "server": "envoy"
+      }
+    ]
+  },
+  {
+    "url": "https://iscuba.online/dive/safari-micronesia/",
+    "error": "HTTP Error 403: Forbidden",
+    "final_url": null,
+    "redirects": [
+      {
+        "status": 302,
+        "url": "https://iscuba.online/dive/safari-micronesia/",
+        "location": "http://iscuba.online/dive/safari-micronesia/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "http://iscuba.online/dive/safari-micronesia/",
+        "location": "https://iscuba.online/dive/safari-micronesia/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "https://iscuba.online/dive/safari-micronesia/",
+        "location": "https://divebooker.com/micronesia-daz3928?afid=377",
+        "redirect_by": "WordPress",
+        "server": "envoy"
+      }
+    ]
+  },
+  {
+    "url": "https://iscuba.online/dive/safari-philippines/",
+    "error": "The read operation timed out",
+    "final_url": null,
+    "redirects": [
+      {
+        "status": 302,
+        "url": "https://iscuba.online/dive/safari-philippines/",
+        "location": "http://iscuba.online/dive/safari-philippines/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "http://iscuba.online/dive/safari-philippines/",
+        "location": "https://iscuba.online/dive/safari-philippines/",
+        "redirect_by": null,
+        "server": "envoy"
+      }
+    ]
+  },
+  {
+    "url": "https://iscuba.online/dive/safari-thailand/",
+    "error": "The read operation timed out",
+    "final_url": null,
+    "redirects": [
+      {
+        "status": 302,
+        "url": "https://iscuba.online/dive/safari-thailand/",
+        "location": "http://iscuba.online/dive/safari-thailand/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "http://iscuba.online/dive/safari-thailand/",
+        "location": "https://iscuba.online/dive/safari-thailand/",
+        "redirect_by": null,
+        "server": "envoy"
+      }
+    ]
+  },
+  {
+    "url": "https://iscuba.online/dive/shop/",
+    "error": "The read operation timed out",
+    "final_url": null,
+    "redirects": [
+      {
+        "status": 302,
+        "url": "https://iscuba.online/dive/shop/",
+        "location": "http://iscuba.online/dive/shop/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "http://iscuba.online/dive/shop/",
+        "location": "https://iscuba.online/dive/shop/",
+        "redirect_by": null,
+        "server": "envoy"
+      }
+    ]
+  },
+  {
+    "url": "https://iscuba.online/dive/smb-set/",
+    "error": "The read operation timed out",
+    "final_url": null,
+    "redirects": [
+      {
+        "status": 302,
+        "url": "https://iscuba.online/dive/smb-set/",
+        "location": "http://iscuba.online/dive/smb-set/",
+        "redirect_by": null,
+        "server": "envoy"
+      },
+      {
+        "status": 301,
+        "url": "http://iscuba.online/dive/smb-set/",
+        "location": "https://iscuba.online/dive/smb-set/",
+        "redirect_by": null,
+        "server": "envoy"
+      }
+    ]
+  },
+  {
+    "url": "https://iscuba.online/dive/spetspredlozheniya/",
+    "error": "The read operation timed out",
+    "final_url": null,
+    "redirects": []
+  },
+  {
+    "url": "https://iscuba.online/dive/sudan/",
+    "error": "The read operation timed out",
+    "final_url": null,
+    "redirects": []
+  },
+  {
+    "url": "https://iscuba.online/egypt-liveaboard-timetable/",
+    "error": "The read operation timed out",
+    "final_url": null,
+    "redirects": []
+  },
+  {
+    "url": "https://puziryov.com/",
+    "error": "HTTP Error 403: Forbidden",
+    "final_url": null,
+    "redirects": []
+  },
+  {
+    "url": "https://scuba.online/",
+    "error": "HTTP Error 503: Service Unavailable",
+    "final_url": null,
+    "redirects": []
+  },
+  {
+    "url": "https://t.me/VPuziryov",
+    "status": 200,
+    "final_url": "https://t.me/VPuziryov",
+    "bytes": 195,
+    "redirects": []
+  }
+]
