@@ -1,0 +1,304 @@
+{
+  "schema_version": 1,
+  "editorial_status": "draft",
+  "products": [
+    {
+      "product_id": "hollis-m1",
+      "title": "Hollis M1",
+      "collection": "instructor",
+      "categories": [
+        "comfort50",
+        "safari"
+      ],
+      "source_url": "https://www.tradeinn.com/diveinn/en/hollis-m-1-diving-mask/82637/p",
+      "manufacturer_url": "https://www.hollis.com/product/mask-m-1/",
+      "status": "candidate",
+      "personally_tested": null,
+      "experience_scope": "model_confirmed",
+      "approved_by": null,
+      "approved_at": null,
+      "last_verified": "2026-10-31",
+      "verification_scope": "Current source page and stated model features only; exact stock, delivery, current SKU ownership and photo publication rights are not confirmed.",
+      "image": null,
+      "artwork": {
+        "src": "/assets/img/gear/mask.svg",
+        "type": "original_category_schematic",
+        "rights": "Created for this repository; not a manufacturer photograph or an exact model rendering."
+      },
+      "colors": [
+        "black"
+      ],
+      "availability": {
+        "status": "listing_found_stock_unverified",
+        "checked_at": "2026-10-31",
+        "note": "Listing is not a stock promise. Select size, destination and configuration at seller before any future purchase."
+      },
+      "components": [
+        {
+          "title": "Hollis M1/M23/M4 Neoprene Strap",
+          "source_url": "https://www.tradeinn.com/diveinn/en/hollis-m1-m23-m4-neoprene-strap/135961432/p",
+          "manufacturer_url": "https://www.hollis.com/product/neoprene-mask-strap/",
+          "type": "replacement_strap",
+          "personally_tested": null
+        }
+      ]
+    },
+    {
+      "product_id": "hollis-f1",
+      "title": "Hollis F1",
+      "collection": "instructor",
+      "categories": [
+        "safari"
+      ],
+      "source_url": "https://www.tradeinn.com/diveinn/en/hollis-f1-bat-diving-fins/445392/p",
+      "manufacturer_url": "https://www.hollis.com/product/f1-bat-fin/",
+      "status": "candidate",
+      "personally_tested": null,
+      "experience_scope": "model_confirmed",
+      "approved_by": null,
+      "approved_at": null,
+      "last_verified": "2026-10-31",
+      "verification_scope": "Current source page and stated model features only; exact stock, delivery, current SKU ownership and photo publication rights are not confirmed.",
+      "image": null,
+      "artwork": {
+        "src": "/assets/img/gear/fins.svg",
+        "type": "original_category_schematic",
+        "rights": "Created for this repository; not a manufacturer photograph or an exact model rendering."
+      },
+      "colors": [
+        "black"
+      ],
+      "availability": {
+        "status": "listing_found_stock_unverified",
+        "checked_at": "2026-10-31",
+        "note": "Listing is not a stock promise. Select size, destination and configuration at seller before any future purchase."
+      },
+      "components": []
+    },
+    {
+      "product_id": "hollis-st-travel",
+      "title": "Hollis ST Travel · ST22",
+      "collection": "instructor",
+      "categories": [
+        "safari"
+      ],
+      "source_url": "https://www.tradeinn.com/diveinn/en/hollis-st-travel-system-wing/138723514/p",
+      "manufacturer_url": "https://www.hollis.com/product/st-system/",
+      "status": "candidate",
+      "personally_tested": null,
+      "experience_scope": "criteria_only",
+      "approved_by": null,
+      "approved_at": null,
+      "last_verified": "2026-10-31",
+      "verification_scope": "Current source page and stated model features only; exact stock, delivery, current SKU ownership and photo publication rights are not confirmed.",
+      "image": null,
+      "artwork": {
+        "src": "/assets/img/gear/wing.svg",
+        "type": "original_category_schematic",
+        "rights": "Created for this repository; not a manufacturer photograph or an exact model rendering."
+      },
+      "colors": [
+        "black"
+      ],
+      "availability": {
+        "status": "listing_found_stock_unverified",
+        "checked_at": "2026-10-31",
+        "note": "Listing is not a stock promise. Select size, destination and configuration at seller before any future purchase."
+      },
+      "components": []
+    },
+    {
+      "product_id": "hollis-smb-spool",
+      "title": "Hollis Compact SMB + Finger Spool",
+      "collection": "instructor",
+      "categories": [
+        "safety"
+      ],
+      "source_url": "https://www.tradeinn.com/diveinn/en/hollis-marker-closed-compact-smb-deco-buoy/135961439/p",
+      "manufacturer_url": "https://www.hollis.com/product/finger-spool-100/",
+      "status": "candidate",
+      "personally_tested": null,
+      "experience_scope": "criteria_only",
+      "approved_by": null,
+      "approved_at": null,
+      "last_verified": "2026-10-31",
+      "verification_scope": "Current source page and stated model features only; exact stock, delivery, current SKU ownership and photo publication rights are not confirmed.",
+      "image": null,
+      "artwork": {
+        "src": "/assets/img/gear/smb.svg",
+        "type": "original_category_schematic",
+        "rights": "Created for this repository; not a manufacturer photograph or an exact model rendering."
+      },
+      "colors": [
+        "orange"
+      ],
+      "availability": {
+        "status": "listing_found_stock_unverified",
+        "checked_at": "2026-10-31",
+        "note": "Listing is not a stock promise. Select size, destination and configuration at seller before any future purchase."
+      },
+      "components": [
+        {
+          "title": "Hollis Spool · 100 ft",
+          "source_url": "https://www.tradeinn.com/diveinn/en/hollis-spool/141710773/p",
+          "manufacturer_url": "https://www.hollis.com/product/finger-spool-100/",
+          "personally_tested": null
+        }
+      ]
+    },
+    {
+      "product_id": "scubapro-g2",
+      "title": "SCUBAPRO Galileo G2",
+      "collection": "instructor",
+      "categories": [
+        "safety",
+        "comfort50"
+      ],
+      "source_url": "https://www.tradeinn.com/diveinn/en/scubapro-galileo-2-dive-computer/136523838/p",
+      "manufacturer_url": "https://scubapro.johnsonoutdoors.com/eu/en-gb/shop/computers/g2-wrist-dive-computer-computer-only",
+      "status": "candidate",
+      "personally_tested": null,
+      "experience_scope": "criteria_only",
+      "approved_by": null,
+      "approved_at": null,
+      "last_verified": "2026-10-31",
+      "verification_scope": "Current source page and stated model features only; exact stock, delivery, current SKU ownership and photo publication rights are not confirmed.",
+      "image": null,
+      "artwork": {
+        "src": "/assets/img/gear/computer.svg",
+        "type": "original_category_schematic",
+        "rights": "Created for this repository; not a manufacturer photograph or an exact model rendering."
+      },
+      "colors": [
+        "black"
+      ],
+      "availability": {
+        "status": "listing_found_notify_me_seen",
+        "checked_at": "2026-10-31",
+        "note": "Listing is not a stock promise. Select size, destination and configuration at seller before any future purchase."
+      },
+      "components": []
+    },
+    {
+      "product_id": "scubapro-go-sport",
+      "title": "SCUBAPRO GO Sport",
+      "collection": "color",
+      "categories": [
+        "safari"
+      ],
+      "source_url": "https://www.tradeinn.com/diveinn/en/scubapro-go-sport-diving-fins/138958423/p",
+      "manufacturer_url": "https://scubapro.johnsonoutdoors.com/eu/en-gb/shop/fins/go-sport-fin",
+      "status": "candidate",
+      "personally_tested": null,
+      "experience_scope": "criteria_only",
+      "approved_by": null,
+      "approved_at": null,
+      "last_verified": "2026-10-31",
+      "verification_scope": "Current source page and stated model features only; exact stock, delivery, current SKU ownership and photo publication rights are not confirmed.",
+      "image": null,
+      "artwork": {
+        "src": "/assets/img/gear/travel-fins-teal.svg",
+        "type": "original_category_schematic",
+        "rights": "Created for this repository; not a manufacturer photograph or an exact model rendering.",
+        "palette_variants": {
+          "teal": "/assets/img/gear/travel-fins-teal.svg",
+          "pink": "/assets/img/gear/travel-fins-pink.svg",
+          "coral": "/assets/img/gear/travel-fins-coral.svg"
+        }
+      },
+      "colors": [
+        "black",
+        "white",
+        "blue",
+        "turquoise",
+        "yellow",
+        "pink"
+      ],
+      "availability": {
+        "status": "listing_found_stock_unverified",
+        "checked_at": "2026-10-31",
+        "note": "Listing is not a stock promise. Select size, destination and configuration at seller before any future purchase."
+      },
+      "components": []
+    },
+    {
+      "product_id": "scubapro-trinidad3",
+      "title": "SCUBAPRO Trinidad 3",
+      "collection": "color",
+      "categories": [
+        "safari"
+      ],
+      "source_url": "https://www.tradeinn.com/diveinn/en/scubapro-trinidad-3-diving-mask/137366612/p",
+      "manufacturer_url": "https://scubapro.johnsonoutdoors.com/eu/en-gb/shop/masks/trinidad-3-dive-mask",
+      "status": "candidate",
+      "personally_tested": null,
+      "experience_scope": "criteria_only",
+      "approved_by": null,
+      "approved_at": null,
+      "last_verified": "2026-10-31",
+      "verification_scope": "Current source page and stated model features only; exact stock, delivery, current SKU ownership and photo publication rights are not confirmed.",
+      "image": null,
+      "artwork": {
+        "src": "/assets/img/gear/travel-mask-teal.svg",
+        "type": "original_category_schematic",
+        "rights": "Created for this repository; not a manufacturer photograph or an exact model rendering.",
+        "palette_variants": {
+          "teal": "/assets/img/gear/travel-mask-teal.svg",
+          "pink": "/assets/img/gear/travel-mask-pink.svg",
+          "coral": "/assets/img/gear/travel-mask-coral.svg"
+        }
+      },
+      "colors": [
+        "blue",
+        "yellow",
+        "pink",
+        "turquoise"
+      ],
+      "availability": {
+        "status": "listing_found_stock_unverified",
+        "checked_at": "2026-10-31",
+        "note": "Listing is not a stock promise. Select size, destination and configuration at seller before any future purchase."
+      },
+      "components": []
+    },
+    {
+      "product_id": "scubapro-navigator",
+      "title": "SCUBAPRO Navigator Lite",
+      "collection": "color",
+      "categories": [
+        "safari"
+      ],
+      "source_url": "https://www.tradeinn.com/diveinn/en/scubapro-navigator-lite-bcd-jacket/142916695/p",
+      "manufacturer_url": "https://scubapro.johnsonoutdoors.com/eu/en-gb/shop/bcds/navigator-lite-bcd",
+      "status": "candidate",
+      "personally_tested": null,
+      "experience_scope": "criteria_only",
+      "approved_by": null,
+      "approved_at": null,
+      "last_verified": "2026-10-31",
+      "verification_scope": "Current source page and stated model features only; exact stock, delivery, current SKU ownership and photo publication rights are not confirmed.",
+      "image": null,
+      "artwork": {
+        "src": "/assets/img/gear/bcd-teal.svg",
+        "type": "original_category_schematic",
+        "rights": "Created for this repository; not a manufacturer photograph or an exact model rendering.",
+        "palette_variants": {
+          "teal": "/assets/img/gear/bcd-teal.svg",
+          "pink": "/assets/img/gear/bcd-pink.svg",
+          "coral": "/assets/img/gear/bcd-coral.svg"
+        }
+      },
+      "colors": [
+        "black",
+        "blue",
+        "coral"
+      ],
+      "availability": {
+        "status": "listing_found_stock_unverified",
+        "checked_at": "2026-10-31",
+        "note": "Listing is not a stock promise. Select size, destination and configuration at seller before any future purchase."
+      },
+      "components": []
+    }
+  ]
+}
