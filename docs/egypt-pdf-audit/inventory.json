@@ -1,0 +1,74 @@
+[
+  {
+    "file": "assets/downloads/25_Sovetov_RU_hub.pdf",
+    "pages": 23,
+    "bytes": 8057068,
+    "sha256": "8137c904b66b351e3c218a815b4fcd387a8c078834e1ccaba2c132c0ec64bffd"
+  },
+  {
+    "file": "assets/downloads/25_Tips_EN_hub.pdf",
+    "pages": 23,
+    "bytes": 4872393,
+    "sha256": "6bf56332106373b85527bfddf4e6d22115e3d4d08814b677f84de8183affd0da"
+  },
+  {
+    "file": "assets/downloads/EGYPT-ROUTES-BY-SEASON-en.pdf",
+    "pages": 6,
+    "bytes": 1833046,
+    "sha256": "2637036378192cfb227a34bff2068b553647df8e17df02c22b73ed015ad1a468"
+  },
+  {
+    "file": "assets/downloads/EGYPT-ROUTES-BY-SEASON-ru.pdf",
+    "pages": 6,
+    "bytes": 1866481,
+    "sha256": "9e0105b13bc69d5927dc3e41590d7869d82e40db7ff82596cedf20c1074968e9"
+  },
+  {
+    "file": "assets/downloads/egypt-liveaboerd-routes-26-en.pdf",
+    "pages": 30,
+    "bytes": 15504946,
+    "sha256": "5638efa568c682900bce409b4a8484e35557d3c3e8e82be6b173f7c44171bd30"
+  },
+  {
+    "file": "assets/downloads/egypt-liveaboerd-routes-26-ru.pdf",
+    "pages": 30,
+    "bytes": 15561467,
+    "sha256": "67bb563b31e4acde0cb26ec70852d79f7aa7080bc042c65bd28bcdbcd902388e"
+  },
+  {
+    "file": "assets/downloads/red-sea-routes-v2-en.pdf",
+    "pages": 30,
+    "bytes": 15504946,
+    "sha256": "5638efa568c682900bce409b4a8484e35557d3c3e8e82be6b173f7c44171bd30"
+  },
+  {
+    "file": "assets/downloads/red-sea-routes-v2-ru.pdf",
+    "pages": 30,
+    "bytes": 15561467,
+    "sha256": "67bb563b31e4acde0cb26ec70852d79f7aa7080bc042c65bd28bcdbcd902388e"
+  },
+  {
+    "file": "assets/downloads/safari-timing-EN.pdf",
+    "pages": 2,
+    "bytes": 2113092,
+    "sha256": "4e43de3b05ae60ac71e7b6ce8efefa3898f0eca50f730435edb02602df567a42"
+  },
+  {
+    "file": "assets/downloads/safari-timing-RU.pdf",
+    "pages": 2,
+    "bytes": 2117669,
+    "sha256": "7520a0af7e94beba900d13b17d3cf5420b02954e259592d93652abd801055f94"
+  },
+  {
+    "file": "Google Drive/drive-en.pdf",
+    "pages": 30,
+    "bytes": 30779957,
+    "sha256": "e658367d579fdf9b195fd9320a9ee8a01e65afe29a176b8c26f3dabca9bd4423"
+  },
+  {
+    "file": "Google Drive/drive-ru.pdf",
+    "pages": 30,
+    "bytes": 31283822,
+    "sha256": "b9f85d20fea73670311efb9442d42487ebcb8d7eaa1c8cb0f86a60bbe0f288eb"
+  }
+]

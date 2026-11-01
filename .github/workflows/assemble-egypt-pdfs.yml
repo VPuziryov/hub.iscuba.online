@@ -1,0 +1,39 @@
+name: Assemble verified Egypt PDF link edits
+on:
+  push:
+    branches: [fix/egypt-pdf-links]
+permissions:
+  contents: write
+jobs:
+  assemble:
+    if: "!contains(github.event.head_commit.message, '[assembled]')"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fix/egypt-pdf-links
+      - name: Reconstruct exact validated PDF bytes
+        run: |
+          python - <<'PY'
+          import base64,hashlib,json,urllib.request
+          from pathlib import Path
+          items=json.loads(Path('.github/egypt-pdf-payload.json').read_text())
+          for x in items:
+              if x['source'].startswith('https://'):
+                  data=urllib.request.urlopen(x['source'],timeout=120).read()
+              else:
+                  data=Path(x['source']).read_bytes()
+              assert hashlib.sha256(data).hexdigest()==x['original_sha256'], x['path']+' original checksum mismatch'
+              result=data+base64.b64decode(x['tail'])
+              assert hashlib.sha256(result).hexdigest()==x['sha256'], x['path']+' result checksum mismatch'
+              Path(x['path']).write_bytes(result)
+              print('Verified:',x['path'])
+          PY
+      - name: Commit PDFs and remove temporary assembly files
+        run: |
+          rm .github/egypt-pdf-payload.json .github/workflows/assemble-egypt-pdfs.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/downloads .github
+          git commit -m "fix: apply verified Egypt PDF URI edits [assembled]"
+          git push origin HEAD:fix/egypt-pdf-links

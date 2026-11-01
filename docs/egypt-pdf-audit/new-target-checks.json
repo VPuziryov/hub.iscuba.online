@@ -1,0 +1,22 @@
+[
+  {
+    "url": "https://egypt.iscuba.online/",
+    "status": 200,
+    "final_url": "https://egypt.iscuba.online/"
+  },
+  {
+    "url": "https://egypt.iscuba.online/safari/ru/",
+    "status": 200,
+    "final_url": "https://egypt.iscuba.online/safari/ru/"
+  },
+  {
+    "url": "https://egypt.iscuba.online/safari/en/",
+    "status": 200,
+    "final_url": "https://egypt.iscuba.online/safari/en/"
+  },
+  {
+    "url": "https://egypt.iscuba.online/schedule/",
+    "status": 200,
+    "final_url": "https://egypt.iscuba.online/schedule/"
+  }
+]
