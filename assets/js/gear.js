@@ -1,6 +1,6 @@
 (function () {
   'use strict';
-  const VERSION = '5';
+  const VERSION = '6';
   const categories = ['safari', 'comfort50', 'kids', 'safety'];
   const locale = document.documentElement.lang;
   const preview = window.GearEnvironment?.preview === true;
@@ -10,7 +10,7 @@
   const back = document.querySelector('[data-gear-back]');
   if (!state || !filters) return;
   if (back) back.href = '/' + locale + '/' + location.search + location.hash;
-  let palette = 'teal';
+  const palette = 'teal';
   function node(tag, cls, text) {
     const el = document.createElement(tag);
     if (cls) el.className = cls;
@@ -38,7 +38,6 @@
       if (!localAsset(src)) { fig.append(node('p', 'gear-no-art', t.imagePending)); return; }
       const img = node('img', 'gear-art');
       img.alt = t.artLabel; img.width = 520; img.height = 320; img.loading = 'lazy';
-      if (p.artwork?.palette_variants) img.dataset.paletteProduct = p.product_id;
       img.addEventListener('error', () => {
         fig.replaceChildren(node('p', 'gear-no-art', t.imagePending));
       }, { once: true });
@@ -52,16 +51,9 @@
       if (photo.external) img.referrerPolicy = 'no-referrer';
       img.addEventListener('error', schematic, { once: true });
       img.src = photo.src;
-      fig.append(img, node('figcaption', '', t.photoLabel + (p.image.variant_label ? ' · ' + p.image.variant_label : '')));
+      fig.append(img);
     } else schematic();
     return fig;
-  }
-  function safeSource(url) {
-    const href = window.GearLinks.httpsURL(url);
-    if (!href) return null;
-    // Only the explicit researched manufacturers are clickable references.
-    const host = new URL(href).hostname;
-    return ['www.hollis.com', 'scubapro.johnsonoutdoors.com'].includes(host) ? href : null;
   }
   function card(p, offers, ui, content, draft, imagePolicy) {
     const copy = content.products[p.product_id];
@@ -72,7 +64,6 @@
     const body = node('div', 'gear-card-body');
     const top = node('div', 'gear-card-top');
     top.append(node('p', 'gear-kicker', copy.kicker));
-    if (draft) top.append(node('span', 'gear-draft', ui.draft));
     body.append(top, node('h3', '', p.title), node('p', 'gear-purpose', copy.purpose));
     const facts = node('ul', 'gear-specs');
     (copy.facts || []).forEach(f => facts.append(node('li', '', f)));
@@ -91,24 +82,6 @@
       if (copy.story) accessory.append(node('p', 'gear-story', copy.story));
       body.append(accessory);
     }
-    if (preview) {
-      const sources = node('details', 'gear-sources');
-      sources.append(node('summary', '', ui.sourceTitle));
-      const all = [p, ...(p.components || [])];
-      for (const item of all) {
-        const row = node('div', 'gear-source');
-        row.append(node('p', '', item.title));
-        const url = safeSource(item.manufacturer_url);
-        if (url) {
-          const link = node('a', '', ui.manufacturer + ' ↗');
-          link.href = url; link.target = '_blank'; link.rel = 'noopener'; row.append(link);
-        }
-        // Provenance only: no active store CTA before programme approval.
-        row.append(node('span', 'gear-source-label', ui.listing), node('code', '', item.source_url));
-        sources.append(row);
-      }
-      sources.append(node('p', 'gear-stock', ui.stock)); body.append(sources);
-    }
     const offer = draft || !ui.activeDisclosure ? null : window.GearLinks.resolveOffer(p, offers, locale);
     const action = node('div', 'gear-action');
     if (offer) {
@@ -118,7 +91,7 @@
       action.append(link, node('p', 'gear-link-note', ui.affiliate));
     } else {
       const button = node('button', 'btn', ui.unavailable); button.type = 'button'; button.disabled = true;
-      action.append(button, node('p', 'gear-link-note', ui.approvalPending));
+      action.append(button);
     }
     body.append(action); el.append(body); return el;
   }
@@ -159,25 +132,16 @@
       document.getElementById('gear-entry-instructor').hidden = !hasInstructor;
       document.getElementById('gear-entry-color').hidden = !hasColor;
       document.getElementById('gear-entries').hidden = !products.length;
-      document.getElementById('gear-palette').hidden = !hasColor;
       state.hidden = products.length > 0;
       if (preview) {
         document.getElementById('gear-preview').hidden = false;
-        document.getElementById('gear-translation').hidden = false;
+        document.getElementById('gear-translation').hidden = !ui.content_fallback;
       }
-      document.querySelectorAll('[data-palette]').forEach(button => button.addEventListener('click', () => {
-        palette = button.dataset.palette;
-        document.querySelectorAll('[data-palette]').forEach(b => b.setAttribute('aria-pressed', String(b === button)));
-        document.querySelectorAll('[data-palette-product]').forEach(img => {
-          const product = products.find(p => p.product_id === img.dataset.paletteProduct);
-          const src = product?.artwork?.palette_variants?.[palette];
-          if (localAsset(src)) img.src = src;
-        });
-        document.getElementById('gear-hero-art').src = '/assets/img/gear/hero-' + palette + '.svg?v=4';
-      }));
       render();
-      if (!preview && publicProducts.some(p => window.GearLinks.resolveOffer(p, merchants.offers, locale)) && ui.activeDisclosure)
-        document.getElementById('gear-disclosure').textContent = ui.activeDisclosure;
+      if (!preview && publicProducts.some(p => window.GearLinks.resolveOffer(p, merchants.offers, locale)) && ui.activeDisclosure) {
+        const disclosure = document.getElementById('gear-disclosure');
+        disclosure.textContent = ui.activeDisclosure; disclosure.hidden = false;
+      }
       document.body.dataset.gearReady = 'true';
       const anchor = document.getElementById(location.hash.slice(1));
       if (anchor && !anchor.hidden) anchor.scrollIntoView({block:'start'});
@@ -186,7 +150,6 @@
         document.getElementById('gear-' + id + '-grid').replaceChildren(); });
       filters.hidden = true;
       document.getElementById('gear-entries').hidden = true;
-      document.getElementById('gear-palette').hidden = true;
       state.hidden = false; state.textContent = state.dataset.error;
       document.body.dataset.gearReady = 'error';
     });

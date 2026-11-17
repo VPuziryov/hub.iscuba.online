@@ -4,8 +4,8 @@
   "heading": "Equipment with a reason",
   "intro": "Recreational diving. Warm water. Travel. An instructor’s real choices and current options for the same practical needs.",
   "empty": "No recommendations are approved for publication yet.",
-  "previewTitle": "Preliminary selection · for review",
-  "previewNote": "Eight cards to assess. Copy is not approved and sales are disabled. Personal experience is separated from assessment of current versions.",
+  "previewTitle": "Preview selection",
+  "previewNote": "",
   "all": "All recommendations",
   "demoTitle": "Demonstration candidates",
   "purpose": "Purpose",
@@ -18,7 +18,7 @@
   "pending": "Awaiting editorial assessment",
   "pendingReview": "Awaiting verification and the author’s assessment",
   "imagePending": "Equipment image pending permission",
-  "unavailable": "Store link disabled",
+  "unavailable": "View at Diveinn",
   "approvalPending": "Preliminary selection · no active sales",
   "viewAt": "View at",
   "affiliate": "Affiliate link",
@@ -37,7 +37,7 @@
   "purposeFins": "Travel fins candidate",
   "products": {
     "hollis-m1": {
-      "kicker": "PERSONAL CHOICE · MODEL CONFIRMED",
+      "kicker": "MASK · PERSONAL CHOICE",
       "purpose": "A mask chosen for the face, not a best-seller list.",
       "facts": [
         "Single lens · frameless construction",
@@ -49,14 +49,14 @@
       "limitations": [
         "Fit comes before brand. Check the seal, nose access and comfort with your hood. An instructor’s personal choice cannot guarantee a seal on a different face."
       ],
-      "experience": "Vitaliy uses the Hollis M1. The current retail version has not been matched to his own example.",
+      "experience": "Vitaliy dives with a Hollis M1. He has not separately tested the current retail version.",
       "accessoryTitle": "Separate accessory: a neoprene replacement strap",
-      "accessory": "Hollis M1/M23/M4 Neoprene Strap replaces the silicone strap; it is not a sleeve over it. Check attachment and adjustment. Vitaliy used a soft headpiece on his spare Oceanic, but its brand and exact type are unknown.",
+      "accessory": "A neoprene strap can catch less hair. The Hollis M1/M23/M4 Neoprene Strap replaces the silicone strap; check attachment compatibility. Sold separately.",
       "story": "At Shark Point, Bonaire, a diver lost her mask. Vitaliy fitted his spare Oceanic to her underwater. Its soft headpiece helped avoid catching her hair. A spare mask can stay unused for years, then matter on one dive.",
       "status": "draft"
     },
     "hollis-f1": {
-      "kicker": "PERSONAL CHOICE · STANDARD F1",
+      "kicker": "FINS · PERSONAL CHOICE",
       "purpose": "When propulsion matters more to you than extra baggage weight.",
       "facts": [
         "Standard F1 · not F1 LT or F2",
@@ -68,11 +68,11 @@
       "limitations": [
         "These are not lightweight travel fins. Their weight and negative buoyancy can affect leg position. Try them with your own boots and assess the whole configuration in water."
       ],
-      "experience": "The F1 model is confirmed by the author. A current retail version or size is not presented as his personal pair.",
+      "experience": "Vitaliy used standard F1 fins and travelled with them. This is not a review of F1 LT or F2.",
       "status": "draft"
     },
     "hollis-st-travel": {
-      "kicker": "CURRENT SYSTEM · AUTHOR’S CRITERIA",
+      "kicker": "SINGLE-TANK TRAVEL WING",
       "purpose": "A compact single-cylinder wing without unnecessary harness clutter.",
       "facts": [
         "ST22 lift: 22 lb / 10 kg",
@@ -84,43 +84,43 @@
       "limitations": [
         "10 kg of lift is not a universal reserve for every cylinder, suit and ballast load. Balance and releasable weight require individual assessment; a continuous harness needs fitting."
       ],
-      "experience": "The criteria are confirmed. Personal use of this ST22 / current ST Travel is not. This is a recreational configuration, not a claim of technical diving.",
+      "experience": "Vitaliy prefers a simple backplate and continuous harness. A personal review of this ST Travel / ST22 system is not yet available.",
       "status": "draft"
     },
     "hollis-smb-spool": {
-      "kicker": "TWO ITEMS · ONE PRACTISED SKILL",
+      "kicker": "SURFACE SAFETY",
       "purpose": "Make your position visible to the surface team.",
       "facts": [
         "Compact SMB: closed design, orange",
         "Finger Spool: 100 ft line · double-ended clip"
       ],
       "advantages": [
-        "Vitaliy uses a Hollis buoy and finger spool. The spool manages line while the buoy marks position. These are current candidates for that pairing, not a packaged shop kit."
+        "The buoy helps the surface team see a diver’s position; the finger spool manages the line. Choose the buoy and spool separately."
       ],
       "limitations": [
         "Choose buoy size and line length for the conditions. Deployment needs practice; do not attach the line to yourself. A buoy cannot guarantee that every vessel will see you."
       ],
-      "experience": "His use is confirmed at brand level. The exact buoy and spool models in his own kit remain unknown.",
+      "experience": "Vitaliy uses a Hollis buoy and spool. These models may differ from his own.",
       "status": "draft"
     },
     "scubapro-g2": {
-      "kicker": "CURRENT CANDIDATE · NOT HIS SOL",
+      "kicker": "COMPUTER · READABLE DISPLAY",
       "purpose": "A readable display and controls understood before the dive.",
       "facts": [
         "2.2-inch colour TFT · three buttons",
         "Optional air integration"
       ],
       "advantages": [
-        "G2 is a currently catalogued Galileo option with configurable displays. Reading it on your wrist is a more useful selection test than counting modes."
+        "Different screen layouts let you choose how information is displayed. Check readability and operation with gloves before buying."
       ],
       "limitations": [
-        "Vitaliy’s personal computer is Galileo Sol, not G2. The photo shows the G2 without a transmitter from the Diveinn feed checked on 17 November 2026; verify configuration, availability and delivery separately."
+        "The pictured computer does not include a transmitter. For air integration, check compatibility and package contents. Try reading the display on your own wrist."
       ],
-      "experience": "Vitaliy uses his Sol with an independent mechanical SPG. The SPG backs up pressure readings, not depth, time or decompression calculations.",
+      "experience": "Vitaliy’s own computer is a Galileo Sol, not a G2. A personal review of the G2 is not yet available.",
       "status": "draft"
     },
     "scubapro-go-sport": {
-      "kicker": "COLOR & TRAVEL · BOOT-FIT",
+      "kicker": "TRAVEL FINS · BOOT FIT",
       "purpose": "Colourful travel fins that fit the boots you actually dive in.",
       "facts": [
         "Open heel · boot-fit · bungee strap",
@@ -132,27 +132,27 @@
       "limitations": [
         "Do not confuse them with bare-fit GO Travel fins. Try the actual boot/fin combination. Weight varies by size; check the airline’s cabin baggage rules separately."
       ],
-      "experience": "Preliminary professional selection. Personal testing of this model by Vitaliy is not confirmed.",
+      "experience": "A travel option to try and compare. A personal review by Vitaliy is not yet available.",
       "status": "draft"
     },
     "scubapro-trinidad3": {
-      "kicker": "COLOR & TRAVEL · SINGLE LENS",
+      "kicker": "COLOUR MASK · SINGLE LENS",
       "purpose": "A light, colourful mask — provided it seals on your face.",
       "facts": [
         "Single lens · frameless construction",
         "Blue · yellow · pink · turquoise"
       ],
       "advantages": [
-        "A coloured mask can bring the look of a kit together. Trinidad 3 has a simple frameless design, making it a travel candidate to try on first."
+        "Frameless construction suits travel, and the colour can coordinate with your fins. A good fit remains the first condition."
       ],
       "limitations": [
         "Colour cannot fix a leak. Check the skirt and nose access. The manufacturer does not offer prescription lens compatibility; consider another solution if correction is needed."
       ],
-      "experience": "Not presented as the author’s own mask. A current option for evaluating fit and travel packing.",
+      "experience": "Start with a fitting: the mask needs to suit your face. A personal review by Vitaliy is not yet available.",
       "status": "draft"
     },
     "scubapro-navigator": {
-      "kicker": "COLOR & TRAVEL · SOFT BACKPACK",
+      "kicker": "TRAVEL BCD · SOFT BACKPACK",
       "purpose": "A travel BCD with back inflation and a deliberate colour accent.",
       "facts": [
         "Foldable Airnet soft backpack",
@@ -162,24 +162,24 @@
         "Navigator Lite earns a place here through its foldable design and two expandable size ranges. The coloured air-cell cover is an aesthetic option, not a reason to accept a poor fit."
       ],
       "limitations": [
-        "An authorised technician must replace the coloured cover. Check fit with a cylinder, valve access, ballast and actual package contents. Diveinn stock of the required colour/size is not confirmed."
+        "Try it with a cylinder: check valve access and weight placement. Colour covers must be changed by an authorised technician; confirm package contents with the seller."
       ],
-      "experience": "Current candidate selected against professional criteria. Vitaliy’s personal use is not confirmed.",
+      "experience": "An option for a light travel setup. A personal review by Vitaliy is not yet available.",
       "status": "draft"
     }
   },
-  "instructorIntro": "Five practical choices: what works, the trade-offs and the limits of personal experience.",
+  "instructorIntro": "Equipment from an instructor’s diving and current options for the same needs.",
   "colorIntro": "Easier to pack. Enjoyable to put together. Fit and function still come first.",
   "draft": "Preliminary selection",
   "why": "Why it is here",
   "limits": "What to consider",
-  "basis": "Basis of selection",
+  "basis": "Personal experience",
   "facts": "Verified reference points",
   "sourceTitle": "Sources & verification",
   "manufacturer": "Manufacturer",
   "listing": "Diveinn source page",
   "stock": "Shop listing found. Stock of a selected size/colour and delivery time are not confirmed.",
-  "artLabel": "Original category schematic · not a model photo",
+  "artLabel": "Equipment illustration · photo to follow",
   "artNote": "Product photo rights are not confirmed. These original schematic illustrations do not reproduce the exact product construction.",
   "paletteTitle": "Find your colour rhythm",
   "paletteNote": "Visual combinations of documented range colours, not ready-to-buy shop bundles. Each version needs a separate availability check.",
@@ -187,7 +187,7 @@
   "palettePink": "Pink + black",
   "paletteCoral": "Blue + coral",
   "allCollections": "Both collections",
-  "translationNote": "Editorial draft. Final recommendations and translations are not approved.",
+  "translationNote": "Product descriptions are currently available in English.",
   "heroLabel": "INSTRUCTOR PRACTICE / CONTEMPORARY TRAVEL",
   "jump": "Explore the collections",
   "accessory": "Accessory",

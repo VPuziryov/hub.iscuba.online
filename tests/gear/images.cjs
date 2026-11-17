@@ -43,7 +43,7 @@ const {chromium}=require('playwright');
  await load();let img=page.locator('#hollis-m1 img');
  assert.equal(await img.getAttribute('src'),image.src);assert.equal(await img.getAttribute('alt'),'Test image');
  assert.equal(await img.getAttribute('referrerpolicy'),'no-referrer');
- assert.equal(await page.locator('#hollis-m1 figcaption').count(),1);assert.equal(requests,1);
+ assert.equal(await page.locator('#hollis-m1 figcaption').count(),0);assert.equal(requests,1);
  fail=true;await load();
  assert((await page.locator('#hollis-m1 img').getAttribute('src')).startsWith('/assets/img/gear/'));
  assert.equal(await page.locator('#hollis-m1 figcaption').count(),1);

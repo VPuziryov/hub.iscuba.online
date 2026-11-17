@@ -22,7 +22,7 @@ for(const o of offers){
 for(const lang of langs){
  const t=json('assets/data/gear/i18n/'+lang+'.json');const page=read(lang+'/gear/index.html');
  assert.equal(t.editorial_status,'draft');assert(page.includes('<html lang="'+lang+'">'));
- assert(page.includes('gear-env.js?v=5'));assert(!page.includes('src="/assets/js/pixel.js"'));
+ assert(page.includes('gear-env.js?v=6'));assert(!page.includes('src="/assets/js/pixel.js"'));
  for(const other of langs)assert(page.includes('hreflang="'+other+'"'));
  const content=t.content_fallback?json('assets/data/gear/i18n/'+t.content_fallback+'.json'):t;
  for(const p of products){const c=content.products[p.product_id];assert.equal(c.status,'draft');assert(c.purpose&&c.experience);assert(c.advantages.length&&c.limitations.length&&c.facts.length);}

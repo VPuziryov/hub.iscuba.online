@@ -14,15 +14,12 @@ const base=process.env.GEAR_TEST_URL||'http://127.0.0.1:8765';const langs=['ru',
    await p.goto(base+'/'+lang+'/gear/'+q+'#color');await p.waitForSelector('body[data-gear-ready=true]');
    assert.equal(await p.locator('.gear-card').count(),8);
    assert.equal(await p.locator('#gear-instructor-grid .gear-card').count(),5);assert.equal(await p.locator('#gear-color-grid .gear-card').count(),3);
-   assert.equal(await p.locator('.gear-card .gear-draft').count(),8);assert.equal(await p.locator('.gear-card button:disabled').count(),8);
+   assert.equal(await p.locator('.gear-card .gear-draft').count(),0);assert.equal(await p.locator('.gear-card button:disabled').count(),8);
    assert.equal(await p.locator('.gear-card .gear-action a').count(),0);assert.equal(await p.locator('[data-category=kids]').count(),0);
    assert.equal(await p.evaluate(()=>typeof window.fbq),'undefined');
-   assert.equal(await p.locator('#gear-translation').isVisible(),true);
-   const old=await p.locator('#scubapro-go-sport img').getAttribute('src');
-   await p.locator('[data-palette=pink]').click();
-   assert.equal(await p.locator('#scubapro-go-sport img').getAttribute('src'),old);
-   assert(old.startsWith('https://storage.googleapis.com/tradeinn-images/web/products_image/'));
-   assert.equal(await p.locator('[data-palette=pink]').getAttribute('aria-pressed'),'true');
+   assert.equal(await p.locator('#gear-translation').isVisible(),!['ru','en'].includes(lang));
+   assert.equal(await p.locator('.gear-sources').count(),0);
+   assert.equal(await p.locator('[data-palette]').count(),0);
    await p.locator('[data-category=safety]').click();assert.equal(await p.locator('.gear-card').count(),2);assert.equal(await p.locator('#color').isVisible(),false);
    await p.locator('[data-category=all]').click();assert.equal(await p.locator('.gear-card').count(),8);
    assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
@@ -30,7 +27,7 @@ const base=process.env.GEAR_TEST_URL||'http://127.0.0.1:8765';const langs=['ru',
    await p.waitForFunction(()=>[...document.querySelectorAll('.gear-art')].every(i=>i.complete&&i.naturalWidth>0));
    assert((await p.locator('[data-gear-back]').getAttribute('href')).endsWith(q+'#color'));
    if(lang==='ru'&&process.env.GEAR_SCREENSHOTS&&viewport.width!==320){
-    await p.locator('[data-palette=teal]').click();await p.waitForFunction(()=>[...document.querySelectorAll('.gear-art')].every(i=>i.complete&&i.naturalWidth>0));await p.evaluate(()=>scrollTo(0,0));
+    await p.waitForFunction(()=>[...document.querySelectorAll('.gear-art')].every(i=>i.complete&&i.naturalWidth>0));await p.evaluate(()=>scrollTo(0,0));
     await p.screenshot({path:process.env.GEAR_SCREENSHOTS+'/gear-ru-'+viewport.width+'.png',fullPage:true});
     await p.locator('#gear-entry-color').click();await p.screenshot({path:process.env.GEAR_SCREENSHOTS+'/gear-color-'+viewport.width+'.png'});
    }

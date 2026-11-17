@@ -113,3 +113,18 @@ Passed this revision:
 Pending: editorial approval, five non-RU/EN content translations, activation of
 commercial links as a separate decision. Feed availability does not approve
 recommendations or claim author testing.
+
+## Visitor-facing preview cleanup — 2026-11-17
+
+Removed per-card draft badges, source URL/manufacturer blocks, feed captions,
+internal approval/photo-rights notices and illustrative palette controls from the
+visitor interface. Kept one brief preview notice, useful product facts, benefits,
+limitations and honest author-experience notes. Five untranslated content locales
+keep only a brief English-description notice; RU/EN show none. Product/translation
+approval gates and image provenance remain in data/docs. No links were activated.
+
+Passed: catalogue/offer and image-policy unit checks, JavaScript syntax and diff
+whitespace checks. Cloud-browser checks across seven desktop routes and fourteen
+responsive iframe routes at 390/320 CSS px: eight cards, five photo elements, no
+horizontal overflow. Visible text contains no feed/Daisycon/source URLs; technical
+sources and repeated draft badges are absent. Physical phones were not tested.
