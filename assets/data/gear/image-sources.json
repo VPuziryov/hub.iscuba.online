@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "source_id": "daisycon-diveinn-20606-de",
+      "provider": "daisycon",
+      "approval_status": "approved",
+      "rights_evidence": "Official DiveInn campaign 20606 feed for approved media 446509, retrieved 2026-11-17; Daisycon publisher terms 2.4–2.6 and product-feed FAQ. See docs/gear-feed-images.md. Affiliate creative use only; no blanket shop-image licence.",
+      "feed_url": "https://daisycon.io/datafeed/?media_id=446509&standard_id=1&language_code=de&locale_id=4&type=xml&program_id=20606&html_transform=none&rawdata=false&encoding=utf8&general=false",
+      "checked_at": "2026-11-17",
+      "permitted_sites": [
+        "hub.iscuba.online"
+      ],
+      "permitted_locales": [
+        "ru",
+        "en",
+        "de",
+        "fr",
+        "it",
+        "lv",
+        "pl"
+      ],
+      "locale_scope_note": "Image assets only within the approved iScuba Gear Picks affiliate project; DE feed does not approve translations or imply stock/delivery in other countries.",
+      "image_rules": [
+        {
+          "origin": "https://storage.googleapis.com",
+          "path_prefix": "/tradeinn-images/web/products_image/"
+        }
+      ]
+    }
+  ]
+}
