@@ -1,6 +1,6 @@
 (function () {
   'use strict';
-  const VERSION = '4';
+  const VERSION = '5';
   const categories = ['safari', 'comfort50', 'kids', 'safety'];
   const locale = document.documentElement.lang;
   const preview = window.GearEnvironment?.preview === true;
@@ -46,13 +46,13 @@
       fig.append(img, node('figcaption', '', t.artLabel));
     }
     if (photo) {
-      const img = node('img', 'gear-art');
+      const img = node('img', 'gear-art gear-photo');
       img.alt = p.image.alt?.[locale] || p.title;
       img.width = 520; img.height = 320; img.loading = 'lazy';
       if (photo.external) img.referrerPolicy = 'no-referrer';
       img.addEventListener('error', schematic, { once: true });
       img.src = photo.src;
-      fig.append(img);
+      fig.append(img, node('figcaption', '', t.photoLabel + (p.image.variant_label ? ' · ' + p.image.variant_label : '')));
     } else schematic();
     return fig;
   }

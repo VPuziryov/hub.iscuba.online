@@ -61,5 +61,6 @@
   "accessory": "Accessory",
   "editorial_status": "draft",
   "content_locale": "en",
-  "content_fallback": "en"
+  "content_fallback": "en",
+  "photoLabel": "Foto aus dem offiziellen Diveinn-Feed"
 }

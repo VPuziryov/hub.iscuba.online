@@ -20,8 +20,8 @@ const base=process.env.GEAR_TEST_URL||'http://127.0.0.1:8765';const langs=['ru',
    assert.equal(await p.locator('#gear-translation').isVisible(),true);
    const old=await p.locator('#scubapro-go-sport img').getAttribute('src');
    await p.locator('[data-palette=pink]').click();
-   assert.notEqual(await p.locator('#scubapro-go-sport img').getAttribute('src'),old);
-   assert((await p.locator('#scubapro-go-sport img').getAttribute('src')).includes('-pink.svg'));
+   assert.equal(await p.locator('#scubapro-go-sport img').getAttribute('src'),old);
+   assert(old.startsWith('https://storage.googleapis.com/tradeinn-images/web/products_image/'));
    assert.equal(await p.locator('[data-palette=pink]').getAttribute('aria-pressed'),'true');
    await p.locator('[data-category=safety]').click();assert.equal(await p.locator('.gear-card').count(),2);assert.equal(await p.locator('#color').isVisible(),false);
    await p.locator('[data-category=all]').click();assert.equal(await p.locator('.gear-card').count(),8);

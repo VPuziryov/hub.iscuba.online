@@ -82,3 +82,34 @@ and retention of eight schematic cards with disabled sales. All fixture image
 responses are in-memory SVG blocks at example.invalid-style domains, not product
 photos or real feed URLs. The existing 21-case language/viewport regression suite
 is rerun after the correction. Existing Hub/Egypt/Pixel and main remain unchanged.
+
+## Official feed image integration — 2026-11-17
+
+Five exact feed matches now render remote product photos; three cards retain
+schematics. See gear-feed-images.md for SKU/variant mapping and permission scope.
+This supersedes earlier statements that the source registry is empty and all
+product images are null. All affiliate URLs still remain null.
+
+Passed this revision:
+- Catalogue/offer validation and image-policy unit suite, including all seven
+  locales for each selected photo and rejection of unrelated Google buckets.
+- Syntax check and git diff whitespace check.
+- Five real HTTPS image endpoints: HTTP 200, image/webp.
+- Cloud-browser desktop checks for all seven languages: eight draft cards,
+  five photo elements, eight disabled store buttons, no commercial links or
+  horizontal overflow. RU view visibly loaded all five photos.
+- 14 additional responsive iframe checks: seven languages at widths 390 and
+  320 CSS pixels, eight cards/five photos, no horizontal overflow. These are
+  narrow browser viewports, not tests on physical phones.
+- Category safety filter yields two cards; restoring all yields eight.
+- Language switch retains gear path, UTM/fbclid and #color. Back links preserve
+  query and anchor. Photo colours are unaffected by illustrative palettes.
+- Existing image failure/rights gates are retained unchanged in gear-images.js;
+  regression fixture expectations updated for the new photo caption/registry.
+  Browser fixture suites from the earlier report were not rerun this revision.
+- Hub/Egypt HTML, base assets, pixel.js, publication/environment gate, offers,
+  main and hosting configuration are not modified by this change.
+
+Pending: editorial approval, five non-RU/EN content translations, activation of
+commercial links as a separate decision. Feed availability does not approve
+recommendations or claim author testing.

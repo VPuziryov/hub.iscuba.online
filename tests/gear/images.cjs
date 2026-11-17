@@ -24,8 +24,10 @@ for(const patch of [{approval_status:'pending'},{rights_evidence:''},{provider:'
  assert.equal(w.GearImages.resolve(image,{schema_version:1,sources:[{...source,...patch}]},'ru'),null,JSON.stringify(patch));
 assert(w.GearImages.resolve({...image,src:'/assets/img/gear/mask.svg'},null,'ru'));
 assert.equal(w.GearImages.resolve({...image,src:'/assets/img/gear/mask.svg',rights_confirmed:false},null,'ru'),null);
-assert.deepEqual(json('assets/data/gear/image-sources.json'),{schema_version:1,sources:[]});
-console.log('PASS: external image source/rights/site/locale/URL gates; empty production registry; existing local rights gate');
+const livePolicy=json('assets/data/gear/image-sources.json');
+for(const p of json('assets/data/gear/products.json').products.filter(p=>p.image)){for(const lang of ['ru','en','de','fr','it','lv','pl'])assert(w.GearImages.resolve(p.image,livePolicy,lang));}
+assert.equal(w.GearImages.resolve({...image,source_id:livePolicy.sources[0].source_id,src:'https://storage.googleapis.com/unrelated/photo.webp'},livePolicy,'ru'),null);
+console.log('PASS: external image source/rights/site/locale/URL gates; scoped official-feed registry; existing local rights gate');
 if(process.env.GEAR_UNIT_ONLY==='1')process.exit(0);
 const {chromium}=require('playwright');
 (async()=>{
@@ -41,7 +43,7 @@ const {chromium}=require('playwright');
  await load();let img=page.locator('#hollis-m1 img');
  assert.equal(await img.getAttribute('src'),image.src);assert.equal(await img.getAttribute('alt'),'Test image');
  assert.equal(await img.getAttribute('referrerpolicy'),'no-referrer');
- assert.equal(await page.locator('#hollis-m1 figcaption').count(),0);assert.equal(requests,1);
+ assert.equal(await page.locator('#hollis-m1 figcaption').count(),1);assert.equal(requests,1);
  fail=true;await load();
  assert((await page.locator('#hollis-m1 img').getAttribute('src')).startsWith('/assets/img/gear/'));
  assert.equal(await page.locator('#hollis-m1 figcaption').count(),1);

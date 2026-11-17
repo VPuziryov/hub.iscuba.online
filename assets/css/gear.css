@@ -66,3 +66,7 @@
 .gear-page [hidden]{display:none!important}
 @media(max-width:760px){.gear-page .gear-main{padding:0 16px 40px}.gear-page .gear-hero{grid-template-columns:1fr;gap:30px;padding:10px 0 30px}.gear-page .gear-hero-copy{max-width:600px}.gear-page .gear-hero-visual{transform:rotate(1deg);max-width:600px}.gear-page .gear-hero h1{font-size:38px;max-width:550px}.gear-page .gear-entries{grid-template-columns:1fr;gap:12px}.gear-page .gear-grid{grid-template-columns:1fr}.gear-page .gear-hero-visual img{max-height:260px;object-fit:cover}.gear-page .gear-palette{flex-direction:column;align-items:stretch;gap:16px;padding:20px}.gear-page .gear-palette-options{flex-direction:row;flex-wrap:wrap}.gear-page .gear-card-body{padding:22px}.gear-page .gear-card .gear-purpose{min-height:0}.gear-page .gear-color{margin-top:45px}.gear-page .gear-back>span{display:none}}
 @media(prefers-reduced-motion:reduce){.gear-page .gear-card,.gear-page .btn,.gear-page .gear-entries a{transition:none}.gear-page .btn:hover{transform:none}}
+
+/* Official feed photos retain their original colours; palette controls affect
+   the illustrative hero and schematic fallbacks only. */
+.gear-page .gear-photo{background:#fff;object-fit:contain;padding:18px;box-sizing:border-box}

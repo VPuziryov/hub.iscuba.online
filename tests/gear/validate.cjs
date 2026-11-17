@@ -6,13 +6,14 @@ const products=json('assets/data/gear/products.json').products,offers=json('asse
 assert.equal(products.length,8);assert.equal(new Set(products.map(p=>p.product_id)).size,8);
 assert.equal(products.filter(p=>p.collection==='instructor').length,5);assert.equal(products.filter(p=>p.collection==='color').length,3);
 for(const p of products){
- assert.equal(p.status,'candidate');assert.equal(p.personally_tested,null);assert.equal(p.image,null);
+ assert.equal(p.status,'candidate');assert.equal(p.personally_tested,null);if(p.image){assert.equal(p.image.rights_confirmed,true);assert.match(p.image.src,/^https:\/\/storage\.googleapis\.com\/tradeinn-images\/web\/products_image\//);assert(p.image.feed_item_id);assert(p.feed_match.sku===p.image.feed_item_id);}
  assert(p.last_verified);assert(p.availability.status.startsWith('listing_found'));
  assert.match(p.source_url,/^https:\/\/www\.tradeinn\.com\/diveinn\/en\//);
  const svg=read(p.artwork.src.slice(1));assert(svg.includes('Original equipment category schematic'));
  assert(!/https?:\/\//.test(svg.replace('http://www.w3.org/2000/svg','')));
  if(p.artwork.palette_variants)for(const src of Object.values(p.artwork.palette_variants))assert(read(src.slice(1)));
 }
+assert.equal(products.filter(p=>p.image).length,5);
 for(const o of offers){
  for(const key of ['affiliate_url','sub_id','network','campaign','approval_evidence'])assert.equal(o[key],null);
  assert.equal(o.approval_status,'pending');assert.deepEqual(o.permitted_locales,[]);
@@ -21,7 +22,7 @@ for(const o of offers){
 for(const lang of langs){
  const t=json('assets/data/gear/i18n/'+lang+'.json');const page=read(lang+'/gear/index.html');
  assert.equal(t.editorial_status,'draft');assert(page.includes('<html lang="'+lang+'">'));
- assert(page.includes('gear-env.js?v=4'));assert(!page.includes('src="/assets/js/pixel.js"'));
+ assert(page.includes('gear-env.js?v=5'));assert(!page.includes('src="/assets/js/pixel.js"'));
  for(const other of langs)assert(page.includes('hreflang="'+other+'"'));
  const content=t.content_fallback?json('assets/data/gear/i18n/'+t.content_fallback+'.json'):t;
  for(const p of products){const c=content.products[p.product_id];assert.equal(c.status,'draft');assert(c.purpose&&c.experience);assert(c.advantages.length&&c.limitations.length&&c.facts.length);}

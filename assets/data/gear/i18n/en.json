@@ -114,7 +114,7 @@
         "G2 is a currently catalogued Galileo option with configurable displays. Reading it on your wrist is a more useful selection test than counting modes."
       ],
       "limitations": [
-        "Vitaliy’s own computer is a Galileo Sol, not G2. Check transmitter and package contents separately. Diveinn displays Notify me; stock of a specific configuration is not confirmed."
+        "Vitaliy’s personal computer is Galileo Sol, not G2. The photo shows the G2 without a transmitter from the Diveinn feed checked on 17 November 2026; verify configuration, availability and delivery separately."
       ],
       "experience": "Vitaliy uses his Sol with an independent mechanical SPG. The SPG backs up pressure readings, not depth, time or decompression calculations.",
       "status": "draft"
@@ -156,7 +156,7 @@
       "purpose": "A travel BCD with back inflation and a deliberate colour accent.",
       "facts": [
         "Foldable Airnet soft backpack",
-        "Standard colours: black · blue · coral"
+        "Pictured: orange variant · M–2XL"
       ],
       "advantages": [
         "Navigator Lite earns a place here through its foldable design and two expandable size ranges. The coloured air-cell cover is an aesthetic option, not a reason to accept a poor fit."
@@ -192,5 +192,6 @@
   "jump": "Explore the collections",
   "accessory": "Accessory",
   "editorial_status": "draft",
-  "content_locale": "en"
+  "content_locale": "en",
+  "photoLabel": "Photo from the official Diveinn feed"
 }
