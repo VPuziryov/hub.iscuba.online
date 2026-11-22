@@ -1,7 +1,6 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    X-Robots-Tag = "noindex, nofollow"
     Referrer-Policy = "no-referrer"
     X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"
